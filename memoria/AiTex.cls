@@ -44,7 +44,7 @@
 \usepackage[toc,page]{appendix} 
 \setabbreviationstyle[acronym]{short-long}
 \makeglossaries
-\include{glossary}
+
 \usepackage[a4paper, margin=0.8in, headheight=14pt]{geometry}
 \usepackage{graphicx}
 \usepackage{listings}
