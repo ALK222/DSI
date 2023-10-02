@@ -11,7 +11,7 @@
 % Identification
 %----------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{AiTeX}[30/12/2020 Template for notes of lessons for the FDI UCM]
+\ProvidesClass{AiTeX}[30/12/2020 Template for notes of apps for the FDI UCM]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}} % Pass through any options to the base class
 \ProcessOptions\relax % Process the given option
@@ -68,7 +68,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\lesson}
+\fancyhead[LE,RO]{\app}
 \fancyhead[RE,LO]{\grade}
 \fancyfoot[LE,RO]{\thepage}
 \fancyfoot[RE,LO]{\leftmark}
@@ -76,7 +76,7 @@
 \renewcommand{\footrulewidth}{1pt}
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyhead[LE,RO]{\lesson}
+    \fancyhead[LE,RO]{\app}
     \fancyhead[RE,LO]{\grade}
     \fancyfoot[LE,RO]{\thepage}
     \renewcommand{\headrulewidth}{1pt}
@@ -128,7 +128,7 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
 \newcommand*{\facultad}{Facultad de #1}
 \newcommand*{\universidad}{#2}
 \newcommand*{\grade}{Grado en #3}
-\newcommand*{\lesson}{#4}
+\newcommand*{\app}{#4}
 \newcommand*{\subtitulo}{#5}
 \newcommand*{\autor}{#6}
 \newcommand*{\curso}{#7}
@@ -152,7 +152,7 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
 	
 	\vspace{0.75\baselineskip} % Whitespace above the title
 	
-	{\LARGE \lesson} % Title
+	{\LARGE \app} % Title
 	
 	\vspace{0.75\baselineskip} % Whitespace below the title
 	
