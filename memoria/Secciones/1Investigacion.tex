@@ -148,4 +148,148 @@ Al finalizar, le agradeceremos al entrevistado su tiempo y su participación en 
 
 \section{Analisis de la competencia}
 
+Para identificar a la competencia primero debemos conocer cuales son las funcionalidades que va a tener nuestra aplicación para ver cuáles otras del mismo tipo se parecen. Las funcionalidades principales de nuestra aplicación serían:
+\begin{itemize}
+    \item Búsqueda de alojamiento.
+    \item Búsqueda de medio de transporte.
+    \item Comparar precios para el mismo viaje.
+    \item Comprar billetes y alojamientos.
+\end{itemize}
+
+Hemos hecho una búsqueda intensiva de las aplicaciones que pueden tener similitudes con nuestra aplicación.
+
+Vamos a diferenciar entre competencia total y competencia parcial. Las aplicaciones que definimos con competencia total, son aquellas que comparten casi en su totalidad las mismas funcionalidades que nuestra aplicación. Por otro lado, hemos definido como competencia parcial aquellas que comparten alguna funcionalidad similar a nuestra aplicación (solo búsqueda de medios de transporte o solo búsqueda de alojamiento).
+
+\subsection{Competencia total}
+\begin{itemize}
+    \item\textbf{Kayak.} Es una aplicación que permite comparar alojamientos y medios de transporte, ofrece descripciones detalladas de los destinos con cosas que se pueden hacer en los lugares y cómo moverse por allí. Tiene un mapamundi con etiquetas de los sitios con los precios más baratos. Tiene un 1,8 de valoración sobre 5.
+    \item\textbf{eDreams.} Es un comparador de viajes que ofrece búsqueda de transporte y alojamiento y además ofrece el paquete conjunto de las dos y también permite alquiler de coche. Tiene servicio prime para reducir el coste de los viajes.Tiene un 4 de valoración sobre 5.
+    \item\textbf{Momondo.} Es un comparador de vuelos, alojamiento y ofrece viajes completos. Tiene una opción de alertas de precios. Tiene un 4 sobre 5 de valoración.
+    \item\textbf{SkyScanner.} Es una aplicación para buscar transporte y alojamiento en un destino determinado en unas fechas determinadas ofrece las últimas ofertas y tiene una sección de recomendaciones. Tiene un 3,9 sobre 5 de valoración.
+\end{itemize}
+
+\subsection{Competencia parcial:}
+\begin{itemize}
+    \item\textbf{Trivago.} Es una aplicación para buscar y comparar alojamientos, tiene un sistema de opiniones para valorar el alojamiento, ofrece ofertas, tiene diferentes opciones para encontrar un alojamiento adecuado para las necesidades del usuario. Tiene un 2,8 de valoración sobre 5.
+    \item\textbf{Iberia.} Es una aplicación de la aerolínea que permite comparar vuelos de Iberia o de sus filiales. también tiene Iberia plus con un sistema de puntos para obtener descuentos. Tiene un 3 de valoración sobre 5
+    \item\textbf{Booking.} Esta web permite comparar y comprar sólo alojamiento, tiene colaboración con aerolíneas como Iberia para hacer descuentos. Tiene un 1,2 de valoración sobre 5.
+\end{itemize}
+
+\subsection{Dimensiones}
+
+\textbf{Comparar transporte.} Realizar una comparación de múltiples medios de transporte en unas fechas. [Respuesta binaria, tabla \ref{table:comp-transporte}]
+\begin{itemize}
+    \item Vuelos
+    \item Trenes
+    \item Buses
+    \item Flexibilidad de fechas 
+    \item Filtros de búsqueda 
+    \item Alquiler de coche 
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l|l|l|l|l|l|}
+    \cline{2-7}
+                                     & Vuelos & Trenes & Buses & Flexibilidad de fechas & Filtros de búsqueda & Alquiler de coche \\ \hline
+    \multicolumn{1}{|l|}{Kayak}      & Si     & Si     & Si    & Si                     & Si                  & Si                \\ \hline
+    \multicolumn{1}{|l|}{eDreams}    & Si     & Si     & No    & No                     & Si                  & Si                \\ \hline
+    \multicolumn{1}{|l|}{Momondo}    & Si     & Si     & Si    & Si                     & Si                  & Si                \\ \hline
+    \multicolumn{1}{|l|}{SkyScanner} & Si     & No     & No    & No                     & Si                  & Si                \\ \hline
+    \multicolumn{1}{|l|}{Trivago}    & No     & No     & No    & No                     & No                  & No                \\ \hline
+    \multicolumn{1}{|l|}{Iberia}     & Si     & No     & No    & Si                     & Si                  & No                \\ \hline
+    \multicolumn{1}{|l|}{Booking}    & No     & No     & No    & No                     & No                  & No                \\ \hline
+    \end{tabular}
+    \caption{Tabla de posibilidad de comparación de transportes entre distintas plataformas}
+    \label{table:comp-transporte}
+\end{table}
+
+\textbf{Comprar transporte.} Poder comprar un medio de transporte previamente comparado. [Respuesta binaria, tabla \ref{table:comprar-transporte}]
+
+\begin{itemize}
+    \item Sistema de puntos
+    \item Suscripción prime 
+    \item Ecologismo 
+    \item Seguros
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l|l|l|l|}
+    \cline{2-5}
+                                     & Sistemas de puntos & Suscripción prime & Ecologismo & Seguros \\ \hline
+    \multicolumn{1}{|l|}{Kayak}      & No                 & No                & No         & Si      \\ \hline
+    \multicolumn{1}{|l|}{eDreams}    & Si                 & Si                & Si         & Si      \\ \hline
+    \multicolumn{1}{|l|}{Momondo}    & No                 & No                & No         & Si      \\ \hline
+    \multicolumn{1}{|l|}{SkyScanner} & Si                 & Si                & Si         & Si      \\ \hline
+    \multicolumn{1}{|l|}{Trivago}    & No                 & No                & No         & No      \\ \hline
+    \multicolumn{1}{|l|}{Iberia}     & Si                 & Si                & No         & Si      \\ \hline
+    \multicolumn{1}{|l|}{Booking}    & No                 & No                & No         & No      \\ \hline
+    \end{tabular}
+    \caption{Tabla comparativa sobre distintas características de los sistemas de compra}
+    \label{table:comprar-transporte}
+    \end{table}
+
+\textbf{Comparar alojamiento.} Realizar una comparación dde múltiples alojamientos en unas fechas. [Respuesta binaria, tabla \ref{table:comp-aloj}]
+
+\begin{itemize}
+    \item Opiniones 
+    \item Valoración con estrellas 
+    \item Filtros de búsqueda 
+    \item Flexibilidad de fechas
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l|l|l|l|}
+    \cline{2-5}
+                                     & Opiniones & Valoración con estrellas & Filtros de búsqueda & Flexibilidad de fechas \\ \hline
+    \multicolumn{1}{|l|}{Kayak}      & Si        & Si                       & Si                  & Si                     \\ \hline
+    \multicolumn{1}{|l|}{eDreams}    & Si        & Si                       & Si                  & No                     \\ \hline
+    \multicolumn{1}{|l|}{Momondo}    & Si        & Si                       & Si                  & Si                     \\ \hline
+    \multicolumn{1}{|l|}{SkyScanner} & Si        & Si                       & Si                  & No                     \\ \hline
+    \multicolumn{1}{|l|}{Trivago}    & Si        & Si                       & Si                  & No                     \\ \hline
+    \multicolumn{1}{|l|}{Iberia}     & No        & No                       & No                  & No                     \\ \hline
+    \multicolumn{1}{|l|}{Booking}    & Si        & Si                       & Si                  & Si                     \\ \hline
+    \end{tabular}
+    \caption{Tabla de funcionalidades de la comparación de viajes}
+    \label{table:comp-aloj}
+    \end{table}
+
+\textbf{Comprar alojamiento.} Poder comprar un alojamiento previamente comparado. [Respuesta vinaria, tabla \ref{table:comprar-aloj}]
+
+\begin{itemize}
+    \item Sistema de puntos 
+    \item Suscripción prime 
+    \item Seguros
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l|l|l|}
+    \cline{2-4}
+                                     & Sistemas de puntos & Suscripción prime & Seguros \\ \hline
+    \multicolumn{1}{|l|}{Kayak}      & No                 & No                & Si      \\ \hline
+    \multicolumn{1}{|l|}{eDreams}    & No                 & Si                & Si      \\ \hline
+    \multicolumn{1}{|l|}{Momondo}    & No                 & No                & Si      \\ \hline
+    \multicolumn{1}{|l|}{SkyScanner} & Si                 & Si                & Si      \\ \hline
+    \multicolumn{1}{|l|}{Trivago}    & No                 & No                & No      \\ \hline
+    \multicolumn{1}{|l|}{Iberia}     & No                 & No                & No      \\ \hline
+    \multicolumn{1}{|l|}{Booking}    & No                 & No                & No      \\ \hline
+    \end{tabular}
+    \caption{Tabla de comparación de las distintas funcionalidades de la compra / reserva de alojamientos}
+    \label{table:comprar-aloj}
+    \end{table}
+
+\subsection{Recomendaciones de acción}
+
+A raíz de los resultados obtenidos en las tablas vamos a sacar unas recomendaciones de acción que nos permitan saber qué nos quiere decir este estudio.
+
+\begin{itemize}
+    \item Todas las páginas que ofrecen servicio de comparar transporte tienen buenos filtros de búsqueda, debemos incluir un buen sistema de filtros.Todas ofrecen como mínimo poder buscar vuelos, algunas incluyen trenes y buses en las búsquedas, sería interesante incluir todas en nuestra aplicación. No todas ofrecen poder buscar con flexibilidad de fechas, así que vemos interesante incluir flexibilidad de fechas en nuestra aplicación. No todas ofrecen servicio de alquiler de coche, es interesante incluirlo en la aplicación.
+    \item Muy pocas páginas de las estudiadas ofrecen un sistema de puntos y suscripción prime, puede ser interesante incluirlo en nuestra aplicación. Solo dos de las páginas estudiadas ofrecen opciones de ecologismo, valoramos que no es tan interesante incluirlo en nuestra aplicación. Casi todas ofrecen un sistema de seguros a la hora de comprar un medio de transporte, es interesante incluirlo.
+    \item Todas las aplicaciones utilizan un sistema de opiniones y de valoración gráfica con estrellas a la hora de mostrar los alojamientos comparados. Es muy interesante incluir esto en nuestra aplicación. Así como filtros de búsqueda también tienen todas, es interesante incluir buenos filtros. No todas ofrecen flexibilidad de fechas a la hora de comparar los alojamientos, es interesante incluirlo en nuestra aplicación.
+    \item Para comprar alojamientos solo una aplicación incluye un sistema de puntos para comparar alojamientos, puede no ser interesante incluir un sistema de puntos para los alojamientos. De las páginas estudiadas para comprar alojamiento, dos de ellas utilizan sistema de prime, es interesante incluirlo. De estas páginas para comprar alojamiento todas tienen un sistema de seguros, es muy interesante incluirlo.
+\end{itemize}
+
 \section{Mapas de empatía}
