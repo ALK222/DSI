@@ -229,6 +229,9 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
      \renewcommand*\l@figure{\@dottedtocline{1}{1em}{3.2em}}
 \makeatother
 
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\listtablename}{Lista de tablas}
+
 % CODE FORMATS
 
 % C++
