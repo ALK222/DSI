@@ -27,6 +27,7 @@
 \usepackage{titlesec}
 \usepackage[spanish]{babel}
 \usepackage{epigraph}
+\usepackage{tabularx}
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage{hyperref}
 \hypersetup{
