@@ -8,7 +8,8 @@ Para poder lograr este objetivo, tenemos que realizar una serie de pasos, que va
 \begin{itemize}
     \item \textbf{Identificación de variables de comportamiento} $\rightarrow$ El primer paso que vamos a seguir es identificar las distintas variables de comportamiento que vamos a tener en la lista de factoides y ver los posibles valores que van a tomar.
     \item \textbf{Relación de individuos con las variables de comportamiento} $\rightarrow$ Tras haber identificado las variables, vamos a ver para cada uno de los usuarios entrevistados el valor que van a tomar cada una de ellas en base a los factoides obtenidos.
-    \item \textbf{Identificación de patrones de comportamiento} 
+    \item \textbf{Identificación de patrones de comportamiento} $\rightarrow$ Una vez configurada la metriz que relaciona los usuarios con las variables, vamos a marcar en ella las posibles repeticiones que aparezcan para poder establecer un listado de patrones de comportamiento con los que vamos a realizar los esqueletos de las personas.
+    \item \textbf{Creación de esqueletos}
 \end{itemize}
 
 \section{Planificación del hito}
@@ -28,26 +29,26 @@ que tenemos registrados) los valores que van a tomar en cada una de ellas. Para 
 en la que vamos a enfrentar cada una de las variables con los entrevistados, poniendo en cada celda el valor que va a tomar la variable para dicho usuario.
 \begin{table}[H]
     \centering
-    \begin{tabular}{p{10em}|p{7em}|p{7em}|p{7em}|p{8em}|}
+    \begin{tabular}{|p{10em}|p{7em}|p{7em}|p{7em}|p{8em}|}
         \cline{2-5}
-                                          & Madi        & Sofía                          & Alberto            & Beatriz                         \\ \hline
-        Rango de edad                     &             & 18 - 25                        & 18 - 25            & 18 - 25                         \\ \hline
-        Estado civil                      & Si          & Soltera                        & En pareja          & En pareja                       \\ \hline
-        Organización de viajes            & Si          & Si                             & Si                 & Si                              \\ \hline
-        Uso de comparadores de viajes     & No          & Kayak, Skyscanner, Trivago     & No                 & eDreams, comparador de Google   \\ \hline
-        Frecuencia de viaje               & Baja        & Media                          & Alta               & Baja                            \\ \hline
-        Tipo de viaje                     & Trabajo     & Ocio                           & Ocio               & Ocio                            \\ \hline
-        Discapacidad                      & No          & No                             & No                 & No                              \\ \hline
-        Acompañante                       &             & Familia                        & Pareja             & Familia                         \\ \hline
-        Medio de transporte más frecuente & Tren        & Transporte público             & Vehículo propio    & Vehículo propio                 \\ \hline
-        Uso de tecnología                 &             & Alto                           & Alto               & Alto                            \\ \hline
-        Viaje nacional                    & Si          & Si                             & Si                 & Si                              \\ \hline
-        Viaje internacional               & Si          & Si                             &                    & Si                              \\ \hline
-        Trabaja                           & Si          & No                             & Si                 & No                              \\ \hline
-        Gusto por viajar                  &             & Si                             & Si                 & Si                              \\ \hline
-        Nivel de ahorro                   & Alto        & Alto                           & Medio              & Alto                            \\ \hline
+        \cellcolor{black}                 & \cellcolor{black}{\textcolor{white}{Madi}}  & \cellcolor{black}{\textcolor{white}{Sofía}}   & \cellcolor{black}{\textcolor{white}{Alberto}} & \cellcolor{black}{\textcolor{white}{Beatriz}} \\ \hline
+        Rango de edad                     &                                             & 18 - 25                                       & 18 - 25                                       & 18 - 25                                       \\ \hline
+        Estado civil                      & Si                                          & Soltera                                       & En pareja                                     & En pareja                                     \\ \hline
+        Organización de viajes            & Si                                          & Si                                            & Si                                            & Si                                            \\ \hline
+        Uso de comparadores de viajes     & No                                          & Kayak, Skyscanner, Trivago                    & No                                            & eDreams, comparador de Google                 \\ \hline
+        Frecuencia de viaje               & Alta                                        & Media                                         & Alta                                          & Baja                                          \\ \hline
+        Tipo de viaje                     & Trabajo                                     & Ocio                                          & Ocio                                          & Ocio                                          \\ \hline
+        Discapacidad                      & No                                          & No                                            & No                                            & No                                            \\ \hline
+        Acompañante                       &                                             & Familia                                       & Pareja                                        & Familia                                       \\ \hline
+        Medio de transporte más frecuente & Tren                                        & Transporte público                            & Vehículo propio                               & Vehículo propio                               \\ \hline
+        Uso de tecnología                 &                                             & Alto                                          & Alto                                          & Alto                                          \\ \hline
+        Viaje nacional                    & Si                                          & Si                                            & Si                                            & Si                                            \\ \hline
+        Viaje internacional               & Si                                          & Si                                            &                                               & Si                                            \\ \hline
+        Trabaja                           & Si                                          & No                                            & Si                                            & No                                            \\ \hline
+        Gusto por viajar                  &                                             & Si                                            & Si                                            & Si                                            \\ \hline
+        Nivel de ahorro                   & Alto                                        & Alto                                          & Medio                                         & Alto                                          \\ \hline
     \end{tabular}
-    \caption{Tabla de relación de los individuos con las variables de comportamiento}
+    \caption{Matriz de relación de los individuos con las variables de comportamiento}
     \label{table:relacion-individuos-variables}
 \end{table}
 
@@ -131,6 +132,31 @@ determinado valor a las variables para cada uno de los usuarios. \\
 \end{itemize}
 
 \section{Identificación de patrones de comportamiento}
+Para identificar los patrones de comportamiento nos hemos basado en la comparación de los usuarios y buscar similitudes en sus gustos a raíz de las variables de comportamiento previamente estudiadas (ver cuadro \ref{table:relacion-individuos-variables-patrones}).
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{10em}|p{7em}|p{7em}|p{7em}|p{8em}|}
+        \cline{2-5}
+        \cellcolor{black}                 & \cellcolor{black}{\textcolor{white}{Madi}}  & \cellcolor{black}{\textcolor{white}{Sofía}}   & \cellcolor{black}{\textcolor{white}{Alberto}} & \cellcolor{black}{\textcolor{white}{Beatriz}} \\ \hline
+        Rango de edad                     &                                             & \cellcolor{green}{18 - 25}                                       & \cellcolor{green}{18 - 25}                                       & \cellcolor{green}{18 - 25}                                       \\ \hline
+        Estado civil                      & Si                                          & Soltera                                       & En pareja                                     & En pareja                                     \\ \hline
+        Organización de viajes            & Si                                          & \cellcolor{green}{Si}                                            & \cellcolor{green}{Si}                                            & \cellcolor{green}{Si}                                            \\ \hline
+        Uso de comparadores de viajes     & \cellcolor{yellow}{No}                      & \cellcolor{purple}{Kayak, Skyscanner, Trivago}                    & No                                            & eDreams, comparador de Google                 \\ \hline
+        Frecuencia de viaje               & \cellcolor{yellow}{Alta}                    & \cellcolor{purple}{Media}                                        & Alta                                          & Baja                                          \\ \hline
+        Tipo de viaje                     & Trabajo                                     & \cellcolor{green}{Ocio}                                          & Ocio                                          & Ocio                                          \\ \hline
+        Discapacidad                      & No                                          & \cellcolor{green}{No}                                            & No                                            & No                                            \\ \hline
+        Acompañante                       &                                             & \cellcolor{blue}{Familia}                                       & Pareja                                        & Familia                                       \\ \hline
+        Medio de transporte más frecuente & Tren                                        & Transporte público                            & Vehículo propio                               & Vehículo propio                               \\ \hline
+        Uso de tecnología                 &                                             & \cellcolor{green}{Alto}                                          & Alto                                          & Alto                                          \\ \hline
+        Viaje nacional                    & \cellcolor{orange}{Si}                      & \cellcolor{orange}{Si}                                            & Si                                            & Si                                            \\ \hline
+        Viaje internacional               & \cellcolor{orange}{Si}                      & \cellcolor{orange}{Si}                                            &                                               & Si                                            \\ \hline
+        Trabaja                           & \cellcolor{yellow}{Si}                      & No                                            & Si                                            & No                                            \\ \hline
+        Gusto por viajar                  &                                             & \cellcolor{green}{Si}                                            & Si                                            & Si                                            \\ \hline
+        Nivel de ahorro                   & Alto                                        & \cellcolor{purple}{Alto}                                           & Medio                                         & Alto                                          \\ \hline
+    \end{tabular}
+    \caption{Matriz de la relación de los individuos con las variables de comportamiento (patrones)}
+    \label{table:relacion-individuos-variables-patrones}
+\end{table}
 Tras realizar el análisis de la matriz anterior hemos identificado los siguientes patrones de comportamiento:
 \begin{itemize}
     \item La gente entre 18 y 25 años comparte un gusto por viajar y sobre todo viajes de ocio.
