@@ -187,44 +187,58 @@ Tras finalizar este proceso de identificación de los patrones de comportamiento
 \subsection{Creación de esqueletos}
 En el apartado anterior identificamos (de forma descriptiva) los distintos tipos de personas que vamos a tener. El siguiente paso va a ser elaborar el esqueleto de dichas personas, para lo cuál se han seguido los siguientes pasos. En primer lugar se han consultado las distintas listas de factoides y los patrones de comportamiento que se han identificado para ver los tres tipos de usuarios diferenciados que tenemos. Posteriormente se han añadido los factoides identificados en los cuestionarios analizando las estadísticas de estos. A continuación pueden verse los resultados del proceso. \\
 
-\textbf{Viajante que usa comparadores de viajes (Marta González Torres)}
+\noindent \textbf{Viajante que usa comparadores de viajes}
 \begin{itemize}
-    \item Edad: 18-25
+    \item Marta González Torres
+    \item 23 años
     \item Viven en ciudad
-    \item Generalmente estudiantes
-    \item Comparten gusto por viajar
-    \item Viajan por ocio
-    \item Tienen un uso alto de la tecnología
-    \item Realizan viajes nacionales e internacionales
-    \item Tienen una frecuencia de viaje media baja
+    \item Estudiante
+    \item Gusto por viajar
+    \item Viaja por ocio
+    \item Tiene un uso alto de la tecnología.
+    \item Tiene una frecuencia de viaje media baja
     \item Persona soltera
-    \item Viajan en familia
-    \item Tienen un nivel de ahorro alto, por eso usan comparadores de viajes
-    \item Utilizan Trivago, SkyScanner, eDreams            
+    \item Viaja en familia
+    \item Utiliza Trivago, SkyScanner, eDreams 
+    \item Objetivos:
+    \begin{itemize}
+        \item Ahorrar la mayor cantidad de dinero posible al realizar el viaje.
+        \item Realizar viajes tanto nacionales como internacionales.
+    \end{itemize}         
 \end{itemize}
 
-\textbf{Viajante que no usa comparadores de viajes (Juan Martínez Torres)}
+\noindent \textbf{Viajante que no usa comparadores de viajes (de forma habitual)}
 \begin{itemize}
-    \item Edad: 18 - 25
-    \item Viven en ciudad
+    \item Juan Martínez Díaz
+    \item 24 años
+    \item Vive en ciudad
     \item Personas que trabajan
     \item Comparten gusto por viajar
+    \item Está en pareja
     \item Viajan por trabajo
     \item Tienen una frecuencia de viaje alta
-    \item Tienen un nivel de ahorro medio
-    \item Realizan viajes nacionales e internacionales
-    \item Tienen un uso alto de la tecnología                       
+    \item Tienen un uso alto de la tecnología 
+    \item Objetivos:
+    \begin{itemize}
+        \item Intentar mantener un nivel de ahorro medio.
+        \item Poder realizar viajes tanto nacionales como internacionales
+    \end{itemize}                      
 \end{itemize}
 
-\textbf{Viajante con discapacidad física (Isabel García Rodríguez)}
+\noindent \textbf{Viajante con discapacidad}
 \begin{itemize}
-    \item Edad: 18 - 25
-    \item Viven en ciudad
-    \item Personas con discapacidades tanto físicas como intelectuales
-    \item Algunos planifican sus viajes
-    \item Parte de ellos encuentra dificultad a la hora de hacer búsquedas
-    \item No usan comparadores de viaje, algunos desisten al intentarlo.
-    \item Les parece complicado pedir ayuda dentro de las páginas de los comparadores                      
+    \item Isabel García Rodríguez
+    \item 30 años
+    \item Vive en ciudad
+    \item Persona con discapacidad física
+    \item Planifica sus viajes
+    \item Puede encontrar alguna dificultad a la hora de hacer búsquedas (necesita medios accesibles)
+    \item Objetivos:
+    \begin{itemize}
+        \item Poder realizar sus viajes buscando medios de transporte accesibles.
+        \item No tiene problemas para comprender la página, pero entiende que hay usuarios a los que sí les puede costar.
+        \item Le parece complicado pedir ayuda dentro de los comparadores de viajes.
+    \end{itemize}             
 \end{itemize}
 
 \subsection{Revisar la completitud y la redundancia}
@@ -319,4 +333,17 @@ Aparte de su trabajo, Isabel es una apasionada de la pintura y trata de visitar 
 Viaja a menudo con su mejor amiga, Carmen, quien la ha apoyado en su viaje de empoderamiento y ha aprendido mucho sobre la discapacidad en el proceso también.
 
 \subsection{Validación de las personas}
+Tras revisar las personas obtenidas en el paso anterior, se ha
+comprobado que contengan toda la información relevante que sacamos de los factoides,
+variables y patrones de comportamiento. También hemos comprobado que todo coincida con los esqueletos de personas. Hemos podido comprobar que en el viajero con discapacidad, en la persona faltaba el factoide de: “Les parece complicado pedir ayuda dentro de las páginas de los comparadores”
+
+Finalmente, el resultado obtenido han sido tres perfiles tal que sus hobbies, background y
+objetivos parten de los conocimientos que tenemos acerca de los viajeros que utilizan comparadores, viajeros que no utilizan comparadores, viajeros con discapacidad.
+
 \subsection{Tipos de personas}
+\begin{itemize}
+    \item \textbf{Persona Primaria} - \textit{Marta González Torres (Viajero que usa comparadores de viajes)} $\rightarrow$ Representa al tipo de usuario consumidor de comparadores de viajes. Se tratan de usuarios que utilizan activamente las funcionalidades de los comparadores con el objetivo de ahorrar lo máximo posible en los transportes para sus viajes.
+    \item \textbf{Persona Secundaria} - \textit{Isabel García Rodríguez (Viajero con discapacidad)} $\rightarrow$ Representa al tipo de usuario consumidor o no consumidor de comparadores de viajes que tienen una necesidad añadida o distinta al resto de usuarios. 
+    Generalmente usuarios que aparte de la interfaz ya creada necesitaran de una pequeña adaptación visual o sensorial para poder sacar el máximo provecho a la aplicación.
+    \item \textbf{Persona Suplementaria} - \textit{Juan Martínez Diaz (Viajero que no usa comparadores de viajes)} $\rightarrow$ Representa al tipo de usuario que no suele usar comparadores de viajes de forma habitual. Buscan experiencias espontáneas y diversas en sus viajes. No es recurrente al uso de comparadores debido a que prefieren contactar con una agencia o familiares que les den todo el trabajo hecho. Pero cuando utilizan los comparadores, las interfaces creadas para satisfacer las necesidades de las personas primarias y secundarias son más que suficientes para satisfacer las suyas.
+\end{itemize}
