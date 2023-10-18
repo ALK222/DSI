@@ -38,6 +38,7 @@
     linktoc=all
 }
 \usepackage{nameref}
+\usepackage[superscript]{cite}
 \usepackage[xindy, nomain, acronym, acronyms, nonumberlist, nopostdot, toc, section=chapter,nogroupskip]{glossaries}
 \usepackage{glossary-mcols}
 \usepackage[automake]{glossaries-extra}
