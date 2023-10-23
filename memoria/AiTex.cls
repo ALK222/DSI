@@ -94,6 +94,7 @@
     modifier={by-nc-sa},
     version={4.0},
 ]{doclicense}
+\usepackage{tcolorbox}
 
 %----------------------------------------------------------
 % New commands
@@ -264,3 +265,22 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
 % COLORED BOX
 \newcommand{\greybox}[1]{\fcolorbox{black}{lightgray!70!white}{#1}}
 \newcommand{\formbox}[1]{\greybox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{#1}}}
+
+
+\newtcolorbox{problema}[1][]{
+  colback=lightgray!20,
+  colframe=lightgray!20,
+  fonttitle=\bfseries,
+  title={\centering\textbf{\color{black}\uline{Problema}}},
+  arc=6pt
+}
+
+\newtcolorbox{vision}[1][]{
+  colback=white,
+  colframe=white,
+  fonttitle=\bfseries,
+  title={\centering\textbf{\color{black}Visión}},
+  arc=6pt,
+  width=0.85\textwidth,
+  halign=center
+}
