@@ -1,0 +1,177 @@
+\chapterA{Hito 4 - Prototipado en Papel}
+
+La siguiente fase del Diseño Guiado por Objetivos (DGO) que vamos a abordar es el prototipado. Esta etapa se va a dividir en dos etapas claramente diferenciadas:
+el prototipado en papel (este hito) y el prototipado digital (siguiente hito). Para realizar este prototipado en papel se ha definido un proceso dividido en seis
+etapas (con posibilidad de realizar una segunda iteración). \\
+
+En estas etapas se va a definir tanto la estructura de alto nivel y la organización de las pantallas como el flujo, comportamiento y organización del sistema. Estas
+etapas son las siguientes y se han realizado de acuerdo al orden que aparecen descritas a continuación:
+\begin{enumerate}
+    \item \textbf{Definir el factor de forma, la postura y los métodos de entrada}
+    \item \textbf{Definir los elementos de datos y funcionales}
+    \item \textbf{Determinar los grupos funcionales y las jerarquías}
+    \item \textbf{Construir los escenarios key path}
+    \item \textbf{Hacer un prototipo del framework de interacción}
+    \item \textbf{Validar los diseños con los escenarios de validación}
+\end{enumerate}
+% TODO argumentar el orden de las etapas 3, 4 y 5.
+% TODO introducir los dos siguientes apartados (resultados Hito 3)
+
+\section{Escenarios de contexto}
+Un escenario es una situación narrativa, una historia concreta y realista que involucra a una persona y narra de manera detallada cómo persigue un objetivo y
+finalmente logra satisfacer dicho objetivo, describiendo el proceso que ha seguido para ello. Cada uno de estos escenarios va a describir cómo se va a comportar
+el usuario (en este caso la persona) en el contexto de la aplicación, definiendo en todo momento qué es lo que tiene que realizar para poder afrontar un problema
+concreto.
+\subsection{Escenarios de contexto de Marta}
+\begin{itemize}
+    \item \textbf{Concierto en la ciudad equivocada} $\rightarrow$ Hace unos días Francesca anunció una gira por Italia. Marta y su
+    hermano no se pueden perder esto, por lo que saca la aplicación y selecciona como destino todas las ciudades de
+    la gira junto a las fechas. Los dos se ponen a mirar a la vez, cada uno en su portátil, y ven que el vuelo más
+    barato es a Milán. !`Sólo 15\euro\space cada uno! Pero desgraciadamente, el día que sale ese vuelo, Francesca canta en Turín.
+    Cuando estaban a punto de descartarlo, Marta se acordó de cuando estuvo de Erasmus que Turín está a apenas 2 horas
+    en tren de Milán. Como toda la información de la app es fácilmente visible, pudo ver a qué hora llegaba y en qué
+    aeropuerto, para así buscar en la misma app un tren que fuese a Turín, fijándose tanto de la distancia a la que estaba el la estación como de los horarios, para poder llegar sin problemas pero que también le diese tiempo a llegar al concierto. Justo cuando ya las habían encontrado e iban a pagar para terminar con la compra de los billetes después de una larga planificación para poder cumplir con lo que se habían propuesto, se les va el Internet. Cuando vuelve el Internet tienen aún todo guardado y finalmente, han podido comprar los billetes aliviados.
+    
+    \item \textbf{Cambio de planes por motivo económico} $\rightarrow$ Es época de exámenes y Marta está muy agobiada.
+    No está muy segura de si ha aprobado las asignaturas que lleva o de cómo le van a salir las que le faltan. Su amiga
+    Pili, viendo el agobio de Marta, le ha dicho de irse a Ibiza de fiesta el finde posterior a los exámenes, de esta
+    manera tiene mayor aliciente para continuar con las semanas que le quedan. A Marta le encantó la idea, así que
+    enseguida sacó la app y buscó vuelos ese finde a Ibiza. Desgraciadamente, estaba un poco justa de dinero porque no
+    está trabajando por el momento, y los precios que tenía el vuelo eran demasiado caros para su bolsillo. Afortunadamente,
+    pudo ver en la aplicación que el mismo día salía un vuelo a Palma de Mallorca, y les costaba la ida y vuelta 50€
+    menos. A Pili le pareció bien cambiar el plan de fiesta a un plan de playa, así que compraron los billetes, deseosas
+    de que acaben.
+\end{itemize}
+\subsection{Escenarios de contexto de Isabel}
+\begin{itemize}
+    \item \textbf{Viaje inesperado} $\rightarrow$ Es lunes e Isabel va a tomar un café con sus compañeros de trabajo, como de costumbre. Mientras espera a 
+    que le traigan el desayuno, su móvil empieza a sonar y al mirar quién la está llamando, ve que es su jefe. Éste le dice que el miércoles hay una conferencia 
+    para la inclusión de niños con discapacidad y que la mujer que iba a dar la ponencia ha tenido un imprevisto y no podrá darla, por lo que le ofrece a Isabel 
+    sustituirla.\\
+    Aunque es muy precipitado, Isabel acepta y empieza a buscar transporte. Abre la aplicación y selecciona en el apartado filtros, persona con discapacidad 
+    física, y ve el abanico de posibilidades de vuelos accesibles para ella. Al ser un viaje que no tenía previsto, su objetivo es ahorrar el máximo dinero 
+    posible, por lo escoge el más barato. Contenta con su compra, se va a casa a preparar la maleta.
+    \item \textbf{Problemas de gestión} $\rightarrow$ Carmen e Isabel llevan varios meses intentando ir a la exposición de arte de un artista emergente que les 
+    gusta mucho. En Barcelona las entradas se agotaron a los pocos minutos de salir, por lo que no consiguieron. Ahora ha vuelto con otra exposición, pero esta 
+    vez en Madrid. \\
+    Como Carmen e Isabel no se la quieren perder, han decidido que viajarán a Madrid un par de días. La exposición estará un mes entero, pero no saben qué días irán.
+    Isabel abre la aplicación y busca los trenes de Renfe en el mes completo que más se ajustan a sus horarios. Eligen esta compañía ya que Carmen tiene 
+    descuentos. Cuando ya ha comprado los billetes, espera un período de tiempo para recibirlos en su correo, pero no llegan. Desde la aplicación se pone en contacto 
+    con el servicio al cliente, que le dice que están teniendo problemas con la gestión de los billetes y que se lo resuelven de forma manual en pocos minutos. Y así 
+    fue, instantes después, Isabel ya tenía sus billetes.
+\end{itemize}
+
+\section{Requisitos}
+Tras hacer un estudio de problemas, expectativas y escenarios de contexto, la última etapa de esta fase de requisitos. En esta fase se van a exponer claramente las 
+necesidades de la persona para satisfacer sus objetivos. Dicho de otro modo, se trata de definir qué es lo que va a hacer nuestra aplicación (pero sin entrar en
+detalle en cómo lo va a hacer). Los requisitos que hemos identificado son los siguientes:
+\begin{itemize}
+    \item Buscar (\textit{\underline{acción}}) transportes disponibles (\textit{\underline{objeto}}) a las ciudades designadas (\textit{\underline{contexto}}).
+    \item Filtrar (\textit{\underline{acción}}) tipo de transporte (\textit{\underline{objeto}}) según preferencia/necesidad (\textit{\underline{contexto}}).
+    \item Seleccionar (\textit{\underline{acción}}) fechas concretas o un intervalo de tiempo (\textit{\underline{objeto}}) para la búsqueda del transporte (\textit{\underline{contexto}}).
+    \item Comparar (\textit{\underline{acción}}) precios (\textit{\underline{objeto}}) de los diferentes transportes a la ciudad designada (\textit{\underline{contexto}}).
+    \item Ordenar (\textit{\underline{acción}}) los transportes (\textit{\underline{objeto}}) por precios y/o fechas según las necesidades, para agilizar la búsqueda (\textit{\underline{contexto}}).
+    \item Reservar (\textit{\underline{acción}}) billetes (\textit{\underline{objeto}}) de los transportes deseados (\textit{\underline{contexto}}).
+    \item Seleccionar (\textit{\underline{acción}}) tipo de transporte (\textit{\underline{objeto}}) según preferencias y/o precio (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) información sobre horarios de transporte (\textit{\underline{objeto}}) al realizar la búsqueda (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) información de los asientos disponibles (\textit{\underline{objeto}}) del vehículo seleccionado (\textit{\underline{contexto}}).
+    \item Seleccionar (\textit{\underline{acción}}) asientos (\textit{\underline{objeto}}) una vez elegido el transporte (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) diferentes rutas (\textit{\underline{objeto}}) cuando seleccionas una serie de destinos (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) servicios disponibles en el transporte (\textit{\underline{objeto}}) cuando seleccionas un transporte en concreto (\textit{\underline{contexto}}).
+    \item Indicar (\textit{\underline{acción}}) la zona de recogida, origen y destino (\textit{\underline{objeto}}) del vehículo a lo largo del trayecto (\textit{\underline{contexto}}).
+    \item Buscar (\textit{\underline{acción}}) transportes disponibles (\textit{\underline{objeto}}) para un viaje inmediato o de última hora (\textit{\underline{contexto}}).
+    \item Filtrar (\textit{\underline{acción}}) opciones de transporte (\textit{\underline{objeto}}) específicas para personas con discapacidad física (\textit{\underline{contexto}}).
+    \item Mostrar (\textit{\underline{acción}}) información detallada (\textit{\underline{objeto}}) sobre la accesibilidad de los transportes disponibles (\textit{\underline{contexto}}).
+    \item Permitir (\textit{\underline{acción}}) la compra de billetes de transporte (\textit{\underline{objeto}}) de manera rápida y sencilla para viajes inesperados (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) descuentos y promociones de transporte (\textit{\underline{objeto}}) para viajes en pareja o con compañeros(\textit{\underline{contexto}}).
+    \item Facilitar (\textit{\underline{acción}}) la compra de billetes (\textit{\underline{objeto}}) en línea y proporcionar una entrega eficiente de los mismos (\textit{\underline{contexto}}).
+    \item Ofrecer (\textit{\underline{acción}}) soporte al cliente (\textit{\underline{objeto}}) para resolver problemas de gestión de billetes de manera rápida y eficaz (\textit{\underline{contexto}}).
+\end{itemize}
+
+\section{Factor de forma, postura y métodos de entrada}
+% TODO Introducción del apartado
+\subsection{Factor de forma}
+Nuestra aplicación estará diseñada para móvil y ordenador. Si se utiliza desde el ordenador, la aplicación se utilizará en mayoritariamente en casa para 
+poder organizar el viaje  tranquilamente, aunque también puede utilizarse en un contexto de trabajo en el que el usuario esté en una oficina. Si se utiliza 
+la aplicación desde el móvil, normalmente el contexto cambia mucho, y el usuario hará un uso de la aplicación rápido y de consulta de información y puede 
+realizarse en cualquier parte y momento.
+
+\subsection{Postura}
+Por un lado tenemos varias \underline{posturas soberanas} centradas en toda la parte de buscar destino, comparación de precios, ofertas o destinos a los que acudir 
+según las preferencias indicadas por el usuario. Por otro lado tendríamos una \underline{postura temporal} relacionada con el chat de soporte o con diferentes dudas 
+que le puedan surgir al usuario que necesiten ser subsanadas, así como diferentes reseñas que los usuarios hayan escrito sobre los diferentes destinos. Por último 
+tendríamos una \underline{postura demonio} relacionada con las diferentes notificaciones que puedan surgir mediante el uso de la aplicación (como la calificación o 
+respuesta a una reseña hecha) y las preferencias indicadas por el usuario.
+
+\subsection{Métodos de entrada}
+En caso de que se utilice la aplicación vía ordenador, los métodos de entrada serán el teclado y ratón, mientras que si se accede a la aplicación por el móvil, 
+el método de entrada será la propia pantalla del teléfono.
+
+\section{Elementos de datos y funcionales}
+% TODO Introducción del apartado
+\subsection{Elementos de datos}
+\begin{itemize}
+    \item \textbf{Transportes} $\rightarrow$ Medio por el cuál se va a viajar.
+    \begin{itemize}
+        \item \textit{Atributos} $\rightarrow$ Horario, origen, destino, accesibilidad, tipo.
+        \item \textit{Relación} $\rightarrow$ Un transporte tiene asociados tantos billetes como plazas tenga, y un transporte puede ser asociado a una ruta.
+    \end{itemize}
+    \item \textbf{Billetes} $\rightarrow$ Es el elemento que se paga para tener acceso al transporte.
+    \begin{itemize}
+        \item \textit{Atributos} $\rightarrow$ Precio, asiento, descuentos.
+        \item \textit{Relación} $\rightarrow$ El billete va asociado a un transporte.
+    \end{itemize}
+    \item \textbf{Viajes} $\rightarrow$ Conjunto de transportes para llegar de un punto a otro.
+    \begin{itemize}
+        \item \textit{Atributos} $\rightarrow$ Origen, destino, transporte.
+        \item \textit{Relación} $\rightarrow$ Transportes con los que se pueden hacer las rutas.
+    \end{itemize}
+\end{itemize} 
+
+\subsection{Elementos funcionales}
+\begin{itemize}
+    \item \textbf{Buscar (acción) transportes disponibles (objeto) a las ciudades designadas (contexto)} $\rightarrow$ Desde el menú principal podemos 
+    seleccionar origen, destino y fechas en las que se quiera realizar el viaje.
+    \item \textbf{Ofrecer (acción) descuentos y promociones de transporte (objeto) para viajes en pareja o con compañeros(contexto)} $\rightarrow$ Desde el menú 
+    principal podemos seleccionar cuántas personas van a realizar el viaje y ver descuentos en determinados billetes.
+    \item \textbf{Filtrar (acción) tipo de transporte (objeto) según preferencia/necesidad (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes 
+    se pueden visualizar distintos viajes en distintos medios de transporte y filtrarlas por tipo de transporte y precio y ordenarlas de mayor a menor.
+    \item \textbf{Filtrar (acción) opciones de transporte (objeto) específicas para personas con discapacidad física (contexto)} $\rightarrow$ Desde la pantalla 
+    de comparador de viajes se pueden filtrar todas las opciones de transporte adecuadas para personas con discapacidad física.
+    \item \textbf{Reservar (acción) billetes (objeto) de los transportes deseados (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes se pueden 
+    seleccionar los billetes deseados y reservarlos.
+    \item \textbf{Mostrar (acción) información detallada sobre la accesibilidad de los transportes disponibles (objeto)} $\rightarrow$ Dentro de la información 
+    de cada transporte, se puede visualizar el nivel de accesibilidad del medio de transporte y seleccionar la ayuda si el usuario lo desea.
+    \item \textbf{Seleccionar (acción) asientos(objeto) una vez elegido el transporte (contexto)} $\rightarrow$ Desde la pantalla de reserva de billetes se 
+    pueden seleccionar los asientos deseados.
+    \item \textbf{Indicar (acción) la zona de recogida, origen y destino (objeto) del vehículo a lo largo del trayecto (contexto)} $\rightarrow$ Desde la pantalla 
+    de reserva de transporte se puede visualizar los detalles de la reserva del transporte, como la recogida origen y el destino de devolución.
+    \item \textbf{Ofrecer (acción) soporte al cliente para resolver problemas de gestión de billetes de manera rápida y eficaz} $\rightarrow$ Desde cualquier pantalla 
+    se puede acceder a la pantalla de soporte al cliente.
+    \item \textbf{Seleccionar (acción) fechas concretas o un intervalo de tiempo(objeto) para la búsqueda del transporte (contexto)} $\rightarrow$ Desde el menú 
+    principal podemos seleccionar las fechas en las que se quiera realizar el viaje con un abanico de días par ofrecer flexibilidad.
+    \item \textbf{Comparar (acción) precios (objeto) de los diferentes transportes a la ciudad designada (contexto)} $\rightarrow$ Desde la pantalla de comparador 
+    de viajes se puede visualizar todas las opciones de transporte a la ciudad destino.
+    \item \textbf{Ordenar (acción) los transportes por precios y/o fechas (objeto) según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Desde 
+    la pantalla de comparador de viajes se pueden ordenar los transportes por fechas y precios.
+    \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según preferencias y/o precio (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar 
+    el vehículo concreto en el que queremos realizar el viaje.
+    \item \textbf{Ofrecer (acción) información de los asientos disponibles (objeto) del vehículo seleccionado (contexto)} $\rightarrow$ Dentro de la página de 
+    reserva de transporte se puede ver cuántos asientos quedan disponibles y cuáles.
+    \item \textbf{Ofrecer (acción) servicios disponibles en el transporte (objeto) cuando seleccionas un transporte en concreto (contexto)} $\rightarrow$ Dentro de 
+    la página de reserva de transporte se puede ver los servicios adicionales del transporte y reservarlos.
+\end{itemize}
+
+\section{Grupos funcionales y jerarquías}
+% TODO Introducción del apartado
+
+\section{Escenarios key path}
+% TODO Introducción del apartado
+
+\section{Prototipado}
+% TODO Introducción del apartado
+
+\section{Escenarios de validación}
+% TODO Introducción del apartado
+
+\section{?`Segunda iteración?}
