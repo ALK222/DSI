@@ -180,11 +180,61 @@ el método de entrada será la propia pantalla del teléfono.
 \section{Grupos funcionales y jerarquías}
 % TODO Introducción del apartado
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[options]{./Imagenes/jerarquia.png}
+    \caption{Diagrama de jerarquías de funciones}
+    \label{fig:jerarquias}
+\end{figure}
+
+\begin{itemize}
+    \item La pantalla de inicio contiene los elementos de búsqueda, atención al cliente y mi perfil.
+    \item El elemento de búsqueda es el componente principal por lo que ocupa gran espacio en la interfaz. Al usarla podrás realizar la selección de origen destino y/o fechas, así como de los viajeros. Estas opciones sirven como filtro a la hora de realizar la comparación, que se muestra a continuación.
+    \item En el apartado de Comparador de viajes puedes ver todos los que cumplen los criterios anteriormente mencionados. Además puedes cambiar los filtros anteriores y/u ordenarlos según distintos criterios. Además podrás seleccionar si quieres que se muestren solo los viajes accesibles para personas con discapacidad física.
+    \item Una vez te interesas por un viaje, pasarás al apartado de Reserva de transporte. Aquí se mostrarán todos los datos de manera clara, como se marcó en los requisitos, además de poder elegir los asientos y realizar la propia reserva del billete.
+    \item En el apartado Mi perfil se puede cambiar los datos del usuario (nombre, correo, teléfono, etc) además de poder ver las reservas pasadas, pudiendo tanto cancelar el viaje como modificarlo (fecha u hora, siempre que lo permita la compañía).
+    \item Como se comentó en el apartado anterior, se podrá acceder al apartado de atención al cliente desde cualquier punto de la aplicación.
+    \item Un principio que podría ser útil para la aplicación es la programación orientada a objetos, debido a que tenemos distintas partes que podrían ser encapsuladas en éstos, como son los viajes.
+    \item En cuanto a los patrones, uno de lo que podría usarse sería el patrón Singleton ya que asegura que cada clase tenga una única instancia, controla el acceso a cada recurso y tiene un control estricto de las variables disponibles.
+    
+\end{itemize}
+\section{Prototipado}
+% TODO Introducción del apartado
+
+
 \section{Escenarios key path}
 % TODO Introducción del apartado
 
-\section{Prototipado}
-% TODO Introducción del apartado
+\subsection{Marta planea un viaje por Italia}
+
+Marta quiere ir a las distintas ciudades del norte de Italia de la gira de Francesca, por lo que abre en el ordenador la aplicación, inicia sesión y en la parte de búsqueda selecciona dos viajeros, ya que va a ir con su hermano. También selecciona como origen Madrid, como destino la primera ciudad de la gira y las fechas que habían planificado quedarse en esa ciudad para luego ir a la próxima ciudad según la ruta diseñada. En este primer caso, ha tenido que filtrar los resultados en avión, ya que tienen que viajar de un país a otro para la primera ciudad y lo más rápido posible. Los resultados aparecen ordenados como predeterminados por fechas, así que no cambia la opción de ordenar. Finalmente reservan los billetes.
+Para el resto de ciudades, hace el mismo procedimiento, a excepción de aquellas ciudades que por lo planificado tiene que contratar algunos medios de transportes o servicios específicos, como es el de camas para dormir apropiadamente. Para esto no ha puesto filtros de medios de transporte y antes de reservar el billete, reserva el servicio de camas (si tiene, sino busca otro transporte, pero lo mira en información antes) y ya reserva el billete.
+Antes de reservar el billete, en cualquier caso, Marta ha tenido que mirar bien la zona de recogida, origen y destino del transporte disponible seleccionado para que se cumpla bien la planificación o modificarla y seleccionar los asientos contiguos de manera que ella y su hermano se sienten juntos.
+Al final, cuando ya ha reservado todo ha entrado en la sección de su perfil de los viajes que ha realizado la compra de algún billete para comprobar que todo cuadra con su planificación y todo estaba correcto. Aunque luego ha tenido que volver a meterse en su perfil para cancelar un viaje ya que la cantante ha cancelado el concierto en esa ciudad y modificar la fecha del día que iba a ir al siguiente viaje para adelantarla, que ha sido fácil porque sólo ha tenido que cambiar la fecha del día de embarque que había aún dos billetes disponibles e incluso ha sido más barato.
+
+\subsection{Marta cambia el viaje por motivos económicos}
+
+Como dentro de poco son los exámenes y Marta está agobiada, su amiga Pili le ha sugerido ir a Ibiza el fin de semana posterior a los exámenes para relajarse. A Marta le ha parecido bien la idea así que coge su móvil y abre la aplicación con la sesión ya iniciada y en la sección de búsqueda selecciona dos viajes y como origen Madrid, destino Ibiza y de fecha el fin de semana acordado. Como anda justa de dinero a los resultados ha tenido que filtrarlos por precio menor de 50 euros y ordenarlos por precio creciente, pero no aparece ningún resultado. Como no podía subir más su presupuesto, se le ocurre quitar el destino para ver qué lugares le alcanza el dinero y ha visto que había un descuento para dos personas a Palma de Mallorca. Así que  después de que Pili cediera al cambio de planes, finalmente selecciona Palma de Mallorca, los asientos y reserva el viaje.
+
+\subsection{Isabel busca un viaje accesible}
+
+Mientras espera el desayuno, Isabel recibe una llamada de su jefe informando sobre la conferencia para la inclusión de niños con discapacidad y la necesidad de encontrar un sustituto para la potente original. Debido a la urgencia, Isabel acepta la propuesta y decide ponerse a buscar transporte para asistir a la conferencia. Para ello abre la aplicación en el móvil e inicia sesión en su cuenta. Debido a su condición física y a la premura de la situación, en la sección de filtros de la aplicación selecciona la opción “persona con discapacidad física” para buscar los transportes que se encuentren mejor adaptados. Además, en la sección tipo de transporte, selecciona “vuelos”.
+
+Una vez aplicado el filtro de búsqueda, explora las diferentes opciones de vuelos y se cerciora mirando la información detallada que son vuelos con facilidades, sobre todo, para personas que requieren silla de ruedas.
+Considerando que se trata de un viaje no planificado e inmediato, Isabel prioriza los vuelos más económicos que cumplan con los requisitos previos. Para ello se apoya en el apartado de  ordenador de viajes por “precio más bajo” para una mayor facilidad en su búsqueda.
+
+Una vez realizada la compra del billete, Isabel se siente satisfecha con la utilidad y simplicidad de la aplicación y se dirige a casa a preparar su maleta.
+
+\subsection{Isabel tiene problemas con la compra de su viaje}
+
+Carmen e Isabel tienen el deseo de asistir a la exposición de un artista emergente que les gusta mucho. Ahora que el artista regresa a Madrid con una nueva exposición, deciden viajar un par de días para no perderse la oportunidad.
+
+Isabel abre la aplicación, inicia sesión y comienza a buscar opciones de trenes de Renfe, que se adapten lo mejor posible a sus horarios y necesidades. Eligen Renfe debido a que Carmen tiene descuentos con esa compañía. A la hora de utilizar el buscador, establecen como destino, “Madrid”; número de viajantes, “2”; y filtro de medio de transporte, “trenes” de la empresa “Renfe”. 
+Por otro lado, la exposición durará un mes entero, por lo que no tienen fechas concretas sobre las que realizar el viaje. Para ello utilizan la opción de la aplicación de filtrado por un intervalo de tiempo específico, en este caso un mes. De la misma forma, utilizan el ordenador de viajes por “precio más bajo” para buscar los trenes más baratos, teniendo una búsqueda más rápida e intuitiva.
+
+Una vez seleccionados y comprados los billetes, Isabel espera durante un período de tiempo razonable a recibir los billetes a través de su correo electrónico vinculado a su cuenta. Ante la falta de recepción de los mismos, se pone en contacto con el servicio de atención al cliente facilitado por la aplicación. Tras explicar su situación, le informan que están teniendo problemas con la gestión de los billetes y le asegura que resolverán el problema de forma manual en pocos minutos. 
+Como prometido, un momento después, Isabel y Carmen recibieron sus billetes, confirmando así su compra exitosa.
+
 
 \section{Escenarios de validación}
 % TODO Introducción del apartado
