@@ -84,21 +84,20 @@ detalle en cómo lo va a hacer). Los requisitos que hemos identificado son los s
     \item Indicar (\textit{acción}) la zona de recogida, origen y destino (\textit{objeto}) del vehículo a lo largo del trayecto (\textit{contexto}).
     \item Filtrar (\textit{acción}) opciones de transporte (\textit{objeto}) específicas para personas con discapacidad física (\textit{contexto}).
     \item Mostrar (\textit{acción}) información detallada (\textit{objeto}) sobre la accesibilidad de los transportes disponibles (\textit{contexto}).
-    \item Facilitar (\textit{acción}) la compra de billetes (\textit{objeto}) en línea y proporcionar una entrega eficiente de los mismos (\textit{contexto}).
     \item Ofrecer (\textit{acción}) soporte al cliente (\textit{objeto}) para resolver problemas de gestión de billetes de manera rápida y eficaz (\textit{contexto}).
     \item Realizar (\textit{acción}) reservas (\textit{objeto}) para un número determinado de personas (\textit{contexto}).
     \item Filtrar (\textit{acción}) viajes (\textit{objeto}) en función del número de personas que vayan a participar en el viaje (\textit{contexto}).
     \item Reservar (\textit{acción}) conjuntos de asientos (\textit{objeto}) para que todos los viajeros en caso de que sea un grupo puedan sentarse juntos (\textit{contexto}).
     \item Notificar al usuario (\textit{acción}) que la reserva (\textit{objeto}) se ha realizado correctamente (\textit{contexto}).
+    \item Poder consultar (\textit{acción}) una reserva (\textit{objeto}) cuando el usuario lo desee (\textit{contexto})
     \item Poder cancelar (\textit{acción}) una reserva (\textit{objeto}) en caso de que el usuario lo considere pertinente (\textit{contexto}).
     \item Poder modificar (\textit{acción}) una reserva (\textit{objeto}) en caso de que el usuario lo considere pertinente (\textit{contexto}).
     \item Elegir (\textit{acción}) la ruta (\textit{objeto}) que más se ajuste a tus necesidades en caso de que haya varias opciones que se puedan seleccionar (\textit{contexto}).
     \item Consultar (\textit{acción}) las paradas (\textit{objeto}) de una ruta en caso de que las tenga (\textit{contexto}).
     \item Ofrecer (\textit{acción}) opciones de hacer escalas (\textit{objeto}) en caso de que se quiera hacer un vuelo con estas condiciones (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) tipo de transporte (\textit{objeto}) según el precio (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) tipo de transporte (\textit{objeto}) según los horarios (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) tipo de transporte (\textit{objeto}) según el origen y el destino (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) tipo de transporte (\textit{objeto}) según el número de viajeros (\textit{contexto}).
+    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el precio (\textit{contexto}).
+    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según los horarios (\textit{contexto}).
+    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el origen y el destino (\textit{contexto}).
     \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por precio según las necesidades, para agilizar la búsqueda (\textit{contexto}).
     \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por horarios según las necesidades, para agilizar la búsqueda (\textit{contexto}).
 \end{itemize}
@@ -145,24 +144,20 @@ el método de entrada será la propia pantalla del teléfono.
 
 \subsection{Elementos funcionales}
 \begin{itemize}
-    \item \textbf{Buscar (acción) transportes disponibles (objeto) a las ciudades designadas (contexto)} $\rightarrow$ Desde el menú principal podemos 
-    seleccionar origen, destino y fechas en las que se quiera realizar el viaje.
-    \item \textbf{Ofrecer (acción) descuentos y promociones de transporte (objeto) para viajes en pareja o con compañeros(contexto)} $\rightarrow$ Desde el menú 
-    principal podemos seleccionar cuántas personas van a realizar el viaje y ver descuentos en determinados billetes.
-    \item \textbf{Filtrar (acción) tipo de transporte (objeto) según preferencia/necesidad (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes 
-    se pueden visualizar distintos viajes en distintos medios de transporte y filtrarlas por tipo de transporte y precio y ordenarlas de mayor a menor.
+    \item \textbf{Buscar (acción) transportes disponibles (objeto) a las ciudades designadas (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar 
+    origen, destino y fechas en las que se quiera realizar el viaje.
     \item \textbf{Filtrar (acción) opciones de transporte (objeto) específicas para personas con discapacidad física (contexto)} $\rightarrow$ Desde la pantalla 
-    de comparador de viajes se pueden filtrar todas las opciones de transporte adecuadas para personas con discapacidad física.
+    de comparador de viajes se pueden filtrar todas las opciones de transporte adecuadas para personas con discapacidad física
     \item \textbf{Reservar (acción) billetes (objeto) de los transportes deseados (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes se pueden 
     seleccionar los billetes deseados y reservarlos.
-    \item \textbf{Mostrar (acción) información detallada sobre la accesibilidad de los transportes disponibles (objeto)} $\rightarrow$ Dentro de la información 
-    de cada transporte, se puede visualizar el nivel de accesibilidad del medio de transporte y seleccionar la ayuda si el usuario lo desea.
+    \item \textbf{Mostrar (acción) información detallada sobre la accesibilidad de los transportes disponibles (objeto)} $\rightarrow$ Dentro de la información de 
+    cada transporte, se puede visualizar el nivel de accesibilidad del medio de transporte y seleccionar la ayuda si el usuario lo desea.
     \item \textbf{Seleccionar (acción) asientos(objeto) una vez elegido el transporte (contexto)} $\rightarrow$ Desde la pantalla de reserva de billetes se 
     pueden seleccionar los asientos deseados.
     \item \textbf{Indicar (acción) la zona de recogida, origen y destino (objeto) del vehículo a lo largo del trayecto (contexto)} $\rightarrow$ Desde la pantalla 
     de reserva de transporte se puede visualizar los detalles de la reserva del transporte, como la recogida origen y el destino de devolución.
-    \item \textbf{Ofrecer (acción) soporte al cliente para resolver problemas de gestión de billetes de manera rápida y eficaz} $\rightarrow$ Desde cualquier pantalla 
-    se puede acceder a la pantalla de soporte al cliente.
+    \item \textbf{Ofrecer (acción) soporte al cliente (acción) para resolver problemas de gestión de billetes de manera rápida y eficaz (contexto)} $\rightarrow$ Desde 
+    cualquier pantalla se puede acceder a la pantalla de atención al cliente.
     \item \textbf{Seleccionar (acción) fechas concretas o un intervalo de tiempo(objeto) para la búsqueda del transporte (contexto)} $\rightarrow$ Desde el menú 
     principal podemos seleccionar las fechas en las que se quiera realizar el viaje con un abanico de días par ofrecer flexibilidad.
     \item \textbf{Comparar (acción) precios (objeto) de los diferentes transportes a la ciudad designada (contexto)} $\rightarrow$ Desde la pantalla de comparador 
@@ -171,10 +166,42 @@ el método de entrada será la propia pantalla del teléfono.
     la pantalla de comparador de viajes se pueden ordenar los transportes por fechas y precios.
     \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según preferencias y/o precio (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar 
     el vehículo concreto en el que queremos realizar el viaje.
-    \item \textbf{Ofrecer (acción) información de los asientos disponibles (objeto) del vehículo seleccionado (contexto)} $\rightarrow$ Dentro de la página de 
-    reserva de transporte se puede ver cuántos asientos quedan disponibles y cuáles.
-    \item \textbf{Ofrecer (acción) servicios disponibles en el transporte (objeto) cuando seleccionas un transporte en concreto (contexto)} $\rightarrow$ Dentro de 
-    la página de reserva de transporte se puede ver los servicios adicionales del transporte y reservarlos.
+    \item \textbf{Ofrecer (acción) información sobre horarios de transporte (objeto) al realizar la búsqueda (contexto)} $\rightarrow$ Dentro de la pagina de búsqueda 
+    de viajes, aparecen los horarios disponibles para cada opción de viaje.
+    \item \textbf{Ofrecer (acción) información de los asientos disponibles (objeto) del vehículo seleccionado (contexto)} $\rightarrow$ Dentro de la página de reserva 
+    de transporte se puede ver cuántos asientos quedan disponibles y cuáles.
+    \item \textbf{Ofrecer (acción) servicios disponibles en el transporte (objeto) cuando seleccionas un transporte en concreto (contexto)} $\rightarrow$ Dentro de la 
+    página de reserva de transporte se puede ver los servicios adicionales del transporte y reservarlos.
+    \item \textbf{Realizar (acción) reservas (objeto) para un número determinado de personas (contexto)} $\rightarrow$ Dentro de la página de reserva de transporte 
+    se pueden seleccionar cuantos billetes se quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
+    \item \textbf{Filtrar (acción) viajes (objeto) en función del número de personas que vayan a participar en el viaje (contexto)} $\rightarrow$ Dentro de la página 
+    de búsqueda de transporte, se pueden filtrar las opciones de viaje a base del número de personas que participen en el viaje.
+    \item \textbf{Reservar (acción) conjuntos de asientos (objeto) para que todos los viajeros en caso de que sea un grupo puedan sentarse juntos (contexto)} 
+    $\rightarrow$ Dentro de la página de reserva en el apartado de selección de asiento se pueden seleccionar los asientos deseados.
+    \item \textbf{Notificar al usuario (acción) que la reserva (objeto) se ha realizado correctamente (contexto)} $\rightarrow$ Después de completar la reserva, 
+    se abre una página de confirmación de reserva.
+    \item \textbf{Poder consultar (acción) una reserva (objeto) cuando el usuario lo desee (contexto)} $\rightarrow$ En la página de viajes reservados, se pueden
+    consultar todas las reservas realizadas.
+    \item \textbf{Poder cancelar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes 
+    reservados, se puede cancelar una reserva.
+    \item \textbf{Poder modificar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes 
+    reservados, se puede modificar una reserva.
+    \item \textbf{Elegir (acción) la ruta (objeto) que más se ajuste a tus necesidades en caso de que haya varias opciones que se puedan seleccionar (contexto)}
+    $\rightarrow$ Dentro de la página de comparador de viajes se puede seleccionar la ruta que se desea.
+    \item \textbf{Consultar (acción) las paradas (objeto) de una ruta en caso de que las tenga (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes 
+    se puede consultar en cada ruta mostrada las paradas que tiene la ruta.
+    \item \textbf{Ofrecer (acción) opciones de hacer escalas (objeto) en caso de que se quiera hacer un vuelo con estas condiciones (contexto)} $\rightarrow$ Dentro 
+    de la página de comparador de viajes se puede seleccionar la opción de coger vuelos con escalas.
+    \item \textbf{Filtrar(acción) tipo de transporte (objeto) según el precio (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes se puede filtrar 
+    por precio y tipo de transporte.
+    \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según los horarios (contexto)} Dentro de la pagina de busqueda de transporte, se puede seleccionar 
+    una opción de transporte en un horario específico.
+    \item \textbf{Ordenar (acción) los transportes (objeto) por precio según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página 
+    de búsqueda, se pueden ordenar las opciones por precio (mayor a menor / menor a mayor).
+    \item \textbf{Ordenar (acción) los transportes (objeto) por horarios según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página 
+    de búsqueda, se pueden ordenar las opciones por horarios.
+    \item \textbf{Ordenar (acción) los transportes (objeto) por duración de trayecto, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página de 
+    búsqueda, se pueden ordenar las opciones por duración de trayecto (menor a mayor).
 \end{itemize}
 
 \section{Grupos funcionales y jerarquías}
@@ -182,7 +209,7 @@ el método de entrada será la propia pantalla del teléfono.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[options]{./Imagenes/jerarquia.png}
+    \includegraphics[width=0.8\linewidth]{./Imagenes/jerarquia.png}
     \caption{Diagrama de jerarquías de funciones}
     \label{fig:jerarquias}
 \end{figure}
@@ -198,9 +225,6 @@ el método de entrada será la propia pantalla del teléfono.
     \item En cuanto a los patrones, uno de lo que podría usarse sería el patrón Singleton ya que asegura que cada clase tenga una única instancia, controla el acceso a cada recurso y tiene un control estricto de las variables disponibles.
     
 \end{itemize}
-\section{Prototipado}
-% TODO Introducción del apartado
-
 
 \section{Escenarios key path}
 % TODO Introducción del apartado
@@ -235,6 +259,8 @@ Por otro lado, la exposición durará un mes entero, por lo que no tienen fechas
 Una vez seleccionados y comprados los billetes, Isabel espera durante un período de tiempo razonable a recibir los billetes a través de su correo electrónico vinculado a su cuenta. Ante la falta de recepción de los mismos, se pone en contacto con el servicio de atención al cliente facilitado por la aplicación. Tras explicar su situación, le informan que están teniendo problemas con la gestión de los billetes y le asegura que resolverán el problema de forma manual en pocos minutos. 
 Como prometido, un momento después, Isabel y Carmen recibieron sus billetes, confirmando así su compra exitosa.
 
+\section{Prototipado}
+% TODO Introducción del apartado
 
 \section{Escenarios de validación}
 % TODO Introducción del apartado
