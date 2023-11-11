@@ -306,10 +306,10 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ Igual
-    \item\textbf{Comparador:} \\ Opciones con ida y vuelta en la misma tarjeta.
-    \item\textbf{Página de compra:} \\ 
-    \item\textbf{Perfil de usuario:} \\ 
+    \item\textbf{Página de inicio:} \\ Diseño de la pantalla de inicio con aspectos parecidos a los demás. El diseño es simple, sin muchos elementos. Contiene los elementos necesarios para realizar un búsqueda como el destino, la salida, las fechas. También tiene otras opciones de búsqueda, número de pasajeros, si el viaje es solo ida y vuelos directos.
+    \item\textbf{Comparador:} \\ Viajes disponibles se agrupan en ida y vuelta, para facilitar la búsqueda, filtros de búsqueda a la izquierda de las opciones disponibles y posibilidad de ordenar mediante diferentes factores las opciones disponibles (precio, duración de viaje, horario de salida).
+    \item\textbf{Página de ``Mis reservas'':} \\ Una lista de los viajes reservados por el usuario. Por cada reserva, aparecen detalles, y también una opción para modificar datos de la reserva, y otro para cancelar la reserva
+    
 \end{itemize}
 
 \subsection[Boceto de Guille]{Boceto de Guille\footnote{Carpeta con el boceto de Guille: \url{https://drive.google.com/drive/folders/1Gl75aNhKJPCpgOizfZxlmVY386eNbcU_?usp=drive_link}}}
@@ -381,7 +381,6 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
     Abajo a la derecha, tenemos el botón del chat. Si pinchas, se abre una ventana en la misma página para poder ponerse en contacto con atención al cliente (este botón lo tendremos en todas las ventanas).
     
     \item\textbf{Comparador:} \\ 
-
     En este caso, Leire dejó la barra de búsqueda de la pantalla principal por si se realizan cambios, para que sea más fácil para los usuarios modificar la información.
     Debajo de la barra de búsqueda, encontramos diferentes tarjetas con la información de los diferentes medios de transportes para el viaje elegido (fecha, hora, precio y si tiene escalas o es directo). Podemos filtrar la información mostrada con los diferentes filtros que tenemos en la parte izquierda de la pantalla (podemos filtrar por medio de transporte, ruta, precio, compañia, horas de salida y llegada…). También podemos elegir el orden en el que nos muestran las tarjetas (precio, duración…).
     
@@ -408,8 +407,6 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
     En las opciones si destaca por algo (más rápida, más barata..).
     Encima de la lista de opciones.
     
-    \item\textbf{Página de compra:} \\ 
-    \item\textbf{Perfil de usuario:} \\ 
 \end{itemize}
 
 
@@ -534,6 +531,79 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 
 
 \section{Escenarios de validación}
-% TODO Introducción del apartado
+Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos escenarios posibles para ver como se podrían solucionar o si es posible que afecten a nuestra aplicación:
+
+\begin{escenario} % 1
+    \centering
+?`Qué pasaría si el usuario quiere buscar un viaje que sea directo? 
+\begin{solucion} \centering
+    \textbf{No contemplado}. De momento, el usuario no puede filtrar los transportes en función del número de paradas que tengan, tenemos que añadir filtro para buscar viajes directos.
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 2
+    \centering
+?`Qué pasaría si el usuario se equivoca introduciendo sus datos personales de perfil? 
+
+\begin{solucion} \centering
+    \textbf{Existe}. Puede modificar sus datos desde la pestaña de usuario dándole al botón de modificar.
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 3
+    \centering
+?`Que pasaría si un usuario está en la página del comparador y entra en la pantalla de perfil y quiere volver?
+
+\begin{solucion} \centering
+    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 4
+    \centering
+?`Que pasaría si un usuario está en la página de reservas y quiere volver a su perfil? 
+
+\begin{solucion} \centering
+    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 5
+    \centering
+?`Que pasaría si un usuario está en la página de una reserva concreta y quiere volver a la pantalla de todas sus reservas?
+
+\begin{solucion} \centering
+    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 6
+    \centering
+?`Qué pasaría si el usuario quiere modificar sus datos porque ha visto un error en su billete? 
+
+\begin{solucion} \centering
+    \textbf{No contemplado}.  No está diseñada la ventana pero el usuario podría desde su perfil modificar los datos de reserva y guardar sus cambios.
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 7
+    \centering
+?`Qué pasaría si el usuario se da cuenta de que el precio final que aparece no se corresponde con el del billete por la aplicación de impuestos?
+
+\begin{solucion} \centering
+    \textbf{No contemplado}. El precio que figure en los billetes debería aparecer con el IVA aplicado.
+
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 8
+    \centering
+?`Qué pasaría si el usuario quiere consultar una duda concreta?
+
+\begin{solucion}
+    \centering
+    \textbf{Parcialmente contemplado}. Existe un botón de preguntas frecuentes pero no está implementado.
+\end{solucion}
+\end{escenario}
 
 \section{?`Segunda iteración?}

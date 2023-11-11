@@ -268,18 +268,18 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
 \newcommand{\formbox}[1]{\greybox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{#1}}}
 
 
-\newtcolorbox{problema}{
+\newtcolorbox{escenario}{
   colback=lightgray!20,
   colframe=lightgray!20,
-  title={\centering\textbf{\color{black}\underline{\textbf{Problema}}}},
+  title={\centering\textbf{\color{black}\underline{\textbf{Escenario}}}},
   arc=6pt
 }
 
-\newtcolorbox{vision}{
+\newtcolorbox{solucion}{
   colback=white,
   colframe=white,
   fonttitle=\bfseries,
-  title={\centering\textbf{\color{black}\textbf{Visión}}},
+  title={\centering\textbf{\color{black}\textbf{Solución}}},
   arc=6pt,
   width=0.85\textwidth,
   halign=center
