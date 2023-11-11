@@ -442,89 +442,112 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 
 \subsection{Conclusiones finales y prototipo final}
 
+Tras evaluar los distintos bocetos hechos por el grupo cogemos las partes que más nos gustan de cada diseño y lo integramos todo en un prototipo final. Ahora se explica este prototipo en detalle.
+
+
+En el inicio de sesión \ref{fig:prot_ses} tendremos la opción de iniciar por nombre de usuario y contraseña, iniciar sesión con Facebook o de iniciar sesión con Google. Algunos elementos comunes a toda la página serán un \textit{header} con el logo y las opciones de cambiar de moneda, de idioma o ir al perfil, un \textit{footer} con el nombre de la compañía, un enlace al aviso legar y un enlace a la política de privacidad y botones flotantes con un chat de asistencia y un \textit{F.A.Q}.
+
+En caso de que sea un usuario que aún no se haya registrado, en la página de registro (figura \ref{fig:prot_reg}) tendrá que introducir su nombre, apellidos, fecha de nacimiento, email, nombre de usuario y contraseña.
+
+En la pantalla de inicio (figura \ref{fig:prot_inicio}) nos enfocamos en la búsqueda, poniendo en la barra principal las opciones de origen y destino, fecha de ida y vuelta y el número de asientos (con opción de poner el tipo de viajero), en esta pantalla también mostraremos ofertas de viajes. 
+
+Una vez el usuario haya realizado una búsqueda llegará a la página del comparador (figura \ref{fig:prot_comp}). En esta ventana mantendremos la barra de búsqueda de la ventana anterior, añadiendo debajo botones por cada tipo de transporte disponible (para solo mostrar del tipo seleccionado o de todos los tipos si no se selecciona ninguno) y un desplegable de ordenación. A la izquierda tendremos una pestaña de filtrado con distintas opciones. Debajo de la barra de búsqueda tendremos una serie de círculos numerados que harán de indicador para que el usuario sepa cuantos pasos le faltan para poder terminar con su reserva. Debajo de este indicador tendremos tarjetas para los distintos viajes, indicando el tipo de transporte, la compañía, el tiempo de duración, la hora de salida y de llegada con sus respectivos destinos y el precio, junto a un icono de información. En el caso de que tengamos ida y vuelta, se mostrarán dos columnas. Tras seleccionar las tarjetas correspondientes le daremos al botón de siguiente para continuar con el procedimiento.
+
+El siguiente paso será rellenar los datos de la reserva (figura \ref{fig:prot_reser}), donde podremos poner los datos de los distintos pasajeros, seleccionar servicios adicionales y seleccionar los asientos. Tras rellenar toda la información pulsaremos el botón de siguiente y continuaremos al último paso.
+
+El último paso es el pago (figura \ref{fig:prot_pago}). En esta ventana se nos mostrará un resumen de la reserva, un mapa con el trayecto de ida (y otro con el de vuelta si se ha seleccionado vuelta) y las opciones de pago por tarjeta y Paypal, así como un resumen del coste con impuestos. Tras hacer el pago correctamente saldrá una ventana emergente (figura \ref{fig:prot_pago_popup}) con el número de reserva para indicar que todo ha ido bien.
+
+Para ver las reservas de un usuario iremos al perfil (figura \ref{fig:prot_perfil}). En el perfil podremos modificar datos, ver las reservas y ver los datos del usuario. Dándole al botón de mis reservas nos llevará a la página con el mismo nombre (figura \ref{fig:prot_reservas_usuario}), donde veremos las reservas pendientes de ocurrir y otras ya pasadas. Para las reservas pendientes podremos modificarlas (dando al botón del lápiz contiguo) o cancelarlas (dando al botón de cruz contiguo).
+
+Si pulsamos al botón en cruz, nos saldrá un mensaje (figura \ref{fig:prot_reservas_usuario_popup}) para confirmar la anulación y pidiendo un motivo para la misma.
+
+Si pulsamos una tarjeta de una reserva, podremos ver los datos detallados de la misma (figura \ref{fig:prot_reservas_mod}) donde podremos descargar los billetes
+
+
+Finalmente, si deseamos modificar nuestros datos de usuario desde nuestro perfil se nos llevaría a la página de modificación (figura \ref{fig:prot_usuario_mod}), donde podremos cambiar la foto de perfil, nombre, apellidos, fecha de nacimiento, documento de identificación y teléfono.
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_ses}
     \caption{Prototipo de página de inicio de sesión}
+    \label{fig:prot_ses}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_reg}
     \caption{Prototipo de registro de nuevo usuario}
+    \label{fig:prot_reg}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_inicio}
     \caption{Prototipo de página de inicio}
+    \label{fig:prot_inicio}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_comp}
     \caption{Prototipo de página de comparador}
+    \label{fig:prot_comp}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_reser}
     \caption{Prototipo de página de Reserva}
+    \label{fig:prot_reser}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_pago}
     \caption{Prototipo de página de pago}
+    \label{fig:prot_pago}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_pago_popup}
     \caption{Prototipo de página de pago con ventana emergente de haber pagado}
+    \label{fig:prot_pago_popup}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_perfil}
     \caption{Prototipo de página de perfil de usuario}
+    \label{fig:prot_perfil}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_reservas_usuario}
     \caption{Prototipo de página de reservas de un usuario}
+    \label{fig:prot_reservas_usuario}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_reservas_usuario_popup}
     \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
+    \label{fig:prot_reservas_usuario_popup}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \caption{Prototipo de página de consulta de una reserva}
     \label{fig:prot_reservas_mod}
-    \caption{Prototipo de página de modificación de una reserva}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \label{fig:prot_usuario_mod}
     \caption{Prototipo de página de modificación de datos de un usuario}
+    \label{fig:prot_usuario_mod}
 \end{figure}
 
 
