@@ -315,15 +315,35 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 \subsection[Boceto de Guille]{Boceto de Guille\footnote{Carpeta con el boceto de Guille: \url{https://drive.google.com/drive/folders/1Gl75aNhKJPCpgOizfZxlmVY386eNbcU_?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ Parte superior con el nombre de la aplicación, logo. Menú con inicio y contáctanos. Perfil
-    Parte de búsqueda: Origen, destino. Seleccionar el número de viajeros y necesidad de asistencia.
-    Quienes somos
-    Viajes más populares.
-    Footer con política de privacidad, etc.
+    \item\textbf{Página de inicio:} \\ El diseño se orienta a la interfaz típica de una página web, con su header, conteniendo el logo de la aplicación y las principales ventanas de acceso, el cuerpo de la página con la información que se quiere mostrar y un footer en el que se detalla la política de privacidad.
     
-    \item\textbf{Comparador:} \\ Pasos a seguir para finalizar el proceso.
-    \item\textbf{Página de compra:} \\ 
-    \item\textbf{Perfil de usuario:} \\ 
+    La página de inicio diseñada por Guillermo se divide en tres secciones. La primera de ellas es la búsqueda de viajes, en la que se puede elegir el origen. el destino, las fechas en las que se va a realizar, indicar el número de asientos que se quieren ocupary si se desea que el viaje sea accesible.
+    Otra de las secciones que aparece es una breve descripción de la aplicación, indicando sus miembros y sus principales funciones.
+    Por último, aparecen detallados los viajes que tienen los mejores precios.
+
+    \item\textbf{Comparador:} \\ Guillermo optó por separar las vistas de los vuelos de ida y vuelta, haciendo que primero se seleccionan los de ida y en caso de que haya seleccionado ida y vuelta, los de vuelta. 
+    
+    Otra de las características del proceso de reserva es que se ha optado por una barra de progreso, en la que se detallan las distintas etapas del proceso de reserva. La primera de ellas es la elección del transporte, la segunda las características adicionales de la reserva y la tercera la selección del método de pago.
+
+    La presentación de la información se realiza en forma de tarjetas, de modo que cada una de ellas va a referenciar a un viaje. La estructura de la tarjeta es muy sencilla. En primer lugar, aparece el icono del transporte a la izquierda (autobús, tren o avión), la hora de salida y de llegada, la compañía que lo opera y el precio (sin iva) del billete.
+
+    Por otro lado, en la sección izquierda de la pantalla aparecen las distintas opciones por las que se pueden filtrar los viajes: tipo de transporte, intervalo horario, precio y viajes accesibles, así como la posibilidad de poder ordenarlos.
+    \item\textbf{Página de compra:} \\ Tercera fase del proceso en la que se puede seleccionar el método del pago con el que se va a efectuar la compra. Puede hacerse tanto por tarjeta de crédito como por Paypal.
+    En el caso de la tarjeta de crédito se solicita información tanto del titular de la tarjeta, como del número, el CVV y la fecha de caducidad.
+    En el caso de Paypal se pide iniciar sesión con la cuenta de Paypal para poder realizar el pago.
+
+    Tras introducir los datos necesarios, si el procesamiento del pago se ha realizado correctamente, aparece un mensaje en pantalla que indica al usuario que la reserva se ha realizado correctamente y que puede ser consultada en su perfil, en el apartado “Mis reservas”.
+
+    \item\textbf{Página de ``Mis reservas'':} \\ Todas las ventanas del perfil van a tener una sidebar a la izquierda con un pequeño menú de navegación en el que se puede acceder a modificar los datos del perfil y a mis reservas.
+
+    En el caso de la pestaña de mis reservas se ha optado por un diseño similar al de la comparación de viajes: mostrar la información en forma de tarjetas, detallando el medio de transporte en el que se va a realizar el viaje, la hora de salida de la ida y de la vuelta y los destinos entre los que se va a realizar el viaje.
+
+    A la derecha de cada tarjeta se da la opción tanto de modificarla como de poder eliminarla.
+
+    Si se hace click sobre la tarjeta de una reserva, aparece una nueva pantalla en la que se puede ver la información detallada de un viaje: los trayectos de ida y de vuelta, las fechas y la posibilidad de descargar los billetes.
+
+    \item\textbf{Perfil de usuario:} \\ La pantalla del perfil se divide en dos secciones: una sidebar desde la que poder acceder a las funciones del perfil (mis reservas y modificar los datos) y una ventana principal en la que aparece la foto del usuario, junto a su nombre completo y apellidos. Debajo de esta información aparece información complementaria, como la dirección y el teléfono de la persona en caso de que haya que contactar.
+    \item\textbf{Cancelar viaje:} \\ Dentro de la pestaña de Mis Reservas, al lado de cada una de las tarjetas aparece un botón que permite eliminar una reserva en caso de que el usuario lo desee.
 \end{itemize}
 
 \subsection[Boceto de Javier y Pablo]{Boceto de Javier y Pablo\footnote{Carpeta con el boceto de Javier y Pablo: \url{https://drive.google.com/drive/folders/1tK_ibzM1pp2TJYlYrToq9VKKUczw79f4?usp=drive_link}}}
@@ -397,8 +417,11 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 
 \begin{itemize}
     \item\textbf{Página de inicio:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas. 
-    En la parte izquierda de header el logo de nuestra empresa y enlaces a las categorías de trenes, autobuses, vuelos.
-    Sobre una imagen que cubre toda la pantalla excepto el header, un rectángulo con los campos para hacer la búsqueda. De izquierda a derecha: origen, destino, fecha de la ida, botón para añadir la vuelta si es sólo ida o en su defecto fecha de la vuelta, número de personas y botón de buscar. 
+    En la parte izquierda del header el logo de nuestra empresa.
+    Debajo de eso, aun en el header, mismos campos que la pantalla de inicio con la información de la búsqueda realizada.
+    Pestañas para seleccionar el medio de transporte.
+    En las opciones si destaca por algo (más rápida, más barata..).
+    Encima de la lista de opciones, en botones, los tres métodos de de ordenación más utilizados y todos los filtros disponibles
     
     \item\textbf{Comparador:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas. 
     En la parte izquierda del header el logo de nuestra empresa.
@@ -406,6 +429,18 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
     Pestañas para seleccionar transporte.
     En las opciones si destaca por algo (más rápida, más barata..).
     Encima de la lista de opciones.
+
+    \item\textbf{Página de ``Mis reservas'':} \\ En la parte derecha del header enlace a tu perfil de usuario. En la parte izquierda del header el logo de nuestra empresa.
+    Justo debajo, el título “Tus reservas” y un poco más abajo, dos opciones en forma de pestaña: próximas y archivadas.
+    La imagen cubre toda la mitad superior de la pantalla, incluyendo desde las pestañas hasta encima del header.
+    En la mitad inferior dos secciones: en la izquierda una lista con las reservas del tipo seleccionado, cada una en un recuadro y con todos sus datos, y en la derecha, un recuadro vertical a modo de formulario para recuperar reservas hechas y asociarlas con la cuenta de usuario. El título es “Recupera tu reserva” y tiene dos campos: nº de reserva y email.
+    
+    \item\textbf{Perfil de usuario:} \\ En la parte izquierda del header el logo de nuestra empresa. 
+    Debajo se lee el título “Tu cuenta”
+    Debajo, una lista con títulos de secciones: Información personal, Tus reservas, Métodos de pago, Notificaciones y Recomiéndanos. Pinchando en cada una de ellas te lleva a la pantalla correspondiente. En este prototipo aparece la sección “Información personal”.
+    Hay una imagen de fondo en la mitad superior de la pantalla, incluye desde la primera sección de la lista hasta justo encima del header.
+    En la mitad inferior derecha, un recuadro con un título que lee “Detalles del pasajero” y campos para actualizar los datos: Tratamiento Sr/Sra, Nombre, Apellidos, Email, Fecha de nacimiento, País/Región y Nº de teléfono. Por último al terminar todos los campos, un botón de “Actualizar datos”.
+    
     
 \end{itemize}
 
@@ -442,8 +477,9 @@ Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path
 
 \subsection{Conclusiones finales y prototipo final}
 
-Tras evaluar los distintos bocetos hechos por el grupo cogemos las partes que más nos gustan de cada diseño y lo integramos todo en un prototipo final. Ahora se explica este prototipo en detalle.
-
+El día 8 de noviembre, nos reunimos todos en el laboratorio para comentar los prototipos y que cada uno explicase
+la idea detrás del suyo. Tras esto, debatimos entre todos qué ideas podían ser más útiles a la hora de realizar los prototipos
+finales y qué podemos integrar de cada prototipo. Al final los resultados a los que llegamos han sido los siguientes.
 
 En el inicio de sesión \ref{fig:prot_ses} tendremos la opción de iniciar por nombre de usuario y contraseña, iniciar sesión con Facebook o de iniciar sesión con Google. Algunos elementos comunes a toda la página serán un \textit{header} con el logo y las opciones de cambiar de moneda, de idioma o ir al perfil, un \textit{footer} con el nombre de la compañía, un enlace al aviso legar y un enlace a la política de privacidad y botones flotantes con un chat de asistencia y un \textit{F.A.Q}.
 
