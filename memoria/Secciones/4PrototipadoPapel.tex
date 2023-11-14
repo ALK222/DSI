@@ -1,329 +1,423 @@
 \chapterA{Hito 4 - Prototipado en Papel}
 
-La siguiente fase del Diseño Guiado por Objetivos (DGO) que vamos a abordar es el prototipado. Esta etapa se va a dividir en dos etapas claramente diferenciadas:
-el prototipado en papel (este hito) y el prototipado digital (siguiente hito). Para realizar este prototipado en papel se ha definido un proceso dividido en seis
-etapas (con posibilidad de realizar una segunda iteración). \\
+La siguiente fase del Diseño Guiado por Objetivos (DGO) que vamos a abordar es
+el prototipado. Esta etapa se va a dividir en dos etapas claramente
+diferenciadas: el prototipado en papel (este hito) y el prototipado digital
+(siguiente hito). Para realizar este prototipado en papel se ha definido un
+proceso dividido en seis etapas (con posibilidad de realizar una segunda
+iteración). \\
 
-En estas etapas se va a definir tanto la estructura de alto nivel y la organización de las pantallas como el flujo, comportamiento y organización del sistema. Estas
-etapas son las siguientes y se han realizado de acuerdo al orden que aparecen descritas a continuación:
+En estas etapas se va a definir tanto la estructura de alto nivel y la
+organización de las pantallas como el flujo, comportamiento y organización del
+sistema. Estas etapas son las siguientes y se han realizado de acuerdo al orden
+que aparecen descritas a continuación:
 \begin{enumerate}
-    \item \textbf{Definir el factor de forma, la postura y los métodos de entrada}
-    \item \textbf{Definir los elementos de datos y funcionales}
-    \item \textbf{Determinar los grupos funcionales y las jerarquías}
-    \item \textbf{Construir los escenarios key path}
-    \item \textbf{Hacer un prototipo del framework de interacción}
-    \item \textbf{Validar los diseños con los escenarios de validación}
+      \item \textbf{Definir el factor de forma, la postura y los métodos de entrada}
+      \item \textbf{Definir los elementos de datos y funcionales}
+      \item \textbf{Determinar los grupos funcionales y las jerarquías}
+      \item \textbf{Construir los escenarios key path}
+      \item \textbf{Hacer un prototipo del framework de interacción}
+      \item \textbf{Validar los diseños con los escenarios de validación}
 \end{enumerate}
 % TODO argumentar el orden de las etapas 3, 4 y 5.
 % TODO introducir los dos siguientes apartados (resultados Hito 3)
 
 \section{Enunciado de problemas y visiones}
 
-Tras evaluar las personas obtenidas y sus objetivos, procedemos a ver los distintos problemas que se nos plantean y la visión de nuestra aplicación para resolver cada uno de ellos. Con estos problemas y visiones podremos focalizar las distintas partes y funcionalidades de la aplicación final.
+Tras evaluar las personas obtenidas y sus objetivos, procedemos a ver los
+distintos problemas que se nos plantean y la visión de nuestra aplicación para
+resolver cada uno de ellos. Con estos problemas y visiones podremos focalizar
+las distintas partes y funcionalidades de la aplicación final.
 
 \begin{problema}
 
-    Puede ser difícil encontrar viajes asequibles y con requisitos establecidos por el usuario.
+      Puede ser difícil encontrar viajes asequibles y con requisitos establecidos por
+      el usuario.
 
-    {\centering
-    \begin{vision} \justifying \noindent
-        Nuestra aplicación ofrecerá los viajes más baratos al comienzo de la búsqueda cuando el usuario lo solicite dentro de unas fechas y una serie de filtros.
+            {\centering
+                  \begin{vision} \justifying\noindent
+                        Nuestra aplicación ofrecerá los viajes más baratos al comienzo de la búsqueda cuando el usuario lo solicite dentro de unas fechas y una serie de filtros.
 
-    \end{vision}}
+                  \end{vision}}
 \end{problema}
 
 \vspace{0.5cm}
 
 \begin{problema}
-    Puede ser difícil poner el foco en lo más importante en una página web muy cargada de información.
+      Puede ser difícil poner el foco en lo más importante en una página web muy cargada de información.
 
-    {\centering
-    \begin{vision}\justifying \noindent
-        Nuestra aplicación contará con toda la información detallada así como con un apartado en el que estarán especificados los servicios que ofrecemos. También contaremos con una serie de recursos para que los usuarios puedan comunicarse con el servicio al cliente.
-    \end{vision}}
-\end{problema}
-
-
-\vspace{0.5cm}
-
-\begin{problema}
-
-    Numerosas aplicaciones web o móviles no están adaptadas a las diferentes discapacidades que puedan poseer los usuarios
-    
-    {\centering
-    \begin{vision}\justifying \noindent
-        Nuestra aplicación va a ofrecer la información justa y necesaria, sacaremos una versión “Alpha” para poder aprender de ella y mejorarla a través del uso.
-    \end{vision}}
-\end{problema}
-
-
-\vspace{0.5cm}
-
-\begin{problema}
-
-    Al ofrecer opciones de diferentes empresas de transporte es complicado conocer toda la información y productos que ofrecen las mismas.
-
-    {\centering
-    \begin{vision}\justifying \noindent
-        Nuestra aplicación contará con toda la información detallada de las diferentes empresas que operan, así como con un apartado en el que se podrá acceder a sus webs oficiales y así obtener más información.    \end{vision}}
-\end{problema}
-    
-\vspace{0.5cm}
-
-\begin{problema}
-
-    En cualquier momento pueden ocurrir diferentes problemas que necesitan ser subsanados por un empleado de la propia empresa y a veces es complicado conocer la información para poder ponerse en contacto con ellos.
-
-    {\centering
-    \begin{vision}\justifying \noindent
-        Contaremos con una serie de recursos para que los usuarios puedan comunicarse con el servicio al cliente de manera rápida, eficaz y por los medios convencionales.
-    \end{vision}}
+      {\centering
+      \begin{vision}\justifying\noindent
+            Nuestra aplicación contará con toda la información detallada así como con un apartado en el que estarán especificados los servicios que ofrecemos. También contaremos con una serie de recursos para que los usuarios puedan comunicarse con el servicio al cliente.
+      \end{vision}}
 \end{problema}
 
 \vspace{0.5cm}
 
 \begin{problema}
 
-    No existe información acerca de si los diferentes medios de transporte están o no adaptados a las diferentes necesidades que puedan tener los usuarios. 
+      Numerosas aplicaciones web o móviles no están adaptadas a las diferentes
+      discapacidades que puedan poseer los usuarios
 
-    {\centering
-    \begin{vision}\justifying \noindent
-        Nuestra aplicación contará con toda la información sobre las diferentes discapacidades y cómo poder ayudar a los distintos usuarios.Así como nuestros trabajadores poseerán la información necesaria para poder contactar con las diferentes empresas de transporte y poder mediar entre el usuario y la empresa para poder viajar cómodo y seguro sin preocupaciones.
-
-    \end{vision}}
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        Nuestra aplicación va a ofrecer la información justa y necesaria, sacaremos una versión “Alpha” para poder aprender de ella y mejorarla a través del uso.
+                  \end{vision}}
 \end{problema}
 
 \vspace{0.5cm}
 
 \begin{problema}
 
-    Las personas quieren encontrar lugares donde se celebren eventos de su interés.
+      Al ofrecer opciones de diferentes empresas de transporte es complicado conocer
+      toda la información y productos que ofrecen las mismas.
 
-    {\centering
-    \begin{vision}\justifying \noindent
-        La aplicación ayudaría a los usuarios a encontrar estas ciudades de acuerdo a estos eventos.
-    \end{vision}}
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        Nuestra aplicación contará con toda la información detallada de las diferentes empresas que operan, así como con un apartado en el que se podrá acceder a sus webs oficiales y así obtener más información.
+                  \end{vision}}
 \end{problema}
 
 \vspace{0.5cm}
 
 \begin{problema}
 
-    Los usuarios quieren ir de un lugar a otro.
+      En cualquier momento pueden ocurrir diferentes problemas que necesitan ser
+      subsanados por un empleado de la propia empresa y a veces es complicado conocer
+      la información para poder ponerse en contacto con ellos.
 
-    {\centering
-    \begin{vision}\justifying \noindent
-        La aplicación les ofrece distintas alternativas de desplazamiento a diferentes precios.
-    \end{vision}}
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        Contaremos con una serie de recursos para que los usuarios puedan comunicarse con el servicio al cliente de manera rápida, eficaz y por los medios convencionales.
+                  \end{vision}}
 \end{problema}
 
 \vspace{0.5cm}
 
 \begin{problema}
 
-    El usuario quiere tener diferentes opciones de transporte, fechas y horarios.
+      No existe información acerca de si los diferentes medios de transporte están o
+      no adaptados a las diferentes necesidades que puedan tener los usuarios.
 
-    {\centering
-    \begin{vision}\justifying \noindent
-        La aplicación ofrece diferentes opciones de transporte, fechas, horarios y precios para poder adecuarse a las necesidades del usuario o usuarios.
-    \end{vision}}
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        Nuestra aplicación contará con toda la información sobre las diferentes discapacidades y cómo poder ayudar a los distintos usuarios.Así como nuestros trabajadores poseerán la información necesaria para poder contactar con las diferentes empresas de transporte y poder mediar entre el usuario y la empresa para poder viajar cómodo y seguro sin preocupaciones.
+
+                  \end{vision}}
+\end{problema}
+
+\vspace{0.5cm}
+
+\begin{problema}
+
+      Las personas quieren encontrar lugares donde se celebren eventos de su interés.
+
+      {\centering
+      \begin{vision}\justifying\noindent
+            La aplicación ayudaría a los usuarios a encontrar estas ciudades de acuerdo a estos eventos.
+      \end{vision}}
+\end{problema}
+
+\vspace{0.5cm}
+
+\begin{problema}
+
+      Los usuarios quieren ir de un lugar a otro.
+
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        La aplicación les ofrece distintas alternativas de desplazamiento a diferentes precios.
+                  \end{vision}}
+\end{problema}
+
+\vspace{0.5cm}
+
+\begin{problema}
+
+      El usuario quiere tener diferentes opciones de transporte, fechas y horarios.
+
+            {\centering
+                  \begin{vision}\justifying\noindent
+                        La aplicación ofrece diferentes opciones de transporte, fechas, horarios y precios para poder adecuarse a las necesidades del usuario o usuarios.
+                  \end{vision}}
 \end{problema}
 
 % \vspace{0.5cm}
 \section{Escenarios de contexto}
-Un escenario es una situación narrativa, una historia concreta y realista que involucra a una persona y narra de manera detallada cómo persigue un objetivo y
-finalmente logra satisfacer dicho objetivo, describiendo el proceso que ha seguido para ello. Cada uno de estos escenarios va a describir cómo se va a comportar
-el usuario (en este caso la persona) en el contexto de la aplicación, definiendo en todo momento qué es lo que tiene que realizar para poder afrontar un problema
-concreto.
+Un escenario es una situación narrativa, una historia concreta y realista que
+involucra a una persona y narra de manera detallada cómo persigue un objetivo y
+finalmente logra satisfacer dicho objetivo, describiendo el proceso que ha
+seguido para ello. Cada uno de estos escenarios va a describir cómo se va a
+comportar el usuario (en este caso la persona) en el contexto de la aplicación,
+definiendo en todo momento qué es lo que tiene que realizar para poder afrontar
+un problema concreto.
 \subsection{Escenarios de contexto de Marta}
 \begin{itemize}
-    \item \textbf{Gira detallada por Italia} $\rightarrow$ Hace unos días Francesca anunció una gira por el norte de Italia, donde Marta todavía no había estado. Marta y su hermano no se pueden perder esto, por lo que saca la aplicación y selecciona como destino Nápoles, donde Francesca dará su primer concierto. Al buscar esta ciudad como destino, aparecen listados por ordenados por horarios (por defecto, pero con posibilidad de cambiarlo) las distintas opciones que se ofrecen para viajar allí desde Madrid. Como no han visitado estas ciudades van a necesitar informarse bien para hacer la ruta de modo que lleguen a tiempo al concierto y puedan hacer algo de turismo antes de ponerse en marcha al siguiente destino del tour, para ello han estudiado tanto ella como su hermano bien los tipos de transporte, horarios y servicios que ofrecen estos y más información adicional (como las compañías, estaciones, paradas, etc.) que han podido consultar en la aplicación sin tener que salirse de esta. En algunas ciudades no encontraron alojamiento por lo que van a tener que recurrir a medios de transporte que ofrezcan camas y necesitarán, por lo tanto, seleccionar este servicio.
+      \item \textbf{Gira detallada por Italia} $\rightarrow$ Hace unos días Francesca anunció una gira por el norte de Italia, donde Marta todavía no había estado. Marta y su hermano no se pueden perder esto, por lo que saca la aplicación y selecciona como destino Nápoles, donde Francesca dará su primer concierto. Al buscar esta ciudad como destino, aparecen listados por ordenados por horarios (por defecto, pero con posibilidad de cambiarlo) las distintas opciones que se ofrecen para viajar allí desde Madrid. Como no han visitado estas ciudades van a necesitar informarse bien para hacer la ruta de modo que lleguen a tiempo al concierto y puedan hacer algo de turismo antes de ponerse en marcha al siguiente destino del tour, para ello han estudiado tanto ella como su hermano bien los tipos de transporte, horarios y servicios que ofrecen estos y más información adicional (como las compañías, estaciones, paradas, etc.) que han podido consultar en la aplicación sin tener que salirse de esta. En algunas ciudades no encontraron alojamiento por lo que van a tener que recurrir a medios de transporte que ofrezcan camas y necesitarán, por lo tanto, seleccionar este servicio.
 
-    Tras haber barajado todas las opciones posibles de las que ofrecía la aplicación, finalmente se decidieron por el primer vuelo con destino a Nápoles que salía de Madrid, de modo que podrían aprovechar la mañana para instalarse en el motel y hacer un poco de turismo por la ciudad. Por ello finalmente compran los billetes en la app y luego pueden consultarlos en su perfil    
-    
-    \item \textbf{Cambio de planes por motivo económico} $\rightarrow$ Es época de exámenes y Marta está muy agobiada. No está muy segura de si ha aprobado las asignaturas que lleva o de cómo le van a salir las que le faltan. Su amiga Pili, viendo el agobio de Marta, le ha dicho de irse a Ibiza de fiesta el fin de semana posterior a los exámenes, de esta manera tiene mayor aliciente para continuar con las semanas que le quedan. A Marta le encantó la idea, así que enseguida sacó la app y buscó vuelos ese fin de semana a Ibiza. Desgraciadamente, estaba un poco justa de dinero porque no está trabajando por el momento, y los precios que tenía el vuelo eran demasiado caros para su bolsillo. Afortunadamente, pudo ver en la aplicación que el mismo día salía un vuelo a Palma de Mallorca, y les costaba la ida y vuelta 50€ menos y seleccionaron esta opción junto con los asientos que les parecían más adecuados para estar juntas. Al final a Pili le pareció bien cambiar el plan de fiesta a un plan de playa, así que compraron los billetes, deseosas de que acaben.
+            Tras haber barajado todas las opciones posibles de las que ofrecía la
+            aplicación, finalmente se decidieron por el primer vuelo con destino a Nápoles
+            que salía de Madrid, de modo que podrían aprovechar la mañana para instalarse
+            en el motel y hacer un poco de turismo por la ciudad. Por ello finalmente
+            compran los billetes en la app y luego pueden consultarlos en su perfil
+
+      \item \textbf{Cambio de planes por motivo económico} $\rightarrow$ Es época de exámenes y Marta está muy agobiada. No está muy segura de si ha aprobado las asignaturas que lleva o de cómo le van a salir las que le faltan. Su amiga Pili, viendo el agobio de Marta, le ha dicho de irse a Ibiza de fiesta el fin de semana posterior a los exámenes, de esta manera tiene mayor aliciente para continuar con las semanas que le quedan. A Marta le encantó la idea, así que enseguida sacó la app y buscó vuelos ese fin de semana a Ibiza. Desgraciadamente, estaba un poco justa de dinero porque no está trabajando por el momento, y los precios que tenía el vuelo eran demasiado caros para su bolsillo. Afortunadamente, pudo ver en la aplicación que el mismo día salía un vuelo a Palma de Mallorca, y les costaba la ida y vuelta 50€ menos y seleccionaron esta opción junto con los asientos que les parecían más adecuados para estar juntas. Al final a Pili le pareció bien cambiar el plan de fiesta a un plan de playa, así que compraron los billetes, deseosas de que acaben.
 \end{itemize}
 \subsection{Escenarios de contexto de Isabel}
 \begin{itemize}
-    \item \textbf{Viaje inesperado} $\rightarrow$ Es lunes e Isabel va a tomar un café con sus compañeros de trabajo, como de costumbre. Mientras espera a que le traigan el desayuno, su móvil empieza a sonar y al mirar quién la está llamando, ve que es su jefe. Éste le dice que el miércoles hay una conferencia para la inclusión de niños con discapacidad y que la mujer que iba a dar la ponencia ha tenido un imprevisto y no podrá darla, por lo que le ofrece a Isabel sustituirla.
+      \item \textbf{Viaje inesperado} $\rightarrow$ Es lunes e Isabel va a tomar un café con sus compañeros de trabajo, como de costumbre. Mientras espera a que le traigan el desayuno, su móvil empieza a sonar y al mirar quién la está llamando, ve que es su jefe. Éste le dice que el miércoles hay una conferencia para la inclusión de niños con discapacidad y que la mujer que iba a dar la ponencia ha tenido un imprevisto y no podrá darla, por lo que le ofrece a Isabel sustituirla.
 
-    Aunque es muy precipitado, Isabel acepta y empieza a buscar transporte. Abre la aplicación y selecciona en el apartado filtros, persona con discapacidad física, y ve el abanico de posibilidades de vuelos accesibles para ella y la información detallada que ofrecen para asegurarse que efectivamente es accesible para gente con discapacidad física que requieran de silla de ruedas. Al ser un viaje que no tenía previsto, su objetivo es ahorrar el máximo dinero posible, por lo escoge el más barato. Contenta con su compra, se va a casa a preparar la maleta.
-    
-    \item \textbf{Problemas con la compra} $\rightarrow$ Carmen e Isabel llevan varios meses intentando ir a la exposición de arte de un artista emergente que les gusta mucho. En Barcelona las entradas se agotaron a los pocos minutos de salir, por lo que no consiguieron. Entonces se acordaron que en la aplicación hay una opción de mirar los lugares que se celebran ciertos eventos, por lo que la abren y buscan el evento y de todos los lugares que se celebran, ven que Madrid es uno de los destinos.
+            Aunque es muy precipitado, Isabel acepta y empieza a buscar transporte. Abre la
+            aplicación y selecciona en el apartado filtros, persona con discapacidad
+            física, y ve el abanico de posibilidades de vuelos accesibles para ella y la
+            información detallada que ofrecen para asegurarse que efectivamente es
+            accesible para gente con discapacidad física que requieran de silla de ruedas.
+            Al ser un viaje que no tenía previsto, su objetivo es ahorrar el máximo dinero
+            posible, por lo escoge el más barato. Contenta con su compra, se va a casa a
+            preparar la maleta.
 
-    Como Carmen e Isabel no se la quieren perder, han decidido que viajarán a Madrid un par de días. La exposición estará un mes entero, pero no saben qué días irán.
-    Isabel abre la aplicación y busca los trenes de Renfe en el mes completo que más se ajustan a sus horarios. Eligen esta compañía ya que Carmen tiene descuentos. Cuando ya ha comprado los billetes, espera un período de tiempo para recibirlos en su correo, pero no llegan. Desde la aplicación se pone en contacto con el servicio al cliente, que le dice que están teniendo problemas con la gestión de los billetes y se lo resuelven de forma manual en pocos minutos. 
-    
-    Y así fue, instantes después, Isabel ya tenía sus billetes.
-    
+      \item \textbf{Problemas con la compra} $\rightarrow$ Carmen e Isabel llevan varios meses intentando ir a la exposición de arte de un artista emergente que les gusta mucho. En Barcelona las entradas se agotaron a los pocos minutos de salir, por lo que no consiguieron. Entonces se acordaron que en la aplicación hay una opción de mirar los lugares que se celebran ciertos eventos, por lo que la abren y buscan el evento y de todos los lugares que se celebran, ven que Madrid es uno de los destinos.
+
+            Como Carmen e Isabel no se la quieren perder, han decidido que viajarán a
+            Madrid un par de días. La exposición estará un mes entero, pero no saben qué
+            días irán. Isabel abre la aplicación y busca los trenes de Renfe en el mes
+            completo que más se ajustan a sus horarios. Eligen esta compañía ya que Carmen
+            tiene descuentos. Cuando ya ha comprado los billetes, espera un período de
+            tiempo para recibirlos en su correo, pero no llegan. Desde la aplicación se
+            pone en contacto con el servicio al cliente, que le dice que están teniendo
+            problemas con la gestión de los billetes y se lo resuelven de forma manual en
+            pocos minutos.
+
+            Y así fue, instantes después, Isabel ya tenía sus billetes.
+
 \end{itemize}
 
 \section{Requisitos}
-Tras hacer un estudio de problemas, expectativas y escenarios de contexto, la última etapa de esta fase de requisitos. En esta fase se van a exponer claramente las 
-necesidades de la persona para satisfacer sus objetivos. Dicho de otro modo, se trata de definir qué es lo que va a hacer nuestra aplicación (pero sin entrar en
-detalle en cómo lo va a hacer). Los requisitos que hemos identificado son los siguientes:
+Tras hacer un estudio de problemas, expectativas y escenarios de contexto, la
+última etapa de esta fase de requisitos. En esta fase se van a exponer
+claramente las necesidades de la persona para satisfacer sus objetivos. Dicho
+de otro modo, se trata de definir qué es lo que va a hacer nuestra aplicación
+(pero sin entrar en detalle en cómo lo va a hacer). Los requisitos que hemos
+identificado son los siguientes:
 \begin{itemize}
-    \item Buscar (\textit{acción}) transportes disponibles (\textit{objeto}) a las ciudades designadas (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) fechas concretas o un intervalo de tiempo(\textit{objeto}) para la búsqueda del transporte (\textit{contexto}).
-    \item Comparar (\textit{acción}) precios (\textit{objeto}) de los diferentes transportes a la ciudad designada (\textit{contexto}).
-    \item Reservar (\textit{acción}) billetes (\textit{objeto}) de los transportes deseados (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) información sobre horarios de transporte (\textit{objeto}) al realizar la búsqueda (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) información de los asientos disponibles (\textit{objeto}) del vehículo seleccionado (\textit{contexto}).
-    \item Seleccionar (\textit{acción}) asientos (\textit{objeto}) una vez elegido el transporte (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) diferentes rutas (\textit{objeto}) cuando seleccionas una serie de destinos (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) servicios disponibles en el transporte (\textit{objeto}) cuando seleccionas un transporte en concreto (\textit{contexto}).
-    \item Indicar (\textit{acción}) la zona de recogida, origen y destino (\textit{objeto}) del vehículo a lo largo del trayecto (\textit{contexto}).
-    \item Filtrar (\textit{acción}) opciones de transporte (\textit{objeto}) específicas para personas con discapacidad física (\textit{contexto}).
-    \item Mostrar (\textit{acción}) información detallada (\textit{objeto}) sobre la accesibilidad de los transportes disponibles (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) soporte al cliente (\textit{objeto}) para resolver problemas de gestión de billetes de manera rápida y eficaz (\textit{contexto}).
-    \item Realizar (\textit{acción}) reservas (\textit{objeto}) para un número determinado de personas (\textit{contexto}).
-    \item Filtrar (\textit{acción}) viajes (\textit{objeto}) en función del número de personas que vayan a participar en el viaje (\textit{contexto}).
-    \item Reservar (\textit{acción}) conjuntos de asientos (\textit{objeto}) para que todos los viajeros en caso de que sea un grupo puedan sentarse juntos (\textit{contexto}).
-    \item Notificar al usuario (\textit{acción}) que la reserva (\textit{objeto}) se ha realizado correctamente (\textit{contexto}).
-    \item Poder consultar (\textit{acción}) una reserva (\textit{objeto}) cuando el usuario lo desee (\textit{contexto})
-    \item Poder cancelar (\textit{acción}) una reserva (\textit{objeto}) en caso de que el usuario lo considere pertinente (\textit{contexto}).
-    \item Poder modificar (\textit{acción}) una reserva (\textit{objeto}) en caso de que el usuario lo considere pertinente (\textit{contexto}).
-    \item Elegir (\textit{acción}) la ruta (\textit{objeto}) que más se ajuste a tus necesidades en caso de que haya varias opciones que se puedan seleccionar (\textit{contexto}).
-    \item Consultar (\textit{acción}) las paradas (\textit{objeto}) de una ruta en caso de que las tenga (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) opciones de hacer escalas (\textit{objeto}) en caso de que se quiera hacer un vuelo con estas condiciones (\textit{contexto}).
-    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el precio (\textit{contexto}).
-    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según los horarios (\textit{contexto}).
-    \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el origen y el destino (\textit{contexto}).
-    \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por precio según las necesidades, para agilizar la búsqueda (\textit{contexto}).
-    \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por horarios según las necesidades, para agilizar la búsqueda (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) información detallada sobre las diferentes empresas que operan (\textit{objeto}) al comparar dos viajes (\textit{contexto}).
-    \item Ofrecer (\textit{acción}) información sobre las ayudas ofrecidas(\textit{objeto}) a usuarios con discapacidad (\textit{contexto}).
+      \item Buscar (\textit{acción}) transportes disponibles (\textit{objeto}) a las
+            ciudades designadas (\textit{contexto}).
+      \item Seleccionar (\textit{acción}) fechas concretas o un intervalo de
+            tiempo(\textit{objeto}) para la búsqueda del transporte (\textit{contexto}).
+      \item Comparar (\textit{acción}) precios (\textit{objeto}) de los diferentes
+            transportes a la ciudad designada (\textit{contexto}).
+      \item Reservar (\textit{acción}) billetes (\textit{objeto}) de los transportes
+            deseados (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) información sobre horarios de transporte
+            (\textit{objeto}) al realizar la búsqueda (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) información de los asientos disponibles
+            (\textit{objeto}) del vehículo seleccionado (\textit{contexto}).
+      \item Seleccionar (\textit{acción}) asientos (\textit{objeto}) una vez elegido el
+            transporte (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) diferentes rutas (\textit{objeto}) cuando seleccionas
+            una serie de destinos (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) servicios disponibles en el transporte
+            (\textit{objeto}) cuando seleccionas un transporte en concreto
+            (\textit{contexto}).
+      \item Indicar (\textit{acción}) la zona de recogida, origen y destino
+            (\textit{objeto}) del vehículo a lo largo del trayecto (\textit{contexto}).
+      \item Filtrar (\textit{acción}) opciones de transporte (\textit{objeto}) específicas
+            para personas con discapacidad física (\textit{contexto}).
+      \item Mostrar (\textit{acción}) información detallada (\textit{objeto}) sobre la
+            accesibilidad de los transportes disponibles (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) soporte al cliente (\textit{objeto}) para resolver
+            problemas de gestión de billetes de manera rápida y eficaz (\textit{contexto}).
+      \item Realizar (\textit{acción}) reservas (\textit{objeto}) para un número
+            determinado de personas (\textit{contexto}).
+      \item Filtrar (\textit{acción}) viajes (\textit{objeto}) en función del número de
+            personas que vayan a participar en el viaje (\textit{contexto}).
+      \item Reservar (\textit{acción}) conjuntos de asientos (\textit{objeto}) para que
+            todos los viajeros en caso de que sea un grupo puedan sentarse juntos
+            (\textit{contexto}).
+      \item Notificar al usuario (\textit{acción}) que la reserva (\textit{objeto}) se ha
+            realizado correctamente (\textit{contexto}).
+      \item Poder consultar (\textit{acción}) una reserva (\textit{objeto}) cuando el
+            usuario lo desee (\textit{contexto})
+      \item Poder cancelar (\textit{acción}) una reserva (\textit{objeto}) en caso de que
+            el usuario lo considere pertinente (\textit{contexto}).
+      \item Poder modificar (\textit{acción}) una reserva (\textit{objeto}) en caso de que
+            el usuario lo considere pertinente (\textit{contexto}).
+      \item Elegir (\textit{acción}) la ruta (\textit{objeto}) que más se ajuste a tus
+            necesidades en caso de que haya varias opciones que se puedan seleccionar
+            (\textit{contexto}).
+      \item Consultar (\textit{acción}) las paradas (\textit{objeto}) de una ruta en caso
+            de que las tenga (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) opciones de hacer escalas (\textit{objeto}) en caso
+            de que se quiera hacer un vuelo con estas condiciones (\textit{contexto}).
+      \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el precio
+            (\textit{contexto}).
+      \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según los
+            horarios (\textit{contexto}).
+      \item Filtrar (\textit{acción}) tipo de transporte (\textit{objeto}) según el origen
+            y el destino (\textit{contexto}).
+      \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por precio según
+            las necesidades, para agilizar la búsqueda (\textit{contexto}).
+      \item Ordenar (\textit{acción}) los transportes (\textit{objeto}) por horarios según
+            las necesidades, para agilizar la búsqueda (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) información detallada sobre las diferentes empresas
+            que operan (\textit{objeto}) al comparar dos viajes (\textit{contexto}).
+      \item Ofrecer (\textit{acción}) información sobre las ayudas
+            ofrecidas(\textit{objeto}) a usuarios con discapacidad (\textit{contexto}).
 \end{itemize}
 
 \section{Factor de forma, postura y métodos de entrada}
 
-En esta fase hemos definido los elementos de la interfaz que representarán los requisitos identificados en la fase de identificación de requisitos.
+En esta fase hemos definido los elementos de la interfaz que representarán los
+requisitos identificados en la fase de identificación de requisitos.
 
-Hemos creado los elementos de datos (transportes, billetes y viajes), junto con sus atributos (por ejemplo, horario en el caso de transportes) y las relaciones con otros elementos de datos, como los transportes y los viajes.
+Hemos creado los elementos de datos (transportes, billetes y viajes), junto con
+sus atributos (por ejemplo, horario en el caso de transportes) y las relaciones
+con otros elementos de datos, como los transportes y los viajes.
 
-Posteriormente, se ha realizado la traducción de los requisitos funcionales en elementos funcionales. De forma que describimos las acciones que podemos realizar añadiendo una acción, un objeto y un contexto.
+Posteriormente, se ha realizado la traducción de los requisitos funcionales en
+elementos funcionales. De forma que describimos las acciones que podemos
+realizar añadiendo una acción, un objeto y un contexto.
 
 \subsection{Factor de forma}
-Nuestra aplicación estará diseñada para móvil y ordenador. Si se utiliza desde el ordenador, la aplicación se utilizará en mayoritariamente en casa para 
-poder organizar el viaje  tranquilamente, aunque también puede utilizarse en un contexto de trabajo en el que el usuario esté en una oficina. Si se utiliza 
-la aplicación desde el móvil, normalmente el contexto cambia mucho, y el usuario hará un uso de la aplicación rápido y de consulta de información y puede 
+Nuestra aplicación estará diseñada para móvil y ordenador. Si se utiliza desde
+el ordenador, la aplicación se utilizará en mayoritariamente en casa para poder
+organizar el viaje tranquilamente, aunque también puede utilizarse en un
+contexto de trabajo en el que el usuario esté en una oficina. Si se utiliza la
+aplicación desde el móvil, normalmente el contexto cambia mucho, y el usuario
+hará un uso de la aplicación rápido y de consulta de información y puede
 realizarse en cualquier parte y momento.
 
 \subsection{Postura}
-Por un lado tenemos varias \underline{posturas soberanas} centradas en toda la parte de buscar destino, comparación de precios, ofertas o destinos a los que acudir 
-según las preferencias indicadas por el usuario. Por otro lado tendríamos una \underline{postura temporal} relacionada con el chat de soporte o con diferentes dudas 
-que le puedan surgir al usuario que necesiten ser subsanadas, así como diferentes reseñas que los usuarios hayan escrito sobre los diferentes destinos. Por último 
-tendríamos una \underline{postura demonio} relacionada con las diferentes notificaciones que puedan surgir mediante el uso de la aplicación (como la calificación o 
-respuesta a una reseña hecha) y las preferencias indicadas por el usuario.
+Por un lado tenemos varias \underline{posturas soberanas} centradas en toda la
+parte de buscar destino, comparación de precios, ofertas o destinos a los que
+acudir según las preferencias indicadas por el usuario. Por otro lado
+tendríamos una \underline{postura temporal} relacionada con el chat de soporte
+o con diferentes dudas que le puedan surgir al usuario que necesiten ser
+subsanadas, así como diferentes reseñas que los usuarios hayan escrito sobre
+los diferentes destinos. Por último tendríamos una \underline{postura demonio}
+relacionada con las diferentes notificaciones que puedan surgir mediante el uso
+de la aplicación (como la calificación o respuesta a una reseña hecha) y las
+preferencias indicadas por el usuario.
 
 \subsection{Métodos de entrada}
-En caso de que se utilice la aplicación vía ordenador, los métodos de entrada serán el teclado y ratón, mientras que si se accede a la aplicación por el móvil, 
-el método de entrada será la propia pantalla del teléfono.
+En caso de que se utilice la aplicación vía ordenador, los métodos de entrada
+serán el teclado y ratón, mientras que si se accede a la aplicación por el
+móvil, el método de entrada será la propia pantalla del teléfono.
 
 \section{Elementos de datos y funcionales}
 
-Los elementos de datos serán la fuente de información de la aplicación (transportes, billetes, etc). Los elementos funcionales son las acciones que pueden ejercer los usuarios sobre dichos objetos. Tras analizar lo visto en apartados anteriores, estos son los distintos elementos de datos y los elementos funcionales.
+Los elementos de datos serán la fuente de información de la aplicación
+(transportes, billetes, etc). Los elementos funcionales son las acciones que
+pueden ejercer los usuarios sobre dichos objetos. Tras analizar lo visto en
+apartados anteriores, estos son los distintos elementos de datos y los
+elementos funcionales.
 
 \subsection{Elementos de datos}
 \begin{itemize}
-    \item \textbf{Transportes} $\rightarrow$ Medio por el cuál se va a viajar.
-    \begin{itemize}
-        \item \textit{Atributos} $\rightarrow$ Horario, origen, destino, accesibilidad, tipo.
-        \item \textit{Relación} $\rightarrow$ Un transporte tiene asociados tantos billetes como plazas tenga, y un transporte puede ser asociado a una ruta.
-    \end{itemize}
-    \item \textbf{Billetes} $\rightarrow$ Es el elemento que se paga para tener acceso al transporte.
-    \begin{itemize}
-        \item \textit{Atributos} $\rightarrow$ Precio, asiento, descuentos.
-        \item \textit{Relación} $\rightarrow$ El billete va asociado a un transporte.
-    \end{itemize}
-    \item \textbf{Viajes} $\rightarrow$ Conjunto de transportes para llegar de un punto a otro.
-    \begin{itemize}
-        \item \textit{Atributos} $\rightarrow$ Origen, destino, transporte.
-        \item \textit{Relación} $\rightarrow$ Transportes con los que se pueden hacer las rutas.
-    \end{itemize}
-\end{itemize} 
+      \item \textbf{Transportes} $\rightarrow$ Medio por el cuál se va a viajar.
+            \begin{itemize}
+                  \item \textit{Atributos} $\rightarrow$ Horario, origen, destino, accesibilidad, tipo.
+                  \item \textit{Relación} $\rightarrow$ Un transporte tiene asociados tantos billetes como plazas tenga, y un transporte puede ser asociado a una ruta.
+            \end{itemize}
+      \item \textbf{Billetes} $\rightarrow$ Es el elemento que se paga para tener acceso al transporte.
+            \begin{itemize}
+                  \item \textit{Atributos} $\rightarrow$ Precio, asiento, descuentos.
+                  \item \textit{Relación} $\rightarrow$ El billete va asociado a un transporte.
+            \end{itemize}
+      \item \textbf{Viajes} $\rightarrow$ Conjunto de transportes para llegar de un punto a otro.
+            \begin{itemize}
+                  \item \textit{Atributos} $\rightarrow$ Origen, destino, transporte.
+                  \item \textit{Relación} $\rightarrow$ Transportes con los que se pueden hacer las rutas.
+            \end{itemize}
+\end{itemize}
 
 \subsection{Elementos funcionales}
 \begin{itemize}
-    \item \textbf{Buscar (acción) transportes disponibles (objeto) a las ciudades designadas (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar 
-    origen, destino y fechas en las que se quiera realizar el viaje.
-    \item \textbf{Filtrar (acción) opciones de transporte (objeto) específicas para personas con discapacidad física (contexto)} $\rightarrow$ Desde la pantalla 
-    de comparador de viajes se pueden filtrar todas las opciones de transporte adecuadas para personas con discapacidad física
-    \item \textbf{Reservar (acción) billetes (objeto) de los transportes deseados (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes se pueden 
-    seleccionar los billetes deseados y reservarlos.
-    \item \textbf{Mostrar (acción) información detallada sobre la accesibilidad de los transportes disponibles (objeto)} $\rightarrow$ Dentro de la información de 
-    cada transporte, se puede visualizar el nivel de accesibilidad del medio de transporte y seleccionar la ayuda si el usuario lo desea.
-    \item \textbf{Seleccionar (acción) asientos(objeto) una vez elegido el transporte (contexto)} $\rightarrow$ Desde la pantalla de reserva de billetes se 
-    pueden seleccionar los asientos deseados.
-    \item \textbf{Indicar (acción) la zona de recogida, origen y destino (objeto) del vehículo a lo largo del trayecto (contexto)} $\rightarrow$ Desde la pantalla 
-    de reserva de transporte se puede visualizar los detalles de la reserva del transporte, como la recogida origen y el destino de devolución.
-    \item \textbf{Ofrecer (acción) soporte al cliente (acción) para resolver problemas de gestión de billetes de manera rápida y eficaz (contexto)} $\rightarrow$ Desde 
-    cualquier pantalla se puede acceder a la pantalla de atención al cliente.
-    \item \textbf{Seleccionar (acción) fechas concretas o un intervalo de tiempo(objeto) para la búsqueda del transporte (contexto)} $\rightarrow$ Desde el menú 
-    principal podemos seleccionar las fechas en las que se quiera realizar el viaje con un abanico de días par ofrecer flexibilidad.
-    \item \textbf{Comparar (acción) precios (objeto) de los diferentes transportes a la ciudad designada (contexto)} $\rightarrow$ Desde la pantalla de comparador 
-    de viajes se puede visualizar todas las opciones de transporte a la ciudad destino.
-    \item \textbf{Ordenar (acción) los transportes por precios y/o fechas (objeto) según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Desde 
-    la pantalla de comparador de viajes se pueden ordenar los transportes por fechas y precios.
-    \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según preferencias y/o precio (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar 
-    el vehículo concreto en el que queremos realizar el viaje.
-    \item \textbf{Ofrecer (acción) información sobre horarios de transporte (objeto) al realizar la búsqueda (contexto)} $\rightarrow$ Dentro de la pagina de búsqueda 
-    de viajes, aparecen los horarios disponibles para cada opción de viaje.
-    \item \textbf{Ofrecer (acción) información de los asientos disponibles (objeto) del vehículo seleccionado (contexto)} $\rightarrow$ Dentro de la página de reserva 
-    de transporte se puede ver cuántos asientos quedan disponibles y cuáles.
-    \item \textbf{Ofrecer (acción) servicios disponibles en el transporte (objeto) cuando seleccionas un transporte en concreto (contexto)} $\rightarrow$ Dentro de la 
-    página de reserva de transporte se puede ver los servicios adicionales del transporte y reservarlos.
-    \item \textbf{Realizar (acción) reservas (objeto) para un número determinado de personas (contexto)} $\rightarrow$ Dentro de la página de reserva de transporte 
-    se pueden seleccionar cuantos billetes se quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
-    \item \textbf{Filtrar (acción) viajes (objeto) en función del número de personas que vayan a participar en el viaje (contexto)} $\rightarrow$ Dentro de la página 
-    de búsqueda de transporte, se pueden filtrar las opciones de viaje a base del número de personas que participen en el viaje.
-    \item \textbf{Reservar (acción) conjuntos de asientos (objeto) para que todos los viajeros en caso de que sea un grupo puedan sentarse juntos (contexto)} 
-    $\rightarrow$ Dentro de la página de reserva en el apartado de selección de asiento se pueden seleccionar los asientos deseados.
-    \item \textbf{Notificar al usuario (acción) que la reserva (objeto) se ha realizado correctamente (contexto)} $\rightarrow$ Después de completar la reserva, 
-    se abre una página de confirmación de reserva.
-    \item \textbf{Poder consultar (acción) una reserva (objeto) cuando el usuario lo desee (contexto)} $\rightarrow$ En la página de viajes reservados, se pueden
-    consultar todas las reservas realizadas.
-    \item \textbf{Poder cancelar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes 
-    reservados, se puede cancelar una reserva.
-    \item \textbf{Poder modificar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes 
-    reservados, se puede modificar una reserva.
-    \item \textbf{Elegir (acción) la ruta (objeto) que más se ajuste a tus necesidades en caso de que haya varias opciones que se puedan seleccionar (contexto)}
-    $\rightarrow$ Dentro de la página de comparador de viajes se puede seleccionar la ruta que se desea.
-    \item \textbf{Consultar (acción) las paradas (objeto) de una ruta en caso de que las tenga (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes 
-    se puede consultar en cada ruta mostrada las paradas que tiene la ruta.
-    \item \textbf{Ofrecer (acción) opciones de hacer escalas (objeto) en caso de que se quiera hacer un vuelo con estas condiciones (contexto)} $\rightarrow$ Dentro 
-    de la página de comparador de viajes se puede seleccionar la opción de coger vuelos con escalas.
-    \item \textbf{Filtrar(acción) tipo de transporte (objeto) según el precio (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes se puede filtrar 
-    por precio y tipo de transporte.
-    \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según los horarios (contexto)} Dentro de la pagina de búsqueda de transporte, se puede seleccionar 
-    una opción de transporte en un horario específico.
-    \item \textbf{Ordenar (acción) los transportes (objeto) por precio según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página 
-    de búsqueda, se pueden ordenar las opciones por precio (mayor a menor / menor a mayor).
-    \item \textbf{Ordenar (acción) los transportes (objeto) por horarios según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página 
-    de búsqueda, se pueden ordenar las opciones por horarios.
-    \item \textbf{Ordenar (acción) los transportes (objeto) por duración de trayecto, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página de 
-    búsqueda, se pueden ordenar las opciones por duración de trayecto (menor a mayor).
+      \item \textbf{Buscar (acción) transportes disponibles (objeto) a las ciudades designadas (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar
+            origen, destino y fechas en las que se quiera realizar el viaje.
+      \item \textbf{Filtrar (acción) opciones de transporte (objeto) específicas para personas con discapacidad física (contexto)} $\rightarrow$ Desde la pantalla
+            de comparador de viajes se pueden filtrar todas las opciones de transporte adecuadas para personas con discapacidad física
+      \item \textbf{Reservar (acción) billetes (objeto) de los transportes deseados (contexto)} $\rightarrow$ Desde la pantalla de comparador de viajes se pueden
+            seleccionar los billetes deseados y reservarlos.
+      \item \textbf{Mostrar (acción) información detallada sobre la accesibilidad de los transportes disponibles (objeto)} $\rightarrow$ Dentro de la información de
+            cada transporte, se puede visualizar el nivel de accesibilidad del medio de transporte y seleccionar la ayuda si el usuario lo desea.
+      \item \textbf{Seleccionar (acción) asientos(objeto) una vez elegido el transporte (contexto)} $\rightarrow$ Desde la pantalla de reserva de billetes se
+            pueden seleccionar los asientos deseados.
+      \item \textbf{Indicar (acción) la zona de recogida, origen y destino (objeto) del vehículo a lo largo del trayecto (contexto)} $\rightarrow$ Desde la pantalla
+            de reserva de transporte se puede visualizar los detalles de la reserva del transporte, como la recogida origen y el destino de devolución.
+      \item \textbf{Ofrecer (acción) soporte al cliente (acción) para resolver problemas de gestión de billetes de manera rápida y eficaz (contexto)} $\rightarrow$ Desde
+            cualquier pantalla se puede acceder a la pantalla de atención al cliente.
+      \item \textbf{Seleccionar (acción) fechas concretas o un intervalo de tiempo(objeto) para la búsqueda del transporte (contexto)} $\rightarrow$ Desde el menú
+            principal podemos seleccionar las fechas en las que se quiera realizar el viaje con un abanico de días par ofrecer flexibilidad.
+      \item \textbf{Comparar (acción) precios (objeto) de los diferentes transportes a la ciudad designada (contexto)} $\rightarrow$ Desde la pantalla de comparador
+            de viajes se puede visualizar todas las opciones de transporte a la ciudad destino.
+      \item \textbf{Ordenar (acción) los transportes por precios y/o fechas (objeto) según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Desde
+            la pantalla de comparador de viajes se pueden ordenar los transportes por fechas y precios.
+      \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según preferencias y/o precio (contexto)} $\rightarrow$ Desde el menú principal podemos seleccionar
+            el vehículo concreto en el que queremos realizar el viaje.
+      \item \textbf{Ofrecer (acción) información sobre horarios de transporte (objeto) al realizar la búsqueda (contexto)} $\rightarrow$ Dentro de la pagina de búsqueda
+            de viajes, aparecen los horarios disponibles para cada opción de viaje.
+      \item \textbf{Ofrecer (acción) información de los asientos disponibles (objeto) del vehículo seleccionado (contexto)} $\rightarrow$ Dentro de la página de reserva
+            de transporte se puede ver cuántos asientos quedan disponibles y cuáles.
+      \item \textbf{Ofrecer (acción) servicios disponibles en el transporte (objeto) cuando seleccionas un transporte en concreto (contexto)} $\rightarrow$ Dentro de la
+            página de reserva de transporte se puede ver los servicios adicionales del transporte y reservarlos.
+      \item \textbf{Realizar (acción) reservas (objeto) para un número determinado de personas (contexto)} $\rightarrow$ Dentro de la página de reserva de transporte
+            se pueden seleccionar cuantos billetes se quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
+      \item \textbf{Filtrar (acción) viajes (objeto) en función del número de personas que vayan a participar en el viaje (contexto)} $\rightarrow$ Dentro de la página
+            de búsqueda de transporte, se pueden filtrar las opciones de viaje a base del número de personas que participen en el viaje.
+      \item \textbf{Reservar (acción) conjuntos de asientos (objeto) para que todos los viajeros en caso de que sea un grupo puedan sentarse juntos (contexto)}
+            $\rightarrow$ Dentro de la página de reserva en el apartado de selección de asiento se pueden seleccionar los asientos deseados.
+      \item \textbf{Notificar al usuario (acción) que la reserva (objeto) se ha realizado correctamente (contexto)} $\rightarrow$ Después de completar la reserva,
+            se abre una página de confirmación de reserva.
+      \item \textbf{Poder consultar (acción) una reserva (objeto) cuando el usuario lo desee (contexto)} $\rightarrow$ En la página de viajes reservados, se pueden
+            consultar todas las reservas realizadas.
+      \item \textbf{Poder cancelar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes
+            reservados, se puede cancelar una reserva.
+      \item \textbf{Poder modificar (acción) una reserva (objeto) en caso de que el usuario lo considere pertinente (contexto)} $\rightarrow$ En la página de viajes
+            reservados, se puede modificar una reserva.
+      \item \textbf{Elegir (acción) la ruta (objeto) que más se ajuste a tus necesidades en caso de que haya varias opciones que se puedan seleccionar (contexto)}
+            $\rightarrow$ Dentro de la página de comparador de viajes se puede seleccionar la ruta que se desea.
+      \item \textbf{Consultar (acción) las paradas (objeto) de una ruta en caso de que las tenga (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes
+            se puede consultar en cada ruta mostrada las paradas que tiene la ruta.
+      \item \textbf{Ofrecer (acción) opciones de hacer escalas (objeto) en caso de que se quiera hacer un vuelo con estas condiciones (contexto)} $\rightarrow$ Dentro
+            de la página de comparador de viajes se puede seleccionar la opción de coger vuelos con escalas.
+      \item \textbf{Filtrar(acción) tipo de transporte (objeto) según el precio (contexto)} $\rightarrow$ Dentro de la página de comparador de viajes se puede filtrar
+            por precio y tipo de transporte.
+      \item \textbf{Seleccionar (acción) tipo de transporte (objeto) según los horarios (contexto)} Dentro de la pagina de búsqueda de transporte, se puede seleccionar
+            una opción de transporte en un horario específico.
+      \item \textbf{Ordenar (acción) los transportes (objeto) por precio según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página
+            de búsqueda, se pueden ordenar las opciones por precio (mayor a menor / menor a mayor).
+      \item \textbf{Ordenar (acción) los transportes (objeto) por horarios según las necesidades, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página
+            de búsqueda, se pueden ordenar las opciones por horarios.
+      \item \textbf{Ordenar (acción) los transportes (objeto) por duración de trayecto, para agilizar la búsqueda (contexto)} $\rightarrow$ Dentro de la página de
+            búsqueda, se pueden ordenar las opciones por duración de trayecto (menor a mayor).
 \end{itemize}
 
 \section{Grupos funcionales y jerarquías}
 
-En esta fase, una vez definidos los elementos de datos y funcionales, vamos a organizarlos agrupándolos en unidades funcionales que nuestras personas el trabajo en una tarea y la transición entre tareas. Para mostrarlo de manera más visual hemos realizado un diagrama en árbol, para el que hemos usado el programa \underline{\href{https://www.drawio.com/}{draw.io}}. Tras un análisis, hemos obtenido el siguiente resultado.
+En esta fase, una vez definidos los elementos de datos y funcionales, vamos a
+organizarlos agrupándolos en unidades funcionales que nuestras personas el
+trabajo en una tarea y la transición entre tareas. Para mostrarlo de manera más
+visual hemos realizado un diagrama en árbol, para el que hemos usado el
+programa \underline{\href{https://www.drawio.com/}{draw.io}}. Tras un análisis,
+hemos obtenido el siguiente resultado.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{./Imagenes/jerarquia.png}
-    \caption{Diagrama de jerarquías de funciones}
-    \label{fig:jerarquias}
+      \centering
+      \includegraphics[width=0.8\linewidth]{./Imagenes/jerarquia.png}
+      \caption{Diagrama de jerarquías de funciones}
+      \label{fig:jerarquias}
 \end{figure}
 
 \subsection{Orden general en que se usarán los elementos}
 
 \begin{enumerate}
 
-    \item Cambiar la configuración de idioma y moneda.
-    \item Acceder a \textit{Atención al cliente} desde la \textit{Página principal}.
-    \item Acceder a \textit{Perfil} desde la \textit{Página principal}.
-    \item Funcionalidad principal: comparar distintas opciones de transportes según las necesidades.
+      \item Cambiar la configuración de idioma y moneda.
+      \item Acceder a \textit{Atención al cliente} desde la \textit{Página principal}.
+      \item Acceder a \textit{Perfil} desde la \textit{Página principal}.
+      \item Funcionalidad principal: comparar distintas opciones de transportes según las
+            necesidades.
 
 \end{enumerate}
 
@@ -331,575 +425,742 @@ En esta fase, una vez definidos los elementos de datos y funcionales, vamos a or
 
 \begin{itemize}
 
-    \item \textbf{Principio de proximidad.} Al agrupar elementos similares conseguimos que el usuario sepa que están relacionados, facilitando así el aprendizaje. Así como mejorar la memorabilidad, ya que el usuario puede relacionarlos mentalmente y recordarlos como grupo.
-    Por ejemplo, la moneda y el idioma se han puesto cerca porque son dos elementos de configuración.    
-    \item \textbf{Principio de cierre.} Tendemos a buscar un único elemento simple.
-    En nuestro caso, hemos puesto una barra deslizante para ver todo el contenido de la página.
-    \item \textbf{Principio.} Los elementos de configuración, perfil y ayuda emplean los elementos de otros sistemas para que sea más fácil y rápido.
-    \item \textbf{Principio de visibilidad y feedback.} La interfaz emplea distintos mecanismos para transmitir su estado actual y las acciones posibles en un determinado momento.
-    Por ejemplo, en la pantalla de Comparador, pone los pasos que quedan para finalizar el proceso.
-    \item \textbf{Ley de Von Restorff.} Destacar una funcionalidad por encima del resto.
-    En la Página principal, queremos dar más importancia a la barra de búsqueda ya que es el objetivo principal de nuestra aplicación
+      \item \textbf{Principio de proximidad.} Al agrupar elementos similares conseguimos que el usuario sepa que están relacionados, facilitando así el aprendizaje. Así como mejorar la memorabilidad, ya que el usuario puede relacionarlos mentalmente y recordarlos como grupo.
+            Por ejemplo, la moneda y el idioma se han puesto cerca porque son dos elementos de configuración.
+      \item \textbf{Principio de cierre.} Tendemos a buscar un único elemento simple.
+            En nuestro caso, hemos puesto una barra deslizante para ver todo el contenido de la página.
+      \item \textbf{Principio.} Los elementos de configuración, perfil y ayuda emplean los elementos de otros sistemas para que sea más fácil y rápido.
+      \item \textbf{Principio de visibilidad y feedback.} La interfaz emplea distintos mecanismos para transmitir su estado actual y las acciones posibles en un determinado momento.
+            Por ejemplo, en la pantalla de Comparador, pone los pasos que quedan para finalizar el proceso.
+      \item \textbf{Ley de Von Restorff.} Destacar una funcionalidad por encima del resto.
+            En la Página principal, queremos dar más importancia a la barra de búsqueda ya que es el objetivo principal de nuestra aplicación
 
 \end{itemize}
 
-
 \section{Escenarios key path}
-Los escenarios key path presentan de forma desarrollada los distintos pasos que una persona tendría que seguir para realizar acciones comunes dentro del programa. En esta sección se presentan escenarios pensados desde el punto de vista de las personas creadas en el hito 2.
+Los escenarios key path presentan de forma desarrollada los distintos pasos que
+una persona tendría que seguir para realizar acciones comunes dentro del
+programa. En esta sección se presentan escenarios pensados desde el punto de
+vista de las personas creadas en el hito 2.
 
 \subsection{Marta planea un viaje por Italia}
 
-Marta quiere ir a las distintas ciudades del norte de Italia de la gira de Francesca, por lo que abre en el ordenador la aplicación, inicia sesión y en la parte de búsqueda selecciona dos viajeros, ya que va a ir con su hermano. También selecciona como origen Madrid, como destino la primera ciudad de la gira y las fechas que habían planificado quedarse en esa ciudad para luego ir a la próxima ciudad según la ruta diseñada. En este primer caso, ha tenido que filtrar los resultados en avión, ya que tienen que viajar de un país a otro para la primera ciudad y lo más rápido posible. Los resultados aparecen ordenados como predeterminados por fechas, así que no cambia la opción de ordenar. Finalmente reservan los billetes.
-Para el resto de ciudades, hace el mismo procedimiento, a excepción de aquellas ciudades que por lo planificado tiene que contratar algunos medios de transportes o servicios específicos, como es el de camas para dormir apropiadamente. Para esto no ha puesto filtros de medios de transporte y antes de reservar el billete, reserva el servicio de camas (si tiene, sino busca otro transporte, pero lo mira en información antes) y ya reserva el billete.
-Antes de reservar el billete, en cualquier caso, Marta ha tenido que mirar bien la zona de recogida, origen y destino del transporte disponible seleccionado para que se cumpla bien la planificación o modificarla y seleccionar los asientos contiguos de manera que ella y su hermano se sienten juntos.
-Al final, cuando ya ha reservado todo ha entrado en la sección de su perfil de los viajes que ha realizado la compra de algún billete para comprobar que todo cuadra con su planificación y todo estaba correcto. Aunque luego ha tenido que volver a meterse en su perfil para cancelar un viaje ya que la cantante ha cancelado el concierto en esa ciudad y modificar la fecha del día que iba a ir al siguiente viaje para adelantarla, que ha sido fácil porque sólo ha tenido que cambiar la fecha del día de embarque que había aún dos billetes disponibles e incluso ha sido más barato.
+Marta quiere ir a las distintas ciudades del norte de Italia de la gira de
+Francesca, por lo que abre en el ordenador la aplicación, inicia sesión y en la
+parte de búsqueda selecciona dos viajeros, ya que va a ir con su hermano.
+También selecciona como origen Madrid, como destino la primera ciudad de la
+gira y las fechas que habían planificado quedarse en esa ciudad para luego ir a
+la próxima ciudad según la ruta diseñada. En este primer caso, ha tenido que
+filtrar los resultados en avión, ya que tienen que viajar de un país a otro
+para la primera ciudad y lo más rápido posible. Los resultados aparecen
+ordenados como predeterminados por fechas, así que no cambia la opción de
+ordenar. Finalmente reservan los billetes. Para el resto de ciudades, hace el
+mismo procedimiento, a excepción de aquellas ciudades que por lo planificado
+tiene que contratar algunos medios de transportes o servicios específicos, como
+es el de camas para dormir apropiadamente. Para esto no ha puesto filtros de
+medios de transporte y antes de reservar el billete, reserva el servicio de
+camas (si tiene, sino busca otro transporte, pero lo mira en información antes)
+y ya reserva el billete. Antes de reservar el billete, en cualquier caso, Marta
+ha tenido que mirar bien la zona de recogida, origen y destino del transporte
+disponible seleccionado para que se cumpla bien la planificación o modificarla
+y seleccionar los asientos contiguos de manera que ella y su hermano se sienten
+juntos. Al final, cuando ya ha reservado todo ha entrado en la sección de su
+perfil de los viajes que ha realizado la compra de algún billete para comprobar
+que todo cuadra con su planificación y todo estaba correcto. Aunque luego ha
+tenido que volver a meterse en su perfil para cancelar un viaje ya que la
+cantante ha cancelado el concierto en esa ciudad y modificar la fecha del día
+que iba a ir al siguiente viaje para adelantarla, que ha sido fácil porque sólo
+ha tenido que cambiar la fecha del día de embarque que había aún dos billetes
+disponibles e incluso ha sido más barato.
 
 \subsection{Marta cambia el viaje por motivos económicos}
 
-Como dentro de poco son los exámenes y Marta está agobiada, su amiga Pili le ha sugerido ir a Ibiza el fin de semana posterior a los exámenes para relajarse. A Marta le ha parecido bien la idea así que coge su móvil y abre la aplicación con la sesión ya iniciada y en la sección de búsqueda selecciona dos viajes y como origen Madrid, destino Ibiza y de fecha el fin de semana acordado. Como anda justa de dinero a los resultados ha tenido que filtrarlos por precio menor de 50 euros y ordenarlos por precio creciente, pero no aparece ningún resultado. Como no podía subir más su presupuesto, se le ocurre quitar el destino para ver qué lugares le alcanza el dinero y ha visto que había un descuento para dos personas a Palma de Mallorca. Así que  después de que Pili cediera al cambio de planes, finalmente selecciona Palma de Mallorca, los asientos y reserva el viaje.
+Como dentro de poco son los exámenes y Marta está agobiada, su amiga Pili le ha
+sugerido ir a Ibiza el fin de semana posterior a los exámenes para relajarse. A
+Marta le ha parecido bien la idea así que coge su móvil y abre la aplicación
+con la sesión ya iniciada y en la sección de búsqueda selecciona dos viajes y
+como origen Madrid, destino Ibiza y de fecha el fin de semana acordado. Como
+anda justa de dinero a los resultados ha tenido que filtrarlos por precio menor
+de 50 euros y ordenarlos por precio creciente, pero no aparece ningún
+resultado. Como no podía subir más su presupuesto, se le ocurre quitar el
+destino para ver qué lugares le alcanza el dinero y ha visto que había un
+descuento para dos personas a Palma de Mallorca. Así que después de que Pili
+cediera al cambio de planes, finalmente selecciona Palma de Mallorca, los
+asientos y reserva el viaje.
 
 \subsection{Isabel busca un viaje accesible}
 
-Mientras espera el desayuno, Isabel recibe una llamada de su jefe informando sobre la conferencia para la inclusión de niños con discapacidad y la necesidad de encontrar un sustituto para la potente original. Debido a la urgencia, Isabel acepta la propuesta y decide ponerse a buscar transporte para asistir a la conferencia. Para ello abre la aplicación en el móvil e inicia sesión en su cuenta. Debido a su condición física y a la premura de la situación, en la sección de filtros de la aplicación selecciona la opción “persona con discapacidad física” para buscar los transportes que se encuentren mejor adaptados. Además, en la sección tipo de transporte, selecciona “vuelos”.
+Mientras espera el desayuno, Isabel recibe una llamada de su jefe informando
+sobre la conferencia para la inclusión de niños con discapacidad y la necesidad
+de encontrar un sustituto para la potente original. Debido a la urgencia,
+Isabel acepta la propuesta y decide ponerse a buscar transporte para asistir a
+la conferencia. Para ello abre la aplicación en el móvil e inicia sesión en su
+cuenta. Debido a su condición física y a la premura de la situación, en la
+sección de filtros de la aplicación selecciona la opción “persona con
+discapacidad física” para buscar los transportes que se encuentren mejor
+adaptados. Además, en la sección tipo de transporte, selecciona “vuelos”.
 
-Una vez aplicado el filtro de búsqueda, explora las diferentes opciones de vuelos y se cerciora mirando la información detallada que son vuelos con facilidades, sobre todo, para personas que requieren silla de ruedas.
-Considerando que se trata de un viaje no planificado e inmediato, Isabel prioriza los vuelos más económicos que cumplan con los requisitos previos. Para ello se apoya en el apartado de  ordenador de viajes por “precio más bajo” para una mayor facilidad en su búsqueda.
+Una vez aplicado el filtro de búsqueda, explora las diferentes opciones de
+vuelos y se cerciora mirando la información detallada que son vuelos con
+facilidades, sobre todo, para personas que requieren silla de ruedas.
+Considerando que se trata de un viaje no planificado e inmediato, Isabel
+prioriza los vuelos más económicos que cumplan con los requisitos previos. Para
+ello se apoya en el apartado de ordenador de viajes por “precio más bajo” para
+una mayor facilidad en su búsqueda.
 
-Una vez realizada la compra del billete, Isabel se siente satisfecha con la utilidad y simplicidad de la aplicación y se dirige a casa a preparar su maleta.
+Una vez realizada la compra del billete, Isabel se siente satisfecha con la
+utilidad y simplicidad de la aplicación y se dirige a casa a preparar su
+maleta.
 
 \subsection{Isabel tiene problemas con la compra de su viaje}
 
-Carmen e Isabel tienen el deseo de asistir a la exposición de un artista emergente que les gusta mucho. Ahora que el artista regresa a Madrid con una nueva exposición, deciden viajar un par de días para no perderse la oportunidad.
+Carmen e Isabel tienen el deseo de asistir a la exposición de un artista
+emergente que les gusta mucho. Ahora que el artista regresa a Madrid con una
+nueva exposición, deciden viajar un par de días para no perderse la
+oportunidad.
 
-Isabel abre la aplicación, inicia sesión y comienza a buscar opciones de trenes de Renfe, que se adapten lo mejor posible a sus horarios y necesidades. Eligen Renfe debido a que Carmen tiene descuentos con esa compañía. A la hora de utilizar el buscador, establecen como destino, “Madrid”; número de viajantes, “2”; y filtro de medio de transporte, “trenes” de la empresa “Renfe”. 
-Por otro lado, la exposición durará un mes entero, por lo que no tienen fechas concretas sobre las que realizar el viaje. Para ello utilizan la opción de la aplicación de filtrado por un intervalo de tiempo específico, en este caso un mes. De la misma forma, utilizan el ordenador de viajes por “precio más bajo” para buscar los trenes más baratos, teniendo una búsqueda más rápida e intuitiva.
+Isabel abre la aplicación, inicia sesión y comienza a buscar opciones de trenes
+de Renfe, que se adapten lo mejor posible a sus horarios y necesidades. Eligen
+Renfe debido a que Carmen tiene descuentos con esa compañía. A la hora de
+utilizar el buscador, establecen como destino, “Madrid”; número de viajantes,
+“2”; y filtro de medio de transporte, “trenes” de la empresa “Renfe”. Por otro
+lado, la exposición durará un mes entero, por lo que no tienen fechas concretas
+sobre las que realizar el viaje. Para ello utilizan la opción de la aplicación
+de filtrado por un intervalo de tiempo específico, en este caso un mes. De la
+misma forma, utilizan el ordenador de viajes por “precio más bajo” para buscar
+los trenes más baratos, teniendo una búsqueda más rápida e intuitiva.
 
-Una vez seleccionados y comprados los billetes, Isabel espera durante un período de tiempo razonable a recibir los billetes a través de su correo electrónico vinculado a su cuenta. Ante la falta de recepción de los mismos, se pone en contacto con el servicio de atención al cliente facilitado por la aplicación. Tras explicar su situación, le informan que están teniendo problemas con la gestión de los billetes y le asegura que resolverán el problema de forma manual en pocos minutos. 
-Como prometido, un momento después, Isabel y Carmen recibieron sus billetes, confirmando así su compra exitosa.
+Una vez seleccionados y comprados los billetes, Isabel espera durante un
+período de tiempo razonable a recibir los billetes a través de su correo
+electrónico vinculado a su cuenta. Ante la falta de recepción de los mismos, se
+pone en contacto con el servicio de atención al cliente facilitado por la
+aplicación. Tras explicar su situación, le informan que están teniendo
+problemas con la gestión de los billetes y le asegura que resolverán el
+problema de forma manual en pocos minutos. Como prometido, un momento después,
+Isabel y Carmen recibieron sus billetes, confirmando así su compra exitosa.
 
 \section{Prototipado}
 
-Tras analizar los distintos requisitos, grupos funcionales y escenarios key-path, cada miembro del grupo presenta distintos prototipos para ofrecer distintos puntos de vista. Dentro de estos prototipos presentamos distintas pantallas y cada uno ofrece su visión al respecto. Cada prototipo se dividirá en las distintas pantalla propuestas:
+Tras analizar los distintos requisitos, grupos funcionales y escenarios
+key-path, cada miembro del grupo presenta distintos prototipos para ofrecer
+distintos puntos de vista. Dentro de estos prototipos presentamos distintas
+pantallas y cada uno ofrece su visión al respecto. Cada prototipo se dividirá
+en las distintas pantalla propuestas:
 
 \subsection[Boceto de Alejandro]{Boceto de Alejandro\footnote{Carpeta con el boceto de Alejandro: \url{https://drive.google.com/drive/folders/1CLpkCqsbOiCKe3X4Alg8wcJb7H8soJQd?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En la página de inicio se encuentran solo el buscador (dividido en destino, fechas de ida y vuelta y número de pasajeros) y una serie de ofertas para incentivar a los usuarios a probar destinos nuevos. El \textit{header} se mantendrá igual a lo largo de toda la página, componiéndose del logo de la página (el cual te lleva a la página de inicio), un acceso directo a las ofertas, otro a una sección de destinos populares y un acceso a la página de asistencia, junto a un icono de usuario que te lleva al inicio de sesión o a tu perfil. 
-    \item\textbf{Comparador:} \\ El comparador mantiene la misma barra de búsqueda para poder cambiar las opciones, así como un desplegable de filtrado para poder filtrar por precio, medio de transporte, etc. y otro desplegable para ordenar por precios, tiempo y otras opciones. El comparador en sí se presenta en forma de tarjetas con distinta información de cada viaje.
-    \item\textbf{Página de compra:} \\ La página de compra tiene un selector de asientos visual, con el color verde para espacios no ocupados, en rojo para los ocupados y los azules para los espacios reservados para personas con discapacidades físicas. Para diferenciar viajeros tendremos un desplegable que cambia los datos de los usuarios que vayan a viajar, desde 1 hasta N. Cada usuario rellenará sus datos y más tarde se puede seleccionar el método de pago.
-    \item\textbf{Perfil de usuario:} \\ La página de perfil de usuario presenta el mismo \textit{header} ligeramente modificado, con la ausencia del botón de perfil de usuario. Dentro del perfil podemos modificar los datos del usuario, así como ver las reservas actuales y modificarlas. al final de la página podremos ver la reseña de cada viaje y sus calificaciones, seguido de un título y una descripción.
+      \item\textbf{Página de inicio:} \\ En la página de inicio se encuentran solo el buscador (dividido en destino, fechas de ida y vuelta y número de pasajeros) y una serie de ofertas para incentivar a los usuarios a probar destinos nuevos. El \textit{header} se mantendrá igual a lo largo de toda la página, componiéndose del logo de la página (el cual te lleva a la página de inicio), un acceso directo a las ofertas, otro a una sección de destinos populares y un acceso a la página de asistencia, junto a un icono de usuario que te lleva al inicio de sesión o a tu perfil.
+      \item\textbf{Comparador:} \\ El comparador mantiene la misma barra de búsqueda para poder cambiar las opciones, así como un desplegable de filtrado para poder filtrar por precio, medio de transporte, etc. y otro desplegable para ordenar por precios, tiempo y otras opciones. El comparador en sí se presenta en forma de tarjetas con distinta información de cada viaje.
+      \item\textbf{Página de compra:} \\ La página de compra tiene un selector de asientos visual, con el color verde para espacios no ocupados, en rojo para los ocupados y los azules para los espacios reservados para personas con discapacidades físicas. Para diferenciar viajeros tendremos un desplegable que cambia los datos de los usuarios que vayan a viajar, desde 1 hasta N. Cada usuario rellenará sus datos y más tarde se puede seleccionar el método de pago.
+      \item\textbf{Perfil de usuario:} \\ La página de perfil de usuario presenta el mismo \textit{header} ligeramente modificado, con la ausencia del botón de perfil de usuario. Dentro del perfil podemos modificar los datos del usuario, así como ver las reservas actuales y modificarlas. al final de la página podremos ver la reseña de cada viaje y sus calificaciones, seguido de un título y una descripción.
 \end{itemize}
-
-
 
 \subsection[Boceto de Carlos]{Boceto de Carlos\footnote{Carpeta con el boceto de Carlos: \url{https://drive.google.com/drive/folders/1D3gLVOxOGFO8uPkvK2vkMU2Do2ZOVNPp?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En el diseño de la página principal Carlos propone poner el logo en el medio justo encima de la barra de búsqueda, la barra de búsqueda contiene apartados de origen, destino, fecha de salida y fecha de llegada, estas fechas pueden ser flexibles añadiendo un desplegable que aparece el calendario y un botón para poner +- días. También en la barra de búsqueda hay un apartado para poner el número de viajeros.
-    El botón de buscar en la barra de búsqueda esta a la derecha del todo.
-    En la parte superior derecha hay un botón para ir el perfil del usuario, un botón para ir a los viajes del usuario y dos iconos, uno para cambiar el idioma y otro para la moneda.
-    Debajo de la barra de búsqueda Carlos propone tres apartados, uno con viajes de oferta, otro con propuestas y el último con destinos populares.
-    
-    
-    \item\textbf{Comparador:} \\ Carlos propone en la página del comparador de viajes mantener la misma barra de búsqueda que en el la página de inicio en la parte superior.
-    A la izquierda propone poner los filtros, permitiendo rangos 
-    Debajo de la barra de búsqueda hay botones para elegir el medio de transporte y al lado un botón para ordenar los viajes mostrados.
-    Carlos propone dos columnas de tarjetas de viaje en medio, la primera con los viajes de ida y la segunda con los viajes de vuelta.
-    Cada tarjeta con la información del viaje, salida, llegada, origen, destino, paradas/escalas.
-    Carlos propone que a la derecha de las columnas aparezca un mapa donde aparezca la ruta seguida y las paradas/escalas marcadas. Los puntos unidos por una flecha.
-    
-    \item\textbf{Página de compra:} \\ Carlos propone una pantalla intermedia de resumen de reserva. 
-    En esta página aparecen a la izquierda tres tarjetas. La primera con la información completa del viaje de ida, debajo de esta tarjeta otra con la información del viaje de vuelta y por último debajo una tarjeta con el precio total del viaje.
-    Debajo de las tarjetas Carlos propone un botón de añadir pasajeros al viaje.
-    Al lado de cada tarjeta de viaje aparece el asiento seleccionado y a la derecha un dibujo del interior del transporte donde se puede seleccionar el asiento y aparecen los que ya están seleccionados. 
-    A la derecha del todo Carlos propone que aparezca la lista con los servicios que se pueden seleccionar a mayores para el viaje.
-    
-    \item\textbf{Página de ``Mis reservas'':} Carlos propone que a la izquierda aparecen las tarjetas de los viajes pasados y el más reciente aparezca más grande con la información más relevante, con botones de ver estado del viaje, modificar viaje y cancelar viaje. 
-    Carlos propone que a la derecha aparece un mapa en grande donde aparezca la ruta del viaje seleccionado a la izquierda.
-    
-    
-    \item\textbf{Perfil de usuario:} \\ Carlos propone que los datos de los usuarios aparezcan a la izquierda en una lista con un cuadro de texto a la derecha donde aparezcan los datos introducidos.
-    Debajo de los datos del usuario, Carlos propone tres botones. un botón de suscribirse a la versión prime de la aplicación, un botón de modificar los datos introducidos y un botón de cancelar la cuenta.
-    A la derecha Carlos propone que aparezca un botón que te lleve a la pantalla de viajes del usuario.
-    
+      \item\textbf{Página de inicio:} \\ En el diseño de la página principal Carlos propone poner el logo en el medio justo encima de la barra de búsqueda, la barra de búsqueda contiene apartados de origen, destino, fecha de salida y fecha de llegada, estas fechas pueden ser flexibles añadiendo un desplegable que aparece el calendario y un botón para poner +- días. También en la barra de búsqueda hay un apartado para poner el número de viajeros.
+            El botón de buscar en la barra de búsqueda esta a la derecha del todo.
+            En la parte superior derecha hay un botón para ir el perfil del usuario, un botón para ir a los viajes del usuario y dos iconos, uno para cambiar el idioma y otro para la moneda.
+            Debajo de la barra de búsqueda Carlos propone tres apartados, uno con viajes de oferta, otro con propuestas y el último con destinos populares.
 
-    \item\textbf{Modificar viaje:} \\ Carlos propone que esta pantalla sea igual a  la pantalla de reserva y te permita seleccionar más o menos servicios y cambiar los asientos.
-    \item\textbf{Cancelar viaje:} \\ Carlos propone un pop-up donde te pregunte porque motivo cancelar el viaje, con posibilidad de poner otro caso en forma de texto.
-    Debajo aparecen botones de cancelar o no cancelar.
-    
-    
+      \item\textbf{Comparador:} \\ Carlos propone en la página del comparador de viajes mantener la misma barra de búsqueda que en el la página de inicio en la parte superior.
+            A la izquierda propone poner los filtros, permitiendo rangos
+            Debajo de la barra de búsqueda hay botones para elegir el medio de transporte y al lado un botón para ordenar los viajes mostrados.
+            Carlos propone dos columnas de tarjetas de viaje en medio, la primera con los viajes de ida y la segunda con los viajes de vuelta.
+            Cada tarjeta con la información del viaje, salida, llegada, origen, destino, paradas/escalas.
+            Carlos propone que a la derecha de las columnas aparezca un mapa donde aparezca la ruta seguida y las paradas/escalas marcadas. Los puntos unidos por una flecha.
+
+      \item\textbf{Página de compra:} \\ Carlos propone una pantalla intermedia de resumen de reserva.
+            En esta página aparecen a la izquierda tres tarjetas. La primera con la información completa del viaje de ida, debajo de esta tarjeta otra con la información del viaje de vuelta y por último debajo una tarjeta con el precio total del viaje.
+            Debajo de las tarjetas Carlos propone un botón de añadir pasajeros al viaje.
+            Al lado de cada tarjeta de viaje aparece el asiento seleccionado y a la derecha un dibujo del interior del transporte donde se puede seleccionar el asiento y aparecen los que ya están seleccionados.
+            A la derecha del todo Carlos propone que aparezca la lista con los servicios que se pueden seleccionar a mayores para el viaje.
+
+      \item\textbf{Página de ``Mis reservas'':} Carlos propone que a la izquierda aparecen las tarjetas de los viajes pasados y el más reciente aparezca más grande con la información más relevante, con botones de ver estado del viaje, modificar viaje y cancelar viaje.
+            Carlos propone que a la derecha aparece un mapa en grande donde aparezca la ruta del viaje seleccionado a la izquierda.
+
+      \item\textbf{Perfil de usuario:} \\ Carlos propone que los datos de los usuarios aparezcan a la izquierda en una lista con un cuadro de texto a la derecha donde aparezcan los datos introducidos.
+            Debajo de los datos del usuario, Carlos propone tres botones. un botón de suscribirse a la versión prime de la aplicación, un botón de modificar los datos introducidos y un botón de cancelar la cuenta.
+            A la derecha Carlos propone que aparezca un botón que te lleve a la pantalla de viajes del usuario.
+
+      \item\textbf{Modificar viaje:} \\ Carlos propone que esta pantalla sea igual a  la pantalla de reserva y te permita seleccionar más o menos servicios y cambiar los asientos.
+      \item\textbf{Cancelar viaje:} \\ Carlos propone un pop-up donde te pregunte porque motivo cancelar el viaje, con posibilidad de poner otro caso en forma de texto.
+            Debajo aparecen botones de cancelar o no cancelar.
+
 \end{itemize}
 \subsection[Boceto de Daniel]{Boceto de Daniel\footnote{Carpeta con el boceto de Daniel: \url{https://drive.google.com/drive/folders/1s6A8aLfWLpiXH4j1sNpUaha3d3mf8XFg?usp=drive_link}}}
 
-
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ Diseño de la pantalla de inicio con aspectos parecidos a los demás. El diseño es simple, sin muchos elementos. Contiene los elementos necesarios para realizar un búsqueda como el destino, la salida, las fechas. También tiene otras opciones de búsqueda, número de pasajeros, si el viaje es solo ida y vuelos directos.
-    \item\textbf{Comparador:} \\ Viajes disponibles se agrupan en ida y vuelta, para facilitar la búsqueda, filtros de búsqueda a la izquierda de las opciones disponibles y posibilidad de ordenar mediante diferentes factores las opciones disponibles (precio, duración de viaje, horario de salida).
-    \item\textbf{Página de ``Mis reservas'':} \\ Una lista de los viajes reservados por el usuario. Por cada reserva, aparecen detalles, y también una opción para modificar datos de la reserva, y otro para cancelar la reserva
-    
+      \item\textbf{Página de inicio:} \\ Diseño de la pantalla de inicio con aspectos parecidos a los demás. El diseño es simple, sin muchos elementos. Contiene los elementos necesarios para realizar un búsqueda como el destino, la salida, las fechas. También tiene otras opciones de búsqueda, número de pasajeros, si el viaje es solo ida y vuelos directos.
+      \item\textbf{Comparador:} \\ Viajes disponibles se agrupan en ida y vuelta, para facilitar la búsqueda, filtros de búsqueda a la izquierda de las opciones disponibles y posibilidad de ordenar mediante diferentes factores las opciones disponibles (precio, duración de viaje, horario de salida).
+      \item\textbf{Página de ``Mis reservas'':} \\ Una lista de los viajes reservados por el usuario. Por cada reserva, aparecen detalles, y también una opción para modificar datos de la reserva, y otro para cancelar la reserva
+
 \end{itemize}
 
 \subsection[Boceto de Guille]{Boceto de Guille\footnote{Carpeta con el boceto de Guille: \url{https://drive.google.com/drive/folders/1Gl75aNhKJPCpgOizfZxlmVY386eNbcU_?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ El diseño se orienta a la interfaz típica de una página web, con su header, conteniendo el logo de la aplicación y las principales ventanas de acceso, el cuerpo de la página con la información que se quiere mostrar y un footer en el que se detalla la política de privacidad.
-    
-    La página de inicio diseñada por Guillermo se divide en tres secciones. La primera de ellas es la búsqueda de viajes, en la que se puede elegir el origen. el destino, las fechas en las que se va a realizar, indicar el número de asientos que se quieren ocupar y si se desea que el viaje sea accesible.
-    Otra de las secciones que aparece es una breve descripción de la aplicación, indicando sus miembros y sus principales funciones.
-    Por último, aparecen detallados los viajes que tienen los mejores precios.
+      \item\textbf{Página de inicio:} \\ El diseño se orienta a la interfaz típica de una página web, con su header, conteniendo el logo de la aplicación y las principales ventanas de acceso, el cuerpo de la página con la información que se quiere mostrar y un footer en el que se detalla la política de privacidad.
 
-    \item\textbf{Comparador:} \\ Guillermo optó por separar las vistas de los vuelos de ida y vuelta, haciendo que primero se seleccionan los de ida y en caso de que haya seleccionado ida y vuelta, los de vuelta. 
-    
-    Otra de las características del proceso de reserva es que se ha optado por una barra de progreso, en la que se detallan las distintas etapas del proceso de reserva. La primera de ellas es la elección del transporte, la segunda las características adicionales de la reserva y la tercera la selección del método de pago.
+            La página de inicio diseñada por Guillermo se divide en tres secciones. La
+            primera de ellas es la búsqueda de viajes, en la que se puede elegir el origen.
+            el destino, las fechas en las que se va a realizar, indicar el número de
+            asientos que se quieren ocupar y si se desea que el viaje sea accesible. Otra
+            de las secciones que aparece es una breve descripción de la aplicación,
+            indicando sus miembros y sus principales funciones. Por último, aparecen
+            detallados los viajes que tienen los mejores precios.
 
-    La presentación de la información se realiza en forma de tarjetas, de modo que cada una de ellas va a referenciar a un viaje. La estructura de la tarjeta es muy sencilla. En primer lugar, aparece el icono del transporte a la izquierda (autobús, tren o avión), la hora de salida y de llegada, la compañía que lo opera y el precio (sin iva) del billete.
+      \item\textbf{Comparador:} \\ Guillermo optó por separar las vistas de los vuelos de ida y vuelta, haciendo que primero se seleccionan los de ida y en caso de que haya seleccionado ida y vuelta, los de vuelta.
 
-    Por otro lado, en la sección izquierda de la pantalla aparecen las distintas opciones por las que se pueden filtrar los viajes: tipo de transporte, intervalo horario, precio y viajes accesibles, así como la posibilidad de poder ordenarlos.
-    \item\textbf{Página de compra:} \\ Tercera fase del proceso en la que se puede seleccionar el método del pago con el que se va a efectuar la compra. Puede hacerse tanto por tarjeta de crédito como por PayPal.
-    En el caso de la tarjeta de crédito se solicita información tanto del titular de la tarjeta, como del número, el CVV y la fecha de caducidad.
-    En el caso de PayPal se pide iniciar sesión con la cuenta de PayPal para poder realizar el pago.
+            Otra de las características del proceso de reserva es que se ha optado por una
+            barra de progreso, en la que se detallan las distintas etapas del proceso de
+            reserva. La primera de ellas es la elección del transporte, la segunda las
+            características adicionales de la reserva y la tercera la selección del método
+            de pago.
 
-    Tras introducir los datos necesarios, si el procesamiento del pago se ha realizado correctamente, aparece un mensaje en pantalla que indica al usuario que la reserva se ha realizado correctamente y que puede ser consultada en su perfil, en el apartado “Mis reservas”.
+            La presentación de la información se realiza en forma de tarjetas, de modo que
+            cada una de ellas va a referenciar a un viaje. La estructura de la tarjeta es
+            muy sencilla. En primer lugar, aparece el icono del transporte a la izquierda
+            (autobús, tren o avión), la hora de salida y de llegada, la compañía que lo
+            opera y el precio (sin iva) del billete.
 
-    \item\textbf{Página de ``Mis reservas'':} \\ Todas las ventanas del perfil van a tener una sidebar a la izquierda con un pequeño menú de navegación en el que se puede acceder a modificar los datos del perfil y a mis reservas.
+            Por otro lado, en la sección izquierda de la pantalla aparecen las distintas
+            opciones por las que se pueden filtrar los viajes: tipo de transporte,
+            intervalo horario, precio y viajes accesibles, así como la posibilidad de poder
+            ordenarlos. \item\textbf{Página de compra:} \\ Tercera fase del proceso en la
+            que se puede seleccionar el método del pago con el que se va a efectuar la
+            compra. Puede hacerse tanto por tarjeta de crédito como por PayPal. En el caso
+            de la tarjeta de crédito se solicita información tanto del titular de la
+            tarjeta, como del número, el CVV y la fecha de caducidad. En el caso de PayPal
+            se pide iniciar sesión con la cuenta de PayPal para poder realizar el pago.
 
-    En el caso de la pestaña de mis reservas se ha optado por un diseño similar al de la comparación de viajes: mostrar la información en forma de tarjetas, detallando el medio de transporte en el que se va a realizar el viaje, la hora de salida de la ida y de la vuelta y los destinos entre los que se va a realizar el viaje.
+            Tras introducir los datos necesarios, si el procesamiento del pago se ha
+            realizado correctamente, aparece un mensaje en pantalla que indica al usuario
+            que la reserva se ha realizado correctamente y que puede ser consultada en su
+            perfil, en el apartado “Mis reservas”.
 
-    A la derecha de cada tarjeta se da la opción tanto de modificarla como de poder eliminarla.
+      \item\textbf{Página de ``Mis reservas'':} \\ Todas las ventanas del perfil van a tener una sidebar a la izquierda con un pequeño menú de navegación en el que se puede acceder a modificar los datos del perfil y a mis reservas.
 
-    Si se hace click sobre la tarjeta de una reserva, aparece una nueva pantalla en la que se puede ver la información detallada de un viaje: los trayectos de ida y de vuelta, las fechas y la posibilidad de descargar los billetes.
+            En el caso de la pestaña de mis reservas se ha optado por un diseño similar al
+            de la comparación de viajes: mostrar la información en forma de tarjetas,
+            detallando el medio de transporte en el que se va a realizar el viaje, la hora
+            de salida de la ida y de la vuelta y los destinos entre los que se va a
+            realizar el viaje.
 
-    \item\textbf{Perfil de usuario:} \\ La pantalla del perfil se divide en dos secciones: una sidebar desde la que poder acceder a las funciones del perfil (mis reservas y modificar los datos) y una ventana principal en la que aparece la foto del usuario, junto a su nombre completo y apellidos. Debajo de esta información aparece información complementaria, como la dirección y el teléfono de la persona en caso de que haya que contactar.
-    \item\textbf{Cancelar viaje:} \\ Dentro de la pestaña de Mis Reservas, al lado de cada una de las tarjetas aparece un botón que permite eliminar una reserva en caso de que el usuario lo desee.
+            A la derecha de cada tarjeta se da la opción tanto de modificarla como de poder
+            eliminarla.
+
+            Si se hace click sobre la tarjeta de una reserva, aparece una nueva pantalla en
+            la que se puede ver la información detallada de un viaje: los trayectos de ida
+            y de vuelta, las fechas y la posibilidad de descargar los billetes.
+
+      \item\textbf{Perfil de usuario:} \\ La pantalla del perfil se divide en dos secciones: una sidebar desde la que poder acceder a las funciones del perfil (mis reservas y modificar los datos) y una ventana principal en la que aparece la foto del usuario, junto a su nombre completo y apellidos. Debajo de esta información aparece información complementaria, como la dirección y el teléfono de la persona en caso de que haya que contactar.
+      \item\textbf{Cancelar viaje:} \\ Dentro de la pestaña de Mis Reservas, al lado de cada una de las tarjetas aparece un botón que permite eliminar una reserva en caso de que el usuario lo desee.
 \end{itemize}
 
 \subsection[Boceto de Javier y Pablo]{Boceto de Javier y Pablo\footnote{Carpeta con el boceto de Javier y Pablo: \url{https://drive.google.com/drive/folders/1tK_ibzM1pp2TJYlYrToq9VKKUczw79f4?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ Pablo y Javi trabajaron conjuntamente en un diseño del buscador con muchos elementos comunes al resto de compañeros. Decidieron un diseño limpio, poco cargado, con información justa y necesaria y con la diferencia de añadir una serie de casillas que designan un filtrado del viaje al inicio en función del tipo de persona que sea el cliente. Existen casillas de personas con más de 65 años y de carnet joven, la cual para viajes en tren, obtiene un descuento económico considerable, esto es importante para que el precio del viaje resulte descontado al iniciar la búsqueda. Además está la casilla de PMR(Persona con Movilidad Reducida) la cual consideramos más necesaria que nunca ya que normalmente no es hasta el final de una reserva de un viaje en bus o tren, en la que un cliente puede marcar que es una PMR. Esto dificulta mucho la reserva porque hay muchos trenes y buses que no están habilitados con asientos o espacios para estas personas o que ya están ocupados al haber escasez de ellos en algunos momentos. Por lo Pablo y Javi han decidido ponerlo al principio de la búsqueda para evitar que el cliente tenga que probar muchas opciones hasta encontrar una reserva potencial, algo que ahorra mucho tiempo y es muy sencillo de diseñar.
-    
-    \item\textbf{Comparador:} \\ Pablo y Javi establecieron la idea de que salieran los resultados de la búsqueda en tres secciones, una por cada tipo de transporte (avión, tren y autobús). De esta manera se ponen en pantalla todas las opciones disponibles y que a la hora de comparar se evita más el hecho de viajar de una página a otra comparando resultados. Un inconveniente es que se provoca una sobreestimulación al usuario al haber mucha concentración de información.
-    Es importante para Pablo y Javier colocar el símbolo de la accesibilidad en la esquina superior derecha del resultado así como una flecha que indica el número de paradas, en la que si se hace click se abre una ventana con las paradas y sus horas. Así el usuario sabrá si en este caso, el medio de transporte está habilitado para PMR.
-    
-    \item\textbf{Página de compra:} \\ En este punto Pablo y Javi a la izquierda optaron por poner la información a rellenar de los pasajeros y a la derecha los datos del método de pago. Arriba al inicio, la información del viaje elegido con los asientos escogidos. Pablo y Javi creyeron conveniente que apareciera un pop-up al pulsar ``Pagar'' . En caso de que el proceso haya sido exitoso, solo aparece un mensaje de ``Éxito'' y varias opciones para descargar en primera instancia el recibo del pago y los billetes. Además de eso ambas cosas serán enviadas al correo electrónico para que no se pierda, luego se podrá acceder en el perfil del usuario, en sus reservas. En caso de fallo, no aparece nada, se marcarán los campos erróneos en rojo para que el usuario corrija la información propuesta.
-    \item\textbf{Página de ``Mis reservas'':} \\ Se optó por un diseño sencillo de una sola página en la que salen las reservas de billetes. A la derecha de la reserva salen una serie de botones con opciones, de momento Pablo y Javi pusieron ``Anular'' y ``Detalles'', cuando se pulsa anular, se abre un pop-up donde el usuario enumera los motivos por lo que quiere cancelar la reserva, en este pop-up hay un botón en el cual habilita al usuario examinar los ficheros del ordenador, para que este pueda subir los ficheros solicitados a rellenar los las empresas de transportes(Iberia, Alsa, Renfe,...).
+      \item\textbf{Página de inicio:} \\ Pablo y Javi trabajaron conjuntamente en un diseño del buscador con muchos elementos comunes al resto de compañeros. Decidieron un diseño limpio, poco cargado, con información justa y necesaria y con la diferencia de añadir una serie de casillas que designan un filtrado del viaje al inicio en función del tipo de persona que sea el cliente. Existen casillas de personas con más de 65 años y de carnet joven, la cual para viajes en tren, obtiene un descuento económico considerable, esto es importante para que el precio del viaje resulte descontado al iniciar la búsqueda. Además está la casilla de PMR(Persona con Movilidad Reducida) la cual consideramos más necesaria que nunca ya que normalmente no es hasta el final de una reserva de un viaje en bus o tren, en la que un cliente puede marcar que es una PMR. Esto dificulta mucho la reserva porque hay muchos trenes y buses que no están habilitados con asientos o espacios para estas personas o que ya están ocupados al haber escasez de ellos en algunos momentos. Por lo Pablo y Javi han decidido ponerlo al principio de la búsqueda para evitar que el cliente tenga que probar muchas opciones hasta encontrar una reserva potencial, algo que ahorra mucho tiempo y es muy sencillo de diseñar.
 
-    \item\textbf{Cancelar viaje:} \\ Pablo y Javi optan por la misma opción descrita en la “Pantalla de reservas” pero también en la propia página de cancelar viajes.
+      \item\textbf{Comparador:} \\ Pablo y Javi establecieron la idea de que salieran los resultados de la búsqueda en tres secciones, una por cada tipo de transporte (avión, tren y autobús). De esta manera se ponen en pantalla todas las opciones disponibles y que a la hora de comparar se evita más el hecho de viajar de una página a otra comparando resultados. Un inconveniente es que se provoca una sobreestimulación al usuario al haber mucha concentración de información.
+            Es importante para Pablo y Javier colocar el símbolo de la accesibilidad en la esquina superior derecha del resultado así como una flecha que indica el número de paradas, en la que si se hace click se abre una ventana con las paradas y sus horas. Así el usuario sabrá si en este caso, el medio de transporte está habilitado para PMR.
+
+      \item\textbf{Página de compra:} \\ En este punto Pablo y Javi a la izquierda optaron por poner la información a rellenar de los pasajeros y a la derecha los datos del método de pago. Arriba al inicio, la información del viaje elegido con los asientos escogidos. Pablo y Javi creyeron conveniente que apareciera un pop-up al pulsar ``Pagar'' . En caso de que el proceso haya sido exitoso, solo aparece un mensaje de ``Éxito'' y varias opciones para descargar en primera instancia el recibo del pago y los billetes. Además de eso ambas cosas serán enviadas al correo electrónico para que no se pierda, luego se podrá acceder en el perfil del usuario, en sus reservas. En caso de fallo, no aparece nada, se marcarán los campos erróneos en rojo para que el usuario corrija la información propuesta.
+      \item\textbf{Página de ``Mis reservas'':} \\ Se optó por un diseño sencillo de una sola página en la que salen las reservas de billetes. A la derecha de la reserva salen una serie de botones con opciones, de momento Pablo y Javi pusieron ``Anular'' y ``Detalles'', cuando se pulsa anular, se abre un pop-up donde el usuario enumera los motivos por lo que quiere cancelar la reserva, en este pop-up hay un botón en el cual habilita al usuario examinar los ficheros del ordenador, para que este pueda subir los ficheros solicitados a rellenar los las empresas de transportes(Iberia, Alsa, Renfe,...).
+
+      \item\textbf{Cancelar viaje:} \\ Pablo y Javi optan por la misma opción descrita en la “Pantalla de reservas” pero también en la propia página de cancelar viajes.
 \end{itemize}
 
 \subsection[Boceto de Laura]{Boceto de Laura\footnote{Carpeta con el boceto de Laura: \url{https://drive.google.com/drive/folders/175YIjquOMOUuaC3SfTCDUe5mkSYAeiRE?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En el prototipo de la página principal, Laura optó por un diseño simple que cumpliese la consistencia externa con el resto de páginas de comparadores de viajes. Para ello ha propuesto una cabecera con el logo de la aplicación a la izquierda y a la derecha el ícono del usuario, que al hacerle clic accede a la página del usuario (se explica más adelante). 
-    En el cuerpo de la página, Laura ha seguido con la consistencia externa, como se ha comentado anteriormente, teniendo los campos de lugar origen, lugar destino, la fecha de ida (con un formato específico), la fecha de vuelta y el número de viajeros. Al final, se encuentra el botón de buscar para dar paso a la ventana del comparador.
-    En el pie de página plantea los botones de atención al cliente y de más información o preguntas frecuentes, con los logos que dan a entender la funcionalidad del botón.
-    
-    \item\textbf{Comparador:} \\ 
+      \item\textbf{Página de inicio:} \\ En el prototipo de la página principal, Laura optó por un diseño simple que cumpliese la consistencia externa con el resto de páginas de comparadores de viajes. Para ello ha propuesto una cabecera con el logo de la aplicación a la izquierda y a la derecha el ícono del usuario, que al hacerle clic accede a la página del usuario (se explica más adelante).
+            En el cuerpo de la página, Laura ha seguido con la consistencia externa, como se ha comentado anteriormente, teniendo los campos de lugar origen, lugar destino, la fecha de ida (con un formato específico), la fecha de vuelta y el número de viajeros. Al final, se encuentra el botón de buscar para dar paso a la ventana del comparador.
+            En el pie de página plantea los botones de atención al cliente y de más información o preguntas frecuentes, con los logos que dan a entender la funcionalidad del botón.
 
-    En este prototipo del comparador, Laura, al igual que con el de la pantalla de inicio, lo ha diseñado siguiendo con la consistencia externa respecto a los comparadores de viaje.
-    Laura ha decidido seguir manteniendo la cabecera igual que la del inicio, permitiendo que al hacer clic sobre el logo vuelva al inicio de la página y pueda hacer clic en el usuario para ir a la pantalla de usuario.
-    En el cuerpo de la página, ha dividido la parte de la izquierda para los filtros que reducen los resultados para que aparezcan más específicos. Se muestran los filtros más relevantes y tiene la opción de que se puede visualizar más.
-    En el centro de la pantalla, Laura ha decidido que al principio está la sección de ordenar que tiene cuatro botones, el de las dos flechas (significa que puede cambiar el orden de mayor a menor o al revés), del precio, de fechas (más próximas) y de duración (del trayecto). Al final de esta línea de botones, se sitúa el botón de volver atrás.
-    Siguiendo con el centro de la pantalla, Laura ha decidido que los resultados de los viajes se muestre en un rectángulo que indique al principio en una etiqueta el tipo de transporte. Las posibles combinaciones de ida y vuelta con sus compañías, las horas, el lugar, la duración y el tipo de viaje (directo, con escalas o paradas, etc.). En la parte inferior a la derecha se sitúa el botón de ver el viaje con más detalle (pantalla de reserva, que se explicará más adelante), el precio (muy destacado para llamar la atención del usuario) y un botón de información (que al hacer clic sale una ventana emergente con los servicios disponibles, separados por ida y vuelta y la accesibilidad que ofrecen, si ofrecen).
-    Al final de la página, se encuentran los botones de atención al cliente y más información, como en la pantalla de inicio.
-    
-    \item\textbf{Página de compra:} \\ En esta pantalla, Laura ha decidido dividirla en dos, la parte de la izquierda el resumen del viaje y la de la derecha el resumen de los gatos.
-    En la parte izquierda, Laura ha propuesto poner el resumen del viaje con la compañía escogida, el tipo de transporte, la duración del viaje de ida y vuelta, y las ciudades. Debajo de estas están las secciones de información que se puede desplegar para ver la descripción del destino y origen con los lugares donde se coge el transporte y un poco de información. Debajo de la información están los servicios adicionales con sus precios, los que ha escogido el usuario están marcados en la checkbox con una cruz, pero en cualquier caso puede seleccionar los otros y los que ya no quieren quitarlos. Y finalmente, está la sección de descuentos y promociones que puede usar el usuario si es que hay.
-    A la derecha, Laura ha decidido diseñar un resumen de todos los gastos y al final, el botón reservar los billetes.
-    También propone los botones de volver atrás, de atención al cliente y de preguntas frecuentes como las anteriores pantallas.
-    \item\textbf{Página de ``Mis reservas'':} En este caso, Laura ha optado por incluirlo en la misma pantalla que en la de usuario y es un resumen del viaje que pone origen y destino con el precio y las fechas. Tiene las opciones de modificar que sería la pantalla parecida a la de reservar y el comparador de viajes, la de cancelar (que te saldrá una ventana de si está seguro de que quiere cancelar el viaje) y la de visualizar el billete (muy parecida a la de reservar quitando el botón de reservar, el resto igual).
-    \item\textbf{Perfil de usuario:} \\ En esta pantalla, Laura ha pensado un diseño que al principio te de la bienvenida con tu nombre de usuario y proceda con el resto de la página.
-    A la izquierda de los campos de datos está la imagen que puede cambiar el usuario en cualquier momento.
-    A la derecha ha pensado haya un menú desplegable con distintas opciones como datos personales, tus reservas y cuenta. 
-    En la opción de datos personales Laura ha decidido que incluya los campos de nombre de usuario, nombre completo (separados nombres, primer apellido y segundo si tiene), edad y sexo.
-    La opción de tus reservas ya ha sido explicada antes.
-    La opción de cuenta ha propuesto mostrar el campo de correo (con la posibilidad de cambiarlo) y eliminar cuenta.
-    Y, como las anteriores pantallas, propone los botones de volver atrás, de atención al cliente y de preguntas frecuentes.
-    
+      \item\textbf{Comparador:} \\
+
+            En este prototipo del comparador, Laura, al igual que con el de la pantalla de
+            inicio, lo ha diseñado siguiendo con la consistencia externa respecto a los
+            comparadores de viaje. Laura ha decidido seguir manteniendo la cabecera igual
+            que la del inicio, permitiendo que al hacer clic sobre el logo vuelva al inicio
+            de la página y pueda hacer clic en el usuario para ir a la pantalla de usuario.
+            En el cuerpo de la página, ha dividido la parte de la izquierda para los
+            filtros que reducen los resultados para que aparezcan más específicos. Se
+            muestran los filtros más relevantes y tiene la opción de que se puede
+            visualizar más. En el centro de la pantalla, Laura ha decidido que al principio
+            está la sección de ordenar que tiene cuatro botones, el de las dos flechas
+            (significa que puede cambiar el orden de mayor a menor o al revés), del precio,
+            de fechas (más próximas) y de duración (del trayecto). Al final de esta línea
+            de botones, se sitúa el botón de volver atrás. Siguiendo con el centro de la
+            pantalla, Laura ha decidido que los resultados de los viajes se muestre en un
+            rectángulo que indique al principio en una etiqueta el tipo de transporte. Las
+            posibles combinaciones de ida y vuelta con sus compañías, las horas, el lugar,
+            la duración y el tipo de viaje (directo, con escalas o paradas, etc.). En la
+            parte inferior a la derecha se sitúa el botón de ver el viaje con más detalle
+            (pantalla de reserva, que se explicará más adelante), el precio (muy destacado
+            para llamar la atención del usuario) y un botón de información (que al hacer
+            clic sale una ventana emergente con los servicios disponibles, separados por
+            ida y vuelta y la accesibilidad que ofrecen, si ofrecen). Al final de la
+            página, se encuentran los botones de atención al cliente y más información,
+            como en la pantalla de inicio.
+
+      \item\textbf{Página de compra:} \\ En esta pantalla, Laura ha decidido dividirla en dos, la parte de la izquierda el resumen del viaje y la de la derecha el resumen de los gatos.
+            En la parte izquierda, Laura ha propuesto poner el resumen del viaje con la compañía escogida, el tipo de transporte, la duración del viaje de ida y vuelta, y las ciudades. Debajo de estas están las secciones de información que se puede desplegar para ver la descripción del destino y origen con los lugares donde se coge el transporte y un poco de información. Debajo de la información están los servicios adicionales con sus precios, los que ha escogido el usuario están marcados en la checkbox con una cruz, pero en cualquier caso puede seleccionar los otros y los que ya no quieren quitarlos. Y finalmente, está la sección de descuentos y promociones que puede usar el usuario si es que hay.
+            A la derecha, Laura ha decidido diseñar un resumen de todos los gastos y al final, el botón reservar los billetes.
+            También propone los botones de volver atrás, de atención al cliente y de preguntas frecuentes como las anteriores pantallas.
+      \item\textbf{Página de ``Mis reservas'':} En este caso, Laura ha optado por incluirlo en la misma pantalla que en la de usuario y es un resumen del viaje que pone origen y destino con el precio y las fechas. Tiene las opciones de modificar que sería la pantalla parecida a la de reservar y el comparador de viajes, la de cancelar (que te saldrá una ventana de si está seguro de que quiere cancelar el viaje) y la de visualizar el billete (muy parecida a la de reservar quitando el botón de reservar, el resto igual).
+      \item\textbf{Perfil de usuario:} \\ En esta pantalla, Laura ha pensado un diseño que al principio te de la bienvenida con tu nombre de usuario y proceda con el resto de la página.
+            A la izquierda de los campos de datos está la imagen que puede cambiar el usuario en cualquier momento.
+            A la derecha ha pensado haya un menú desplegable con distintas opciones como datos personales, tus reservas y cuenta.
+            En la opción de datos personales Laura ha decidido que incluya los campos de nombre de usuario, nombre completo (separados nombres, primer apellido y segundo si tiene), edad y sexo.
+            La opción de tus reservas ya ha sido explicada antes.
+            La opción de cuenta ha propuesto mostrar el campo de correo (con la posibilidad de cambiarlo) y eliminar cuenta.
+            Y, como las anteriores pantallas, propone los botones de volver atrás, de atención al cliente y de preguntas frecuentes.
+
 \end{itemize}
 
 \subsection[Boceto de Leire]{Boceto de Leire\footnote{Carpeta con el boceto de Leire: \url{https://drive.google.com/drive/folders/1UuyvH4UscltpxwordJf_IMLDTDp9Oekc?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En el prototipo de la página principal, Leire decidió centrarse en el diseño de una barra de búsqueda como objeto principal de la pantalla, en el que aparece el origen y destino deseados, las fechas, el número de pasajeros y si se quiere realizar el viaje sólo de ida o de ida y vuelta.
-    En la parte de arriba de la pantalla encontramos el logo con el nombre de la empresa (si pinchas te llevaría a la página principal desde cualquier pantalla), a la izquierda, y un icono para el perfil, a la derecha.
-    En el caso de pinchar sobre el icono del perfil, se desplegará una pestaña que permitirá al usuario ir a su información personal o cerrar sesión.
-    Debajo de la barra de búsqueda encontraremos una serie de ofertas con los viajes más baratos actualmente. Así como las fechas de estos viajes y los precios, para una compra más rápida.
-    Abajo a la derecha, tenemos el botón del chat. Si pinchas, se abre una ventana en la misma página para poder ponerse en contacto con atención al cliente (este botón lo tendremos en todas las ventanas).
-    
-    \item\textbf{Comparador:} \\ 
-    En este caso, Leire dejó la barra de búsqueda de la pantalla principal por si se realizan cambios, para que sea más fácil para los usuarios modificar la información.
-    Debajo de la barra de búsqueda, encontramos diferentes tarjetas con la información de los diferentes medios de transportes para el viaje elegido (fecha, hora, precio y si tiene escalas o es directo). Podemos filtrar la información mostrada con los diferentes filtros que tenemos en la parte izquierda de la pantalla (podemos filtrar por medio de transporte, ruta, precio, compañía, horas de salida y llegada…). También podemos elegir el orden en el que nos muestran las tarjetas (precio, duración…).
-    
-    \item\textbf{Página de ``Mis reservas'':} \\ En este caso, Leire ha optado por poner la foto del usuario a la izquierda con un botón debajo para cerrar la sesión.
-    En la parte central de la pantalla, encontramos dos desplegables con las reservas activas y las pasadas.
-    En el caso de pinchar sobre las activas, mostrará al usuario un resumen con la información de los viajes que tendrá próximamente. Así como darle la posibilidad de cancelar ese viaje.
-    En el caso de pinchar sobre las pasadas, mostrará al usuario un resumen con la información de los viajes que ya ha realizado.
-    
-    \item\textbf{Perfil de usuario:} \\ En la pantalla del perfil, Leire ha decidido poner la foto del usuario en la parte izquierda, junto con un botón para acceder a los datos personales del usuario y otro para las reservas.
-    En la parte derecha encontramos casillas para el nombre, apellidos, fecha de nacimiento, sexo y el resto de información del usuario. También da la posibilidad de cambiar estos datos.
-    
+      \item\textbf{Página de inicio:} \\ En el prototipo de la página principal, Leire decidió centrarse en el diseño de una barra de búsqueda como objeto principal de la pantalla, en el que aparece el origen y destino deseados, las fechas, el número de pasajeros y si se quiere realizar el viaje sólo de ida o de ida y vuelta.
+            En la parte de arriba de la pantalla encontramos el logo con el nombre de la empresa (si pinchas te llevaría a la página principal desde cualquier pantalla), a la izquierda, y un icono para el perfil, a la derecha.
+            En el caso de pinchar sobre el icono del perfil, se desplegará una pestaña que permitirá al usuario ir a su información personal o cerrar sesión.
+            Debajo de la barra de búsqueda encontraremos una serie de ofertas con los viajes más baratos actualmente. Así como las fechas de estos viajes y los precios, para una compra más rápida.
+            Abajo a la derecha, tenemos el botón del chat. Si pinchas, se abre una ventana en la misma página para poder ponerse en contacto con atención al cliente (este botón lo tendremos en todas las ventanas).
+
+      \item\textbf{Comparador:} \\
+            En este caso, Leire dejó la barra de búsqueda de la pantalla principal por si se realizan cambios, para que sea más fácil para los usuarios modificar la información.
+            Debajo de la barra de búsqueda, encontramos diferentes tarjetas con la información de los diferentes medios de transportes para el viaje elegido (fecha, hora, precio y si tiene escalas o es directo). Podemos filtrar la información mostrada con los diferentes filtros que tenemos en la parte izquierda de la pantalla (podemos filtrar por medio de transporte, ruta, precio, compañía, horas de salida y llegada…). También podemos elegir el orden en el que nos muestran las tarjetas (precio, duración…).
+
+      \item\textbf{Página de ``Mis reservas'':} \\ En este caso, Leire ha optado por poner la foto del usuario a la izquierda con un botón debajo para cerrar la sesión.
+            En la parte central de la pantalla, encontramos dos desplegables con las reservas activas y las pasadas.
+            En el caso de pinchar sobre las activas, mostrará al usuario un resumen con la información de los viajes que tendrá próximamente. Así como darle la posibilidad de cancelar ese viaje.
+            En el caso de pinchar sobre las pasadas, mostrará al usuario un resumen con la información de los viajes que ya ha realizado.
+
+      \item\textbf{Perfil de usuario:} \\ En la pantalla del perfil, Leire ha decidido poner la foto del usuario en la parte izquierda, junto con un botón para acceder a los datos personales del usuario y otro para las reservas.
+            En la parte derecha encontramos casillas para el nombre, apellidos, fecha de nacimiento, sexo y el resto de información del usuario. También da la posibilidad de cambiar estos datos.
+
 \end{itemize}
 \subsection[Boceto de Maria]{Boceto de Maria\footnote{Carpeta con el boceto de Maria: \url{https://drive.google.com/drive/folders/1mXz73K2l3AV1JRvOyf3aVBfp4IgAOCdD?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas. 
-    En la parte izquierda de header el logo de nuestra empresa y enlaces a las categorías de trenes, autobuses, vuelos.
-    Sobre una imagen que cubre toda la pantalla excepto el header, un rectángulo con los campos para hacer la búsqueda. De izquierda a derecha: origen, destino, fecha de la ida, botón para añadir la vuelta si es sólo ida o en su defecto fecha de la vuelta, número de personas y botón de buscar. 
-    
-    \item\textbf{Comparador:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas. 
-    En la parte izquierda del header el logo de nuestra empresa.
-    Debajo de eso, aun en el header, mismos campos que la pantalla de inicio con la información de la búsqueda realizada.
-    Pestañas para seleccionar transporte.
-    En las opciones si destaca por algo (más rápida, más barata..).
-    Encima de la lista de opciones.
+      \item\textbf{Página de inicio:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas.
+            En la parte izquierda de header el logo de nuestra empresa y enlaces a las categorías de trenes, autobuses, vuelos.
+            Sobre una imagen que cubre toda la pantalla excepto el header, un rectángulo con los campos para hacer la búsqueda. De izquierda a derecha: origen, destino, fecha de la ida, botón para añadir la vuelta si es sólo ida o en su defecto fecha de la vuelta, número de personas y botón de buscar.
 
-    \item\textbf{Página de ``Mis reservas'':} \\ En la parte derecha del header enlace a tu perfil de usuario. En la parte izquierda del header el logo de nuestra empresa.
-    Justo debajo, el título “Tus reservas” y un poco más abajo, dos opciones en forma de pestaña: próximas y archivadas.
-    La imagen cubre toda la mitad superior de la pantalla, incluyendo desde las pestañas hasta encima del header.
-    En la mitad inferior dos secciones: en la izquierda una lista con las reservas del tipo seleccionado, cada una en un recuadro y con todos sus datos, y en la derecha, un recuadro vertical a modo de formulario para recuperar reservas hechas y asociarlas con la cuenta de usuario. El título es “Recupera tu reserva” y tiene dos campos: n\textdegree de reserva y email.
-    
-    \item\textbf{Perfil de usuario:} \\ En la parte izquierda del header el logo de nuestra empresa. 
-    Debajo se lee el título “Tu cuenta”
-    Debajo, una lista con títulos de secciones: Información personal, Tus reservas, Métodos de pago, Notificaciones y Recomendados. Pinchando en cada una de ellas te lleva a la pantalla correspondiente. En este prototipo aparece la sección “Información personal”.
-    Hay una imagen de fondo en la mitad superior de la pantalla, incluye desde la primera sección de la lista hasta justo encima del header.
-    En la mitad inferior derecha, un recuadro con un título que lee “Detalles del pasajero” y campos para actualizar los datos: Tratamiento Sr/Sra, Nombre, Apellidos, Email, Fecha de nacimiento, País/Región y N\textdegree de teléfono. Por último al terminar todos los campos, un botón de “Actualizar datos”.
-    
-    
+      \item\textbf{Comparador:} \\ En la parte derecha del header cambiar idioma y moneda. También enlace a tu perfil de usuario y a tus reservas.
+            En la parte izquierda del header el logo de nuestra empresa.
+            Debajo de eso, aun en el header, mismos campos que la pantalla de inicio con la información de la búsqueda realizada.
+            Pestañas para seleccionar transporte.
+            En las opciones si destaca por algo (más rápida, más barata..).
+            Encima de la lista de opciones.
+
+      \item\textbf{Página de ``Mis reservas'':} \\ En la parte derecha del header enlace a tu perfil de usuario. En la parte izquierda del header el logo de nuestra empresa.
+            Justo debajo, el título “Tus reservas” y un poco más abajo, dos opciones en forma de pestaña: próximas y archivadas.
+            La imagen cubre toda la mitad superior de la pantalla, incluyendo desde las pestañas hasta encima del header.
+            En la mitad inferior dos secciones: en la izquierda una lista con las reservas del tipo seleccionado, cada una en un recuadro y con todos sus datos, y en la derecha, un recuadro vertical a modo de formulario para recuperar reservas hechas y asociarlas con la cuenta de usuario. El título es “Recupera tu reserva” y tiene dos campos: n\textdegree de reserva y email.
+
+      \item\textbf{Perfil de usuario:} \\ En la parte izquierda del header el logo de nuestra empresa.
+            Debajo se lee el título “Tu cuenta”
+            Debajo, una lista con títulos de secciones: Información personal, Tus reservas, Métodos de pago, Notificaciones y Recomendados. Pinchando en cada una de ellas te lleva a la pantalla correspondiente. En este prototipo aparece la sección “Información personal”.
+            Hay una imagen de fondo en la mitad superior de la pantalla, incluye desde la primera sección de la lista hasta justo encima del header.
+            En la mitad inferior derecha, un recuadro con un título que lee “Detalles del pasajero” y campos para actualizar los datos: Tratamiento Sr/Sra, Nombre, Apellidos, Email, Fecha de nacimiento, País/Región y N\textdegree de teléfono. Por último al terminar todos los campos, un botón de “Actualizar datos”.
+
 \end{itemize}
-
 
 \subsection[Boceto de Rodrigo]{Boceto de Rodrigo\footnote{Carpeta con el boceto de Rodrigo: \url{https://drive.google.com/drive/folders/1DUsmP6Jo2ZFUitYpQU91Pd6CipjM2G4M?usp=drive_link}}}
 
 \begin{itemize}
-    \item\textbf{Página de inicio:} \\ En la parte superior, panel de busca rápida de ofertas para los diferentes medios de transporte. 
-    Casillas de marcado de utilización de bonos o descuentos. 
-    
-    \item\textbf{Comparador:} \\ Selección de tipos de transporte además de un sistema de ordenación en la parte superior.
-    Barra lateral independiente con diferentes filtros de búsqueda acumulables.
-    
-    \item\textbf{Página de compra:} \\ Pantalla dividida en dos partes. En la parte izquierda zona de selección de detalles adicionales requeridos para la reserva del billete, como podría ser el seguro, servicios,etc. Además de información correspondiente a los titulares del billete.
-    En la parte derecha, información sobre el método de pago, documentación relacionada con el billete tras la compra y zona de valoración del servicio de la aplicación.
-    
-    \item\textbf{Página de ``Mis reservas'':} \\ Tarjetas para los diferentes viajes con la información principal visible. Además de contar con la opción de ``más detalles'' para una mayor visión de las características del billete.
-    Sistema de agrupación de billetes pasados y billetes que todavía no han sido usados los cuales se podrán modificar o anular.
-    
-    \item\textbf{Perfil de usuario:} \\ Pantalla dividida en dos partes. La parte izquierda, un panel de control con la foto del usuario y opciones de perfil como la configuración de notificaciones de la aplicación, ``suscripciones'' para ver las diferentes ofertas de suscripción disponibles, ``mis reservas'' para acceder directamente a la sección de tus reservas realizadas y ``cerrar sesión'' para salir de la cuenta.
-    La parte derecha está conformada por los datos personales del usuario, además de las opciones de ``cancelar cuenta'' y ``guardar cambios'' en caso de que se quiera modificar los datos.
-    
+      \item\textbf{Página de inicio:} \\ En la parte superior, panel de busca rápida de ofertas para los diferentes medios de transporte.
+            Casillas de marcado de utilización de bonos o descuentos.
+
+      \item\textbf{Comparador:} \\ Selección de tipos de transporte además de un sistema de ordenación en la parte superior.
+            Barra lateral independiente con diferentes filtros de búsqueda acumulables.
+
+      \item\textbf{Página de compra:} \\ Pantalla dividida en dos partes. En la parte izquierda zona de selección de detalles adicionales requeridos para la reserva del billete, como podría ser el seguro, servicios,etc. Además de información correspondiente a los titulares del billete.
+            En la parte derecha, información sobre el método de pago, documentación relacionada con el billete tras la compra y zona de valoración del servicio de la aplicación.
+
+      \item\textbf{Página de ``Mis reservas'':} \\ Tarjetas para los diferentes viajes con la información principal visible. Además de contar con la opción de ``más detalles'' para una mayor visión de las características del billete.
+            Sistema de agrupación de billetes pasados y billetes que todavía no han sido usados los cuales se podrán modificar o anular.
+
+      \item\textbf{Perfil de usuario:} \\ Pantalla dividida en dos partes. La parte izquierda, un panel de control con la foto del usuario y opciones de perfil como la configuración de notificaciones de la aplicación, ``suscripciones'' para ver las diferentes ofertas de suscripción disponibles, ``mis reservas'' para acceder directamente a la sección de tus reservas realizadas y ``cerrar sesión'' para salir de la cuenta.
+            La parte derecha está conformada por los datos personales del usuario, además de las opciones de ``cancelar cuenta'' y ``guardar cambios'' en caso de que se quiera modificar los datos.
+
 \end{itemize}
 
 \subsection[Boceto de Sergio]{Boceto de Sergio\footnote{Carpeta con el boceto de Sergio: \url{https://drive.google.com/drive/folders/1Iw0kasuToaGSr-NjqgJBwVrCVe-GpAl1?usp=drive_link}}}
 
 \begin{itemize}
-    
-    \item\textbf{Página de inicio:} \\ Con el objetivo de tener la máxima simplicidad en la pantalla de inicio, Sergio pensó que el centro de la pantalla debería ser ocupado por un simple botón que te llevase al comparador. Esto pone el foco sobre la principal utilidad de la aplicación. Además, siguiendo los principios de la jerarquía, habría un botón de perfil arriba a la derecha, con el que se podría acceder a los datos del usuario en caso de haber iniciado sesión o a la pantalla para iniciarla o registrarse en el caso de no tener cuenta o no haber accedido nunca. Por último, justo a la izquierda de este botón encontraríamos el botón de atención al cliente, el cuál abriría un desplegable con un chat y con otros datos de contacto, como el correo o el teléfono de la empresa.
-    \item\textbf{Comparador:} \\ En este caso, Sergio optó por poner el filtrado por búsqueda en la mitad superior de la pantalla. Para mantener la consistencia externa con respecto al resto de comparadores, ha elegido el orden de origen-destino-fechas-acompañantes en este buscador. La opción de fechas abriría un calendario para poder seleccionar de manera más simple, pero igualmente se podría meter por teclado. En caso de dejar alguno de los apartados libres, buscaría las opciones que consideremos preferentes con respecto a los apartados rellenados. En la mitad inferior encontraríamos los resultados de la búsqueda anterior. En caso de no haber rellenado nada tendríamos las ofertas destacadas que creyéramos que pueden interesar al usuario. En la parte izquierda, tendríamos los diferentes filtros y ordenaciones que ofrece nuestra aplicación. Estaría flotando para poder bajar entre los diferentes viajes sin que varíen los filtros. Cada viaje estaría dentro de una Card, las cuales contienen los datos de mayor importancia para el usuario. A la izquierda habría una imagen a decidir entre el destino o la compañía. En la parte de info tendríamos datos básicos como el origen con la fecha y hora de salida, y el destino con los mismos datos de llegada. Además se podrá ver el tiempo de viaje y el aeropuerto tanto del origen como del destino. Junto a esta información podremos ver el precio. Esto será lo más destacado de la tarjeta, pues es uno de los atributos más importantes del viaje. A la derecha de esto tendremos los servicios que ofrece este tren, como por ejemplo si es accesible para personas con discapacidad o si cuenta con baños, si éstos son accesibles, etc. Como en la anterior pantalla, está en la parte superior el botón para acceder a los datos del perfil o de inicio de sesión y el botón para usar la atención al cliente. Además, se ha añadido un botón a la derecha para poder volver a la pantalla principal.
-    \item\textbf{Página de compra:} \\ Esta sería una pantalla simple, ya que simplemente saldrían las cartas de los viajes de ida y de vuelta que se han elegido, para que pueda verificar que todos los datos son correctos. En caso de confirmar, el usuario accedería a una plataforma de pago externa a la aplicación. En la parte de arriba habría en la izquierda los botones para acceder al perfil del usuario y al lado para poder ver la atención al cliente. En la parte izquierda estaría el botón para ir a la pantalla anterior.
-    \item\textbf{Perfil de usuario:} \\ Este es el prototipo que se vería en el caso de que el usuario haya iniciado sesión. Se vería a la izquierda la foto de perfil, y junto a ella los datos personales del usuario, a definir. Pero entre ellos podrían estar el nombre, los apellidos, el DNI y algunos datos de contacto, como podrían ser el correo y el teléfono. Debajo de la información habría 2 botones, uno con la opción de modificar alguno de los campos y otro para poder borrar el perfil. A la derecha de estos datos podemos ver las reservas que ha realizado el cliente. Serían unas cards más pequeñas que en el caso del comparador, en la que se incluiría una cantidad de datos menor, pero destacando igualmente el precio. Junto a cada tarjeta habrían 2 botones, uno con la función de borrarla, que nos llevaría a la función de cancelado de viaje, el cuál informaría de si el usuario podría recuperar el dinero (total o parcialmente) o no. El otro botón es para poder acceder a la pantalla de modificar viaje, a través de la cual el usuario tendrá la opción (en el caso de ser posible) de cambiar el viaje por otro, aportando la diferencia de precios. Igual que en los anteriores prototipos, arriba están las opciones de acceder al perfil, al servicio de atención al cliente y de volver a la pantalla anterior.
+
+      \item\textbf{Página de inicio:} \\ Con el objetivo de tener la máxima simplicidad en la pantalla de inicio, Sergio pensó que el centro de la pantalla debería ser ocupado por un simple botón que te llevase al comparador. Esto pone el foco sobre la principal utilidad de la aplicación. Además, siguiendo los principios de la jerarquía, habría un botón de perfil arriba a la derecha, con el que se podría acceder a los datos del usuario en caso de haber iniciado sesión o a la pantalla para iniciarla o registrarse en el caso de no tener cuenta o no haber accedido nunca. Por último, justo a la izquierda de este botón encontraríamos el botón de atención al cliente, el cuál abriría un desplegable con un chat y con otros datos de contacto, como el correo o el teléfono de la empresa.
+      \item\textbf{Comparador:} \\ En este caso, Sergio optó por poner el filtrado por búsqueda en la mitad superior de la pantalla. Para mantener la consistencia externa con respecto al resto de comparadores, ha elegido el orden de origen-destino-fechas-acompañantes en este buscador. La opción de fechas abriría un calendario para poder seleccionar de manera más simple, pero igualmente se podría meter por teclado. En caso de dejar alguno de los apartados libres, buscaría las opciones que consideremos preferentes con respecto a los apartados rellenados. En la mitad inferior encontraríamos los resultados de la búsqueda anterior. En caso de no haber rellenado nada tendríamos las ofertas destacadas que creyéramos que pueden interesar al usuario. En la parte izquierda, tendríamos los diferentes filtros y ordenaciones que ofrece nuestra aplicación. Estaría flotando para poder bajar entre los diferentes viajes sin que varíen los filtros. Cada viaje estaría dentro de una Card, las cuales contienen los datos de mayor importancia para el usuario. A la izquierda habría una imagen a decidir entre el destino o la compañía. En la parte de info tendríamos datos básicos como el origen con la fecha y hora de salida, y el destino con los mismos datos de llegada. Además se podrá ver el tiempo de viaje y el aeropuerto tanto del origen como del destino. Junto a esta información podremos ver el precio. Esto será lo más destacado de la tarjeta, pues es uno de los atributos más importantes del viaje. A la derecha de esto tendremos los servicios que ofrece este tren, como por ejemplo si es accesible para personas con discapacidad o si cuenta con baños, si éstos son accesibles, etc. Como en la anterior pantalla, está en la parte superior el botón para acceder a los datos del perfil o de inicio de sesión y el botón para usar la atención al cliente. Además, se ha añadido un botón a la derecha para poder volver a la pantalla principal.
+      \item\textbf{Página de compra:} \\ Esta sería una pantalla simple, ya que simplemente saldrían las cartas de los viajes de ida y de vuelta que se han elegido, para que pueda verificar que todos los datos son correctos. En caso de confirmar, el usuario accedería a una plataforma de pago externa a la aplicación. En la parte de arriba habría en la izquierda los botones para acceder al perfil del usuario y al lado para poder ver la atención al cliente. En la parte izquierda estaría el botón para ir a la pantalla anterior.
+      \item\textbf{Perfil de usuario:} \\ Este es el prototipo que se vería en el caso de que el usuario haya iniciado sesión. Se vería a la izquierda la foto de perfil, y junto a ella los datos personales del usuario, a definir. Pero entre ellos podrían estar el nombre, los apellidos, el DNI y algunos datos de contacto, como podrían ser el correo y el teléfono. Debajo de la información habría 2 botones, uno con la opción de modificar alguno de los campos y otro para poder borrar el perfil. A la derecha de estos datos podemos ver las reservas que ha realizado el cliente. Serían unas cards más pequeñas que en el caso del comparador, en la que se incluiría una cantidad de datos menor, pero destacando igualmente el precio. Junto a cada tarjeta habrían 2 botones, uno con la función de borrarla, que nos llevaría a la función de cancelado de viaje, el cuál informaría de si el usuario podría recuperar el dinero (total o parcialmente) o no. El otro botón es para poder acceder a la pantalla de modificar viaje, a través de la cual el usuario tendrá la opción (en el caso de ser posible) de cambiar el viaje por otro, aportando la diferencia de precios. Igual que en los anteriores prototipos, arriba están las opciones de acceder al perfil, al servicio de atención al cliente y de volver a la pantalla anterior.
 
 \end{itemize}
 
 \subsection{Conclusiones finales y prototipo final}
 
-El día 8 de noviembre, nos reunimos todos en el laboratorio para comentar los prototipos y que cada uno explicase
-la idea detrás del suyo. Tras esto, debatimos entre todos qué ideas podían ser más útiles a la hora de realizar los prototipos
-finales y qué podemos integrar de cada prototipo. Al final los resultados a los que llegamos han sido los siguientes.
+El día 8 de noviembre, nos reunimos todos en el laboratorio para comentar los
+prototipos y que cada uno explicase la idea detrás del suyo. Tras esto,
+debatimos entre todos qué ideas podían ser más útiles a la hora de realizar los
+prototipos finales y qué podemos integrar de cada prototipo. Al final los
+resultados a los que llegamos han sido los siguientes.
 
-En el inicio de sesión \ref{fig:prot_ses} tendremos la opción de iniciar por nombre de usuario y contraseña, iniciar sesión con Facebook o de iniciar sesión con Google. Algunos elementos comunes a toda la página serán un \textit{header} con el logo y las opciones de cambiar de moneda, de idioma o ir al perfil, un \textit{footer} con el nombre de la compañía, un enlace al aviso legar y un enlace a la política de privacidad y botones flotantes con un chat de asistencia y un \textit{F.A.Q}.
+En el inicio de sesión \ref{fig:prot_ses} tendremos la opción de iniciar por
+nombre de usuario y contraseña, iniciar sesión con Facebook o de iniciar sesión
+con Google. Algunos elementos comunes a toda la página serán un \textit{header}
+con el logo y las opciones de cambiar de moneda, de idioma o ir al perfil, un
+\textit{footer} con el nombre de la compañía, un enlace al aviso legar y un
+enlace a la política de privacidad y botones flotantes con un chat de
+asistencia y un \textit{F.A.Q}.
 
-En caso de que sea un usuario que aún no se haya registrado, en la página de registro (figura \ref{fig:prot_reg}) tendrá que introducir su nombre, apellidos, fecha de nacimiento, email, nombre de usuario y contraseña.
+En caso de que sea un usuario que aún no se haya registrado, en la página de
+registro (figura \ref{fig:prot_reg}) tendrá que introducir su nombre,
+apellidos, fecha de nacimiento, email, nombre de usuario y contraseña.
 
-En la pantalla de inicio (figura \ref{fig:prot_inicio}) nos enfocamos en la búsqueda, poniendo en la barra principal las opciones de origen y destino, fecha de ida y vuelta y el número de asientos (con opción de poner el tipo de viajero), en esta pantalla también mostraremos ofertas de viajes. 
+En la pantalla de inicio (figura \ref{fig:prot_inicio}) nos enfocamos en la
+búsqueda, poniendo en la barra principal las opciones de origen y destino,
+fecha de ida y vuelta y el número de asientos (con opción de poner el tipo de
+viajero), en esta pantalla también mostraremos ofertas de viajes.
 
-Una vez el usuario haya realizado una búsqueda llegará a la página del comparador (figura \ref{fig:prot_comp}). En esta ventana mantendremos la barra de búsqueda de la ventana anterior, añadiendo debajo botones por cada tipo de transporte disponible (para solo mostrar del tipo seleccionado o de todos los tipos si no se selecciona ninguno) y un desplegable de ordenación. A la izquierda tendremos una pestaña de filtrado con distintas opciones. Debajo de la barra de búsqueda tendremos una serie de círculos numerados que harán de indicador para que el usuario sepa cuantos pasos le faltan para poder terminar con su reserva. Debajo de este indicador tendremos tarjetas para los distintos viajes, indicando el tipo de transporte, la compañía, el tiempo de duración, la hora de salida y de llegada con sus respectivos destinos y el precio, junto a un icono de información. En el caso de que tengamos ida y vuelta, se mostrarán dos columnas. Tras seleccionar las tarjetas correspondientes le daremos al botón de siguiente para continuar con el procedimiento.
+Una vez el usuario haya realizado una búsqueda llegará a la página del
+comparador (figura \ref{fig:prot_comp}). En esta ventana mantendremos la barra
+de búsqueda de la ventana anterior, añadiendo debajo botones por cada tipo de
+transporte disponible (para solo mostrar del tipo seleccionado o de todos los
+tipos si no se selecciona ninguno) y un desplegable de ordenación. A la
+izquierda tendremos una pestaña de filtrado con distintas opciones. Debajo de
+la barra de búsqueda tendremos una serie de círculos numerados que harán de
+indicador para que el usuario sepa cuantos pasos le faltan para poder terminar
+con su reserva. Debajo de este indicador tendremos tarjetas para los distintos
+viajes, indicando el tipo de transporte, la compañía, el tiempo de duración, la
+hora de salida y de llegada con sus respectivos destinos y el precio, junto a
+un icono de información. En el caso de que tengamos ida y vuelta, se mostrarán
+dos columnas. Tras seleccionar las tarjetas correspondientes le daremos al
+botón de siguiente para continuar con el procedimiento.
 
-El siguiente paso será rellenar los datos de la reserva (figura \ref{fig:prot_reser}), donde podremos poner los datos de los distintos pasajeros, seleccionar servicios adicionales y seleccionar los asientos. Tras rellenar toda la información pulsaremos el botón de siguiente y continuaremos al último paso.
+El siguiente paso será rellenar los datos de la reserva (figura
+\ref{fig:prot_reser}), donde podremos poner los datos de los distintos
+pasajeros, seleccionar servicios adicionales y seleccionar los asientos. Tras
+rellenar toda la información pulsaremos el botón de siguiente y continuaremos
+al último paso.
 
-El último paso es el pago (figura \ref{fig:prot_pago}). En esta ventana se nos mostrará un resumen de la reserva, un mapa con el trayecto de ida (y otro con el de vuelta si se ha seleccionado vuelta) y las opciones de pago por tarjeta y PayPal, así como un resumen del coste con impuestos. Tras hacer el pago correctamente saldrá una ventana emergente (figura \ref{fig:prot_pago_popup}) con el número de reserva para indicar que todo ha ido bien.
+El último paso es el pago (figura \ref{fig:prot_pago}). En esta ventana se nos
+mostrará un resumen de la reserva, un mapa con el trayecto de ida (y otro con
+el de vuelta si se ha seleccionado vuelta) y las opciones de pago por tarjeta y
+PayPal, así como un resumen del coste con impuestos. Tras hacer el pago
+correctamente saldrá una ventana emergente (figura \ref{fig:prot_pago_popup})
+con el número de reserva para indicar que todo ha ido bien.
 
-Para ver las reservas de un usuario iremos al perfil (figura \ref{fig:prot_perfil}). En el perfil podremos modificar datos, ver las reservas y ver los datos del usuario. Dándole al botón de mis reservas nos llevará a la página con el mismo nombre (figura \ref{fig:prot_reservas_usuario}), donde veremos las reservas pendientes de ocurrir y otras ya pasadas. Para las reservas pendientes podremos modificarlas (dando al botón del lápiz contiguo) o cancelarlas (dando al botón de cruz contiguo).
+Para ver las reservas de un usuario iremos al perfil (figura
+\ref{fig:prot_perfil}). En el perfil podremos modificar datos, ver las reservas
+y ver los datos del usuario. Dándole al botón de mis reservas nos llevará a la
+página con el mismo nombre (figura \ref{fig:prot_reservas_usuario}), donde
+veremos las reservas pendientes de ocurrir y otras ya pasadas. Para las
+reservas pendientes podremos modificarlas (dando al botón del lápiz contiguo) o
+cancelarlas (dando al botón de cruz contiguo).
 
-Si pulsamos al botón en cruz, nos saldrá un mensaje (figura \ref{fig:prot_reservas_usuario_popup}) para confirmar la anulación y pidiendo un motivo para la misma.
+Si pulsamos al botón en cruz, nos saldrá un mensaje (figura
+\ref{fig:prot_reservas_usuario_popup}) para confirmar la anulación y pidiendo
+un motivo para la misma.
 
-Si pulsamos una tarjeta de una reserva, podremos ver los datos detallados de la misma (figura \ref{fig:prot_reservas_mod}) donde podremos descargar los billetes
+Si pulsamos una tarjeta de una reserva, podremos ver los datos detallados de la
+misma (figura \ref{fig:prot_reservas_mod}) donde podremos descargar los
+billetes
 
-
-Finalmente, si deseamos modificar nuestros datos de usuario desde nuestro perfil se nos llevaría a la página de modificación (figura \ref{fig:prot_usuario_mod}), donde podremos cambiar la foto de perfil, nombre, apellidos, fecha de nacimiento, documento de identificación y teléfono.
+Finalmente, si deseamos modificar nuestros datos de usuario desde nuestro
+perfil se nos llevaría a la página de modificación (figura
+\ref{fig:prot_usuario_mod}), donde podremos cambiar la foto de perfil, nombre,
+apellidos, fecha de nacimiento, documento de identificación y teléfono.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de inicio de sesión}
-    \label{fig:prot_ses}
+      \centering
+      \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de inicio de sesión}
+      \label{fig:prot_ses}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de registro de nuevo usuario}
-    \label{fig:prot_reg}
+      \centering
+      \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de registro de nuevo usuario}
+      \label{fig:prot_reg}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de inicio}
-    \label{fig:prot_inicio}
+      \centering
+      \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de inicio}
+      \label{fig:prot_inicio}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de comparador}
-    \label{fig:prot_comp}
+      \centering
+      \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de comparador}
+      \label{fig:prot_comp}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de Reserva}
-    \label{fig:prot_reser}
+      \centering
+      \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de Reserva}
+      \label{fig:prot_reser}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de pago}
-    \label{fig:prot_pago}
+      \centering
+      \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de pago}
+      \label{fig:prot_pago}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de pago con ventana emergente de haber pagado}
-    \label{fig:prot_pago_popup}
+      \centering
+      \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de pago con ventana emergente de haber pagado}
+      \label{fig:prot_pago_popup}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de perfil de usuario}
-    \label{fig:prot_perfil}
+      \centering
+      \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de perfil de usuario}
+      \label{fig:prot_perfil}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de reservas de un usuario}
-    \label{fig:prot_reservas_usuario}
+      \centering
+      \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de reservas de un usuario}
+      \label{fig:prot_reservas_usuario}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
-    \label{fig:prot_reservas_usuario_popup}
+      \centering
+      \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
+      \label{fig:prot_reservas_usuario_popup}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de consulta de una reserva}
-    \label{fig:prot_reservas_mod}
+      \centering
+      \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de consulta de una reserva}
+      \label{fig:prot_reservas_mod}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
-    \caption{Prototipo de página de modificación de datos de un usuario}
-    \label{fig:prot_usuario_mod}
+      \centering
+      \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+      \caption{Prototipo de página de modificación de datos de un usuario}
+      \label{fig:prot_usuario_mod}
 \end{figure}
-
-
-
 
 \section{Escenarios de validación}
-Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos escenarios posibles para ver como se podrían solucionar o si es posible que afecten a nuestra aplicación:
+Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos
+escenarios posibles para ver como se podrían solucionar o si es posible que
+afecten a nuestra aplicación:
 
 \begin{escenario} % 1
-    \centering
-?`Qué pasaría si el usuario quiere buscar un viaje que sea directo? 
-\begin{solucion} \centering
-    \textbf{No contemplado}. De momento, el usuario no puede filtrar los transportes en función del número de paradas que tengan, tenemos que añadir filtro para buscar viajes directos.
-\end{solucion}
+      \centering
+      ?`Qué pasaría si el usuario quiere buscar un viaje que sea directo?
+      \begin{solucion} \centering
+            \textbf{No contemplado}. De momento, el usuario no puede filtrar los transportes en función del número de paradas que tengan, tenemos que añadir filtro para buscar viajes directos.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 2
-    \centering
-?`Qué pasaría si el usuario se equivoca introduciendo sus datos personales de perfil? 
+      \centering
+      ?`Qué pasaría si el usuario se equivoca introduciendo sus datos personales de perfil?
 
-\begin{solucion} \centering
-    \textbf{Existe}. Puede modificar sus datos desde la pestaña de usuario dándole al botón de modificar.
-\end{solucion}
+      \begin{solucion} \centering
+            \textbf{Existe}. Puede modificar sus datos desde la pestaña de usuario dándole al botón de modificar.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 3
-    \centering
-?`Que pasaría si un usuario está en la página del comparador y entra en la pantalla de perfil y quiere volver?
+      \centering
+      ?`Que pasaría si un usuario está en la página del comparador y entra en la pantalla de perfil y quiere volver?
 
-\begin{solucion} \centering
-    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
-\end{solucion}
+      \begin{solucion} \centering
+            \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 4
-    \centering
-?`Que pasaría si un usuario está en la página de reservas y quiere volver a su perfil? 
+      \centering
+      ?`Que pasaría si un usuario está en la página de reservas y quiere volver a su perfil?
 
-\begin{solucion} \centering
-    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
-\end{solucion}
+      \begin{solucion} \centering
+            \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 5
-    \centering
-?`Que pasaría si un usuario está en la página de una reserva concreta y quiere volver a la pantalla de todas sus reservas?
+      \centering
+      ?`Que pasaría si un usuario está en la página de una reserva concreta y quiere volver a la pantalla de todas sus reservas?
 
-\begin{solucion} \centering
-    \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver. 
-\end{solucion}
+      \begin{solucion} \centering
+            \textbf{No contemplado}. De momento no contemplamos que se pueda volver a la pantalla anterior, tenemos que añadir botón de volver.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 6
-    \centering
-?`Qué pasaría si el usuario quiere modificar sus datos porque ha visto un error en su billete? 
+      \centering
+      ?`Qué pasaría si el usuario quiere modificar sus datos porque ha visto un error en su billete?
 
-\begin{solucion} \centering
-    \textbf{No contemplado}.  No está diseñada la ventana pero el usuario podría desde su perfil modificar los datos de reserva y guardar sus cambios.
-\end{solucion}
+      \begin{solucion} \centering
+            \textbf{No contemplado}.  No está diseñada la ventana pero el usuario podría desde su perfil modificar los datos de reserva y guardar sus cambios.
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 7
-    \centering
-?`Qué pasaría si el usuario se da cuenta de que el precio final que aparece no se corresponde con el del billete por la aplicación de impuestos?
+      \centering
+      ?`Qué pasaría si el usuario se da cuenta de que el precio final que aparece no se corresponde con el del billete por la aplicación de impuestos?
 
-\begin{solucion} \centering
-    \textbf{No contemplado}. El precio que figure en los billetes debería aparecer con el IVA aplicado.
+      \begin{solucion} \centering
+            \textbf{No contemplado}. El precio que figure en los billetes debería aparecer con el IVA aplicado.
 
-\end{solucion}
+      \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 8
-    \centering
-?`Qué pasaría si el usuario quiere consultar una duda concreta?
+      \centering
+      ?`Qué pasaría si el usuario quiere consultar una duda concreta?
 
-\begin{solucion}
-    \centering
-    \textbf{Parcialmente contemplado}. Existe un botón de preguntas frecuentes pero no está implementado.
-\end{solucion}
+      \begin{solucion}
+            \centering
+            \textbf{Parcialmente contemplado}. Existe un botón de preguntas frecuentes pero no está implementado.
+      \end{solucion}
 \end{escenario}
 
 \section{Segunda iteración}
 
-Tras estudiar el prototipo final de la primera iteración, detectamos distintos problemas o mejoras que podíamos hacer. En esta segunda interacción pretendemos mejorar la interfaz y arreglar errores o cosas que faltaban en la primera.
+Tras estudiar el prototipo final de la primera iteración, detectamos distintos
+problemas o mejoras que podíamos hacer. En esta segunda interacción pretendemos
+mejorar la interfaz y arreglar errores o cosas que faltaban en la primera.
 
 \subsection{Prototipo}
 
-Las ventanas de inicio de sesión (figura \ref{fig:prot2_ses}) , registro de usuario (figura \ref{fig:prot2_reg}), de inicio (figura \ref{fig:prot2_inicio}), datos adicionales de reserva (figura \ref{fig:prot2_reser}),y pago (figura \ref{fig:prot2_pago} y \ref{fig:prot2_pago_popup}) no han sido modificadas.
-Las ventanas de comparador (figura \ref{fig:prot2_comp}), perfil (figura \ref{fig:prot2_perfil}), ``Mis reservas'' (figura \ref{fig:prot2_reservas_usuario} y \ref{fig:prot2_reservas_usuario_popup}), consultar reserva (figura \ref{fig:prot2_reservas_mod}) y modificar datos de usuario (figura \ref{fig:prot2_usuario_mod}) ahora tienen un botón para volver a la ventana anterior.
-Las ventanas para la página de soporte (figura \ref{fig:prot2_soporte}), modificar reserva (figura \ref{fig:prot2_reserva_mod}) y preguntas frecuentes (figura \ref{fig:prot2_faq}) han sido añadidas para completar los requisitos.
+Las ventanas de inicio de sesión (figura \ref{fig:prot2_ses}) , registro de
+usuario (figura \ref{fig:prot2_reg}), de inicio (figura
+\ref{fig:prot2_inicio}), datos adicionales de reserva (figura
+\ref{fig:prot2_reser}),y pago (figura \ref{fig:prot2_pago} y
+\ref{fig:prot2_pago_popup}) no han sido modificadas. Las ventanas de comparador
+(figura \ref{fig:prot2_comp}), perfil (figura \ref{fig:prot2_perfil}), ``Mis
+reservas'' (figura \ref{fig:prot2_reservas_usuario} y
+\ref{fig:prot2_reservas_usuario_popup}), consultar reserva (figura
+\ref{fig:prot2_reservas_mod}) y modificar datos de usuario (figura
+\ref{fig:prot2_usuario_mod}) ahora tienen un botón para volver a la ventana
+anterior. Las ventanas para la página de soporte (figura
+\ref{fig:prot2_soporte}), modificar reserva (figura
+\ref{fig:prot2_reserva_mod}) y preguntas frecuentes (figura
+\ref{fig:prot2_faq}) han sido añadidas para completar los requisitos.
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de inicio de sesión}
-    \label{fig:prot2_ses}
+      \centering
+      \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de inicio de sesión}
+      \label{fig:prot2_ses}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de registro de nuevo usuario}
-    \label{fig:prot2_reg}
+      \centering
+      \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de registro de nuevo usuario}
+      \label{fig:prot2_reg}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de inicio}
-    \label{fig:prot2_inicio}
+      \centering
+      \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de inicio}
+      \label{fig:prot2_inicio}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de comparador}
-    \label{fig:prot2_comp}
+      \centering
+      \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de comparador}
+      \label{fig:prot2_comp}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de Reserva}
-    \label{fig:prot2_reser}
+      \centering
+      \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de Reserva}
+      \label{fig:prot2_reser}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de pago}
-    \label{fig:prot2_pago}
+      \centering
+      \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de pago}
+      \label{fig:prot2_pago}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de pago con ventana emergente de haber pagado}
-    \label{fig:prot2_pago_popup}
+      \centering
+      \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de pago con ventana emergente de haber pagado}
+      \label{fig:prot2_pago_popup}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de perfil de usuario}
-    \label{fig:prot2_perfil}
+      \centering
+      \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de perfil de usuario}
+      \label{fig:prot2_perfil}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de reservas de un usuario}
-    \label{fig:prot2_reservas_usuario}
+      \centering
+      \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de reservas de un usuario}
+      \label{fig:prot2_reservas_usuario}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
-    \label{fig:prot2_reservas_usuario_popup}
+      \centering
+      \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
+      \label{fig:prot2_reservas_usuario_popup}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de consulta de una reserva}
-    \label{fig:prot2_reservas_mod}
+      \centering
+      \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de consulta de una reserva}
+      \label{fig:prot2_reservas_mod}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de modificación de datos de un usuario}
-    \label{fig:prot2_usuario_mod}
+      \centering
+      \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de modificación de datos de un usuario}
+      \label{fig:prot2_usuario_mod}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=13, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de soporte}
-    \label{fig:prot2_soporte}
+      \centering
+      \includegraphics[page=13, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de soporte}
+      \label{fig:prot2_soporte}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=14, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de modificación de datos de una reserva}
-    \label{fig:prot2_reserva_mod}
+      \centering
+      \includegraphics[page=14, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de modificación de datos de una reserva}
+      \label{fig:prot2_reserva_mod}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[page=15, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
-    \caption{Prototipo de página de preguntas frecuentes}
-    \label{fig:prot2_faq}
+      \centering
+      \includegraphics[page=15, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+      \caption{Prototipo de página de preguntas frecuentes}
+      \label{fig:prot2_faq}
 \end{figure}
