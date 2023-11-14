@@ -284,3 +284,20 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
   width=0.85\textwidth,
   halign=center
 }
+
+\newtcolorbox{problema}{
+  colback=lightgray!20,
+  colframe=lightgray!20,
+  title={\centering\textbf{\color{black}\underline{\textbf{Problema}}}},
+  arc=6pt
+}
+
+\newtcolorbox{Visión}{
+  colback=white,
+  colframe=white,
+  fonttitle=\bfseries,
+  title={\centering\textbf{\color{black}\textbf{Visión}}},
+  arc=6pt,
+  width=0.85\textwidth,
+  halign=center
+}
