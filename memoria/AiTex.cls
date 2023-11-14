@@ -292,7 +292,7 @@ Esta plantilla se crea para facilitar el proceso de elaborar apuntes\\\\
   arc=6pt
 }
 
-\newtcolorbox{Visión}{
+\newtcolorbox{vision}{
   colback=white,
   colframe=white,
   fonttitle=\bfseries,
