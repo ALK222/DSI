@@ -7,18 +7,32 @@ etapas (con posibilidad de realizar una segunda iteración). \\
 En estas etapas se va a definir tanto la estructura de alto nivel y la organización de las pantallas como el flujo, comportamiento y organización del sistema. Estas
 etapas son las siguientes y se han realizado de acuerdo al orden que aparecen descritas a continuación:
 \begin{enumerate}
-    \item \textbf{Definir el factor de forma, la postura y los métodos de entrada}
-    \item \textbf{Definir los elementos de datos y funcionales}
-    \item \textbf{Determinar los grupos funcionales y las jerarquías}
-    \item \textbf{Construir los escenarios key path}
-    \item \textbf{Hacer un prototipo del framework de interacción}
-    \item \textbf{Validar los diseños con los escenarios de validación}
+    \item \textbf{Definir el factor de forma, la postura y los métodos de entrada} $\rightarrow$ se detalla el contexto en el que se va a mostrar la información, los
+    métodos de entrada de la aplicación y la atención que tiene el usuario al interactuar con el sistema.
+    \item \textbf{Definir los elementos de datos y funcionales} $\rightarrow$ el punto de partida de este apartado van a ser los requisitos identificados en el hito anterior.
+    En primer lugar, van a definirse los elementos de datos que se van a utilizar en nuestra aplicación y posteriormente para cada uno de los requisitos se va a explicar
+    cómo va a integrarse ese requisito en el diseño.
+    \item \textbf{Determinar los grupos funcionales y las jerarquías} $\rightarrow$ en este apartado se va a detallar la jerarquía de las distintas interfaces que van a 
+    ser diseñadas para la aplicación, así como el orden en el que se van a usar los elementos y los principios y patrones que se han usado.
+    \item \textbf{Construir los escenarios key path} $\rightarrow$ en esta etapa se van a desarrollar los escenarios keypath apoyados en los escenarios de contexto realizados
+    en el hito anterior. Estos escenarios entran en un mayor detalle del funcionamiento de la aplicación que los escenarios de contexto, por lo que son esenciales para
+    un buen prototipado.
+    \item \textbf{Hacer un prototipo del framework de interacción} $\rightarrow$ en base a la información obtenida en los pasos anteriores, hemos realizado de forma independiente
+    los prototipos que van a conformar nuestra aplicación, para posteriormente ponerlos en común y seleccionar aquellos que realmente se vayan a ajustar al prototipo de
+    aplicación que queremos desarrollar.
+    \item \textbf{Validar los diseños con los escenarios de validación} $\rightarrow$ por último, como método para validar los prototipos que hemos acordado en conjunto,
+    vamos a crear una serie de escenarios de validación que nos van a permitir empatizar con el usuario y poder detectar aquellos fallos y defectos presentes en nuestros
+    prototipos.
 \end{enumerate}
-% TODO argumentar el orden de las etapas 3, 4 y 5.
-% TODO introducir los dos siguientes apartados (resultados Hito 3)
+
+El orden escogido para las etapas 3, 4 y 5 viene determinado principalmente por la necesidad de tener toda la información posible al alcance a la hora de realizar los
+prototipos. Es por ello que se ha optado por realizar los escenarios keypath en el paso anterior, utilizándolos como uno de los puntos de apoyo de los prototipos. Otro
+de los puntos de apoyo va a ser las jerarquías y los grupos funcionales, ya que ofrecen una idea general de la estructura básica de nuestra aplicación. \\
+
+Antes de comenzar las etapas especificadas en este hito, se va a comenzar introduciendo los resultados del hito anterior, aplicando las correcciones necesarias para poder
+extraer la máxima cantidad posible de información. Estos apartados van a ser los enunciados de problemas y visiones, los escenarios de contexto y los requisitos identificados.
 
 \section{Enunciado de problemas y visiones}
-
 Tras evaluar las personas obtenidas y sus objetivos, procedemos a ver los distintos problemas que se nos plantean y la visión de nuestra aplicación para resolver cada uno de ellos. Con estos problemas y visiones podremos focalizar las distintas partes y funcionalidades de la aplicación final.
 
 \begin{problema}
@@ -129,8 +143,8 @@ Tras evaluar las personas obtenidas y sus objetivos, procedemos a ver los distin
     \end{vision}}
 \end{problema}
 
-\vspace{0.5cm}
-s
+%\vspace{0.5cm}
+
 \section{Escenarios de contexto}
 Un escenario es una situación narrativa, una historia concreta y realista que involucra a una persona y narra de manera detallada cómo persigue un objetivo y
 finalmente logra satisfacer dicho objetivo, describiendo el proceso que ha seguido para ello. Cada uno de estos escenarios va a describir cómo se va a comportar
@@ -628,95 +642,111 @@ Si pulsamos una tarjeta de una reserva, podremos ver los datos detallados de la 
 
 Finalmente, si deseamos modificar nuestros datos de usuario desde nuestro perfil se nos llevaría a la página de modificación (figura \ref{fig:prot_usuario_mod}), donde podremos cambiar la foto de perfil, nombre, apellidos, fecha de nacimiento, documento de identificación y teléfono.
 
+Por último, en el caso de que el usuario que inicie la sesión sea un usuario con discapacidad, la pestaña del comparador mostraría únicamente viajes accesibles, con
+posibilidad de consultar los servicios accesibles que ofrece cada uno de los transportes (figura \ref{fig:prot_comp_dis}). Asimismo, tras seleccionar su viaje, pueden 
+en la página de datos adicionales de la reserva solicitar asistencia en las estaciones (tanto de origen como destino) (figura \ref{fig:prot_reserva_dis})
+
 \begin{figure}[H]
     \centering
-    \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de inicio de sesión}
     \label{fig:prot_ses}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=2, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de registro de nuevo usuario}
     \label{fig:prot_reg}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=3, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de inicio}
     \label{fig:prot_inicio}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=4, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de comparador}
     \label{fig:prot_comp}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de Reserva}
     \label{fig:prot_reser}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de pago}
     \label{fig:prot_pago}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de pago con ventana emergente de haber pagado}
     \label{fig:prot_pago_popup}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de perfil de usuario}
     \label{fig:prot_perfil}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de reservas de un usuario}
     \label{fig:prot_reservas_usuario}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
     \label{fig:prot_reservas_usuario_popup}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=13, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de consulta de una reserva}
     \label{fig:prot_reservas_mod}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos_definitivos.pdf}
+    \includegraphics[page=14, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
     \caption{Prototipo de página de modificación de datos de un usuario}
     \label{fig:prot_usuario_mod}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
+    \caption{Prototipo de página de comparador de un usuario con discapacidad}
+    \label{fig:prot_comp_dis}
+\end{figure}
 
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteracion I.pdf}
+    \caption{Prototipo de página de reserva de un usuario con discapacidad}
+    \label{fig:prot_reserva_dis}
+\end{figure}
 
 \section{Escenarios de validación}
-Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos escenarios posibles para ver como se podrían solucionar o si es posible que afecten a nuestra aplicación:
+Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos escenarios posibles para ver como se podrían solucionar o si es posible que afecten a 
+nuestra aplicación:
 
 \begin{escenario} % 1
     \centering
@@ -791,15 +821,54 @@ Tras diseñar algunos bocetos y realizar el diseño final, ponemos algunos escen
 \end{solucion}
 \end{escenario}
 
-\section{Segunda iteración}
+\begin{escenario} % 9
+    \centering
+?`Qué pasaría si el usuario quiere consultar la fecha de sus viajes?
 
-Tras estudiar el prototipo final de la primera iteración, detectamos distintos problemas o mejoras que podíamos hacer. En esta segunda interacción pretendemos mejorar la interfaz y arreglar errores o cosas que faltaban en la primera.
+\begin{solucion}
+    \centering
+    \textbf{No contemplado}. No está diseñada para ver las fechas en la sección de las reservas realizadas por el usuario.
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 10
+    \centering
+?`Qué pasaría si el usuario quiere consultar las fechas en las que se produce el viaje cuando está buscando?
+
+\begin{solucion}
+    \centering
+    \textbf{Parcialmente contemplado}. El usuario puede consultar una gran cantidad de datos en las tarjetas, pero las fechas del viaje no figuran.
+\end{solucion}
+\end{escenario}
+
+\begin{escenario} % 11
+    \centering
+?`Qué pasaría si el usuario quiere cambiar las fechas de una reserva?
+
+\begin{solucion}
+    \centering
+    \textbf{Contemplado}. no puede porque puede cambiar el precio, las horas, el transporte (por lo tanto, los asientos disponibles). Para ello habría que anular la reserva y coger otra.
+\end{solucion}
+\end{escenario}
+
+
+\section{Segunda iteración}
+Tras estudiar el prototipo final de la primera iteración, detectamos distintos problemas o mejoras que podíamos hacer. En esta segunda iteración pretendemos 
+mejorar la interfaz y arreglar errores o cosas que faltaban en la primera. Algunos de estos errores y faltas se encuentran contemplados en los escenarios de validación
+realizados en la iteración anterior. \\
+
+Otra de las mejoras que se pretende llevar a cabo es la realización de los escenarios keypath utilizando las nuevas interfaces que ya han sido corregidas en esta iteración,
+de modo que esta etapa va a realizarse en un orden contrario al de la iteración anterior: en primer lugar se van a realizar las correcciones sobre los prototipos y 
+posteriormente los escenarios keypath. \\
+
+Por último y para cerrar esta iteración, se han realizado los prototipos interactivos en forma de vídeo y además se van a plantear los escenarios de validación 
+anteriores (y algunos nuevos que consideremos necesarios) para comprobar si hemos podido realizar correctamente las modificaciones necesarias.
 
 \subsection{Prototipo}
-
-Las ventanas de inicio de sesión (figura \ref{fig:prot2_ses}) , registro de usuario (figura \ref{fig:prot2_reg}), de inicio (figura \ref{fig:prot2_inicio}), datos adicionales de reserva (figura \ref{fig:prot2_reser}),y pago (figura \ref{fig:prot2_pago} y \ref{fig:prot2_pago_popup}) no han sido modificadas.
+Las ventanas de inicio de sesión (figura \ref{fig:prot2_ses}) , registro de usuario (figura \ref{fig:prot2_reg}), de inicio (figura \ref{fig:prot2_inicio}), datos adicionales de reserva (figuras \ref{fig:prot2_reser} y \ref{fig:prot2_reserva_dis}),y pago (figura \ref{fig:prot2_pago} y \ref{fig:prot2_pago_popup}) no han sido modificadas.
+En el caso de las ventanas que muestran los precios de compra, como el comparador (figuras \ref{fig:prot2_comp} y \ref{fig:prot2_comp_dis}) y la página de inicio (figura \ref{fig:prot2_inicio}) muestran los precios con el IVA ya aplicado.
 Las ventanas de comparador (figura \ref{fig:prot2_comp}), perfil (figura \ref{fig:prot2_perfil}), ``Mis reservas'' (figura \ref{fig:prot2_reservas_usuario} y \ref{fig:prot2_reservas_usuario_popup}), consultar reserva (figura \ref{fig:prot2_reservas_mod}) y modificar datos de usuario (figura \ref{fig:prot2_usuario_mod}) ahora tienen un botón para volver a la ventana anterior.
-Las ventanas para la página de soporte (figura \ref{fig:prot2_soporte}), modificar reserva (figura \ref{fig:prot2_reserva_mod}) y preguntas frecuentes (figura \ref{fig:prot2_faq}) han sido añadidas para completar los requisitos.
+Las ventanas para la página de soporte (figura \ref{fig:prot2_soporte}), modificar reserva (figura \ref{fig:prot2_reserva_mod}) y preguntas frecuentes (figura \ref{fig:prot2_faq}) han sido añadidas para completar los requisitos. Por último, en el caso de las ventanas del comparador (figuras \ref{fig:prot2_comp} y \ref{fig:prot2_comp_dis}) aparece un nuevo filtro para seleccionar si se desean viajes directos o no.
 \begin{figure}[H]
     \centering
     \includegraphics[page=1, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
@@ -830,42 +899,42 @@ Las ventanas para la página de soporte (figura \ref{fig:prot2_soporte}), modifi
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de Reserva}
     \label{fig:prot2_reser}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=6, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de pago}
     \label{fig:prot2_pago}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de pago con ventana emergente de haber pagado}
     \label{fig:prot2_pago_popup}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=8, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de perfil de usuario}
     \label{fig:prot2_perfil}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=9, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=11, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de reservas de un usuario}
     \label{fig:prot2_reservas_usuario}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=10, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de reservas de un usuario con ventana emergente de anulación}
     \label{fig:prot2_reservas_usuario_popup}
 \end{figure}
@@ -879,28 +948,121 @@ Las ventanas para la página de soporte (figura \ref{fig:prot2_soporte}), modifi
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=12, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=13, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de modificación de datos de un usuario}
     \label{fig:prot2_usuario_mod}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=13, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=16, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de soporte}
     \label{fig:prot2_soporte}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=14, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=15, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de modificación de datos de una reserva}
     \label{fig:prot2_reserva_mod}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[page=15, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \includegraphics[page=17, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
     \caption{Prototipo de página de preguntas frecuentes}
     \label{fig:prot2_faq}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=7, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \caption{Prototipo de reserva para usuarios con discapacidad}
+    \label{fig:prot2_reserva_dis}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=5, width=0.9\textwidth]{./Imagenes/Prototipo/Prototipos definitivos - Iteración II.pdf}
+    \caption{Prototipo de comparador para personas con discapacidad}
+    \label{fig:prot2_comp_dis}
+\end{figure}
+
+\subsection{Escenarios keypath}
+Tras haber realizado las correcciones pertinentes sobre los prototipos diseñados, se han utilizado como punto de partida para poder profundizar y completar los
+escenarios keypath, dotándolos de mayor significado. \\
+
+Para poder completarlos, se ha acompañado el texto con las interfaces de la aplicación diseñadas en esta iteración, explicando con flechas y otros elementos los pasos
+que se han seguido para solventar la situación planteada en el escenario de forma más visual y descriptiva que el texto sólo.
+
+\subsubsection{Marta planea un viaje por Italia}
+“Marta quiere ir a las distintas ciudades del norte de Italia de la gira de Francesca, por lo que abre en el ordenador la aplicación, inicia sesión y en la parte de búsqueda selecciona dos viajeros, ya que va a ir con su hermano. También selecciona como origen Madrid, como destino la primera ciudad de la gira y las fechas que habían planificado quedarse en esa ciudad para luego ir a la próxima ciudad según la ruta diseñada. 
+En este primer caso, ha tenido que filtrar los resultados en avión, ya que tienen que viajar de un país a otro para la primera ciudad y lo más rápido posible. Los resultados aparecen ordenados como predeterminados por fechas, así que no cambia la opción de ordenar. 
+En el siguiente paso, Marta rellena sus datos y los de su hermano y selecciona los asientos contiguos de manera que ella y su hermano se sienten juntos.
+Finalmente en el paso último de la reserva de billetes, mirando antes la zona de recogida del lugar de origen y destino seleccionados mediante los mapas para que se cumpla bien la planificación y tener en cuenta para los siguientes billetes del resto de ciudades.” (figura \ref{fig:Marta1})
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/Keypath/Marta1.png}
+    \caption{Inicio de sesión y reserva}
+    \label{fig:Marta1}
+\end{figure}
+
+“Para el resto de ciudades, hace el mismo procedimiento, a excepción de aquellas ciudades que por lo planificado tiene que contratar algunos medios de transportes 
+o servicios específicos, como es el de camas para dormir apropiadamente. Para esto no ha puesto filtros de medios de transporte y antes de reservar el billete, 
+reserva el servicio de camas (si tiene, sino busca otro transporte, pero lo mira en información antes) y ya reserva el billete.” (figura \ref{fig:Marta2})
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Imagenes/Keypath/Marta2.png}
+    \caption{Nueva reserva con servicios adicionales}
+    \label{fig:Marta2}
+\end{figure}
+
+“Al final, cuando ya ha reservado todo ha entrado en la sección de su perfil de los viajes que ha realizado la compra de algún billete para comprobar que todo 
+cuadra con su planificación y estaba correcto.” (figura \ref{fig:Marta3})
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/Keypath/Marta3.png}
+    \caption{Comprueba datos reserva}
+    \label{fig:Marta3}
+\end{figure}
+
+“Marta ha tenido que volver a meterse en su perfil para cancelar un viaje ya que la cantante ha cancelado el concierto en esa ciudad.” (figura \ref{fig:Marta4}) “Debido 
+a este último cambio, Marta modifica la fecha del día que iba a ir al siguiente viaje para adelantarla, que ha tenido que cancelar el viaje de la siguiente ciudad 
+y reserva otro con las nuevas fechas. Con las prisas de que solo quedaban dos asientos libres, cree que ha puesto mal sus datos. Lo mira y efectivamente, 
+están mal, así que modifica los datos de la reserva.” (figura \ref{fig:Marta5})
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/Keypath/Marta4.png}
+    \caption{Cancela una reserva}
+    \label{fig:Marta4}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/Keypath/Marta5.png}
+    \caption{Modifica datos reserva}
+    \label{fig:Marta5}
+\end{figure}
+
+\subsubsection{Marta cambia el viaje por motivos económicos}
+“Como dentro de poco son los exámenes y Marta está agobiada, su amiga Pili le ha sugerido ir a Ibiza el fin de semana posterior a los exámenes para relajarse. A 
+Marta le ha parecido bien la idea así que coge su portátil y abre la aplicación con la sesión ya iniciada y en la sección de búsqueda selecciona dos viajes y 
+como origen Madrid, destino Ibiza y de fecha el fin de semana acordado. Empieza ordenando los resultados con los precios crecientes pero ve que no son precios 
+muy asequibles, así que aplica el filtro de precio a 50 euros máximo y no hay ningún resultado.” (figura \ref{fig:Marta6}) “Al final, cuando ya ha reservado todo ha entrado en la sección 
+de su perfil de los viajes que ha realizado la compra de algún billete para comprobar que todo cuadra con su planificación y todo estaba correcto.”
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Imagenes/Keypath/Marta6.png}
+    \caption{Filtro sin resultados}
+    \label{fig:Marta6}
+\end{figure}
+
+“Como no podía subir más su presupuesto, vuelve al inicio de la página mientras piensa y ve las ofertas que hay al principio y ve que ir a Palma de Mallorca sale 
+20 euros la ida y vuelta cada uno. Así que después de que Pili cediera al cambio de planes, selecciona Palma de Mallorca, los asientos y reserva el viaje 
+(hace el mismo proceso que el resto).” (figura \ref{fig:Marta7})
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Imagenes/Keypath/Marta7.png}
+    \caption{Reserva de una oferta}
+    \label{fig:Marta7}
 \end{figure}
