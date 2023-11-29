@@ -1,0 +1,33 @@
+\section{Elementos de datos}
+
+En esta fase hemos definido los elementos de la interfaz que representarán los
+requisitos identificados en la fase de identificación de requisitos.
+
+Hemos creado los elementos de datos (transportes, billetes y viajes), junto con sus
+atributos (por ejemplo, horario en el caso de transportes) y las relaciones con otros
+elementos de datos, como los transportes y los viajes.
+
+Posteriormente, se ha realizado la traducción de los requisitos funcionales en elementos
+funcionales. De forma que describimos las acciones que podemos realizar añadiendo una acción,
+un objeto y un contexto.
+
+\subsection{Definición}
+
+Tras un análisis de los errores cometidos en el hito anterior hemos definido los elementos
+de la siguiente manera:
+
+\begin{itemize}
+    \item \textbf{Viaje}. Con este elemento representamos todos los datos sobre un desplazamiento
+    concreto. Contará con los siguientes atributos:
+    \begin{itemize}
+        \item Fecha. Se marcará tanto el día de salida como el de llegada (pueden ser el mismo),
+            con el formato en el orden correspondiente a la región (en España, \textit{dd/mm/aaaa}).
+        \item Horario. La hora a la que sale el medio de transporte, además de la hora estimada de 
+            llegada. El formato será \textit{HH:MM}, marcando la hora local del origen.
+        \item Origen. Ciudad de la que sale el viaje, indicando la estación o aerpuerto correspondiente.
+        \item Destino. Igual que con el origen, se guardará la ciudad de destino junto al lugar concreto.
+        \item Accesibilidad. Si es un viaje accesible para personas con discapacidad o no.
+
+    \end{itemize}
+
+\end{itemize}
