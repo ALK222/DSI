@@ -18,16 +18,47 @@ de la siguiente manera:
 
 \begin{itemize}
     \item \textbf{Viaje}. Con este elemento representamos todos los datos sobre un desplazamiento
-    concreto. Contará con los siguientes atributos:
-    \begin{itemize}
-        \item Fecha. Se marcará tanto el día de salida como el de llegada (pueden ser el mismo),
-            con el formato en el orden correspondiente a la región (en España, \textit{dd/mm/aaaa}).
-        \item Horario. La hora a la que sale el medio de transporte, además de la hora estimada de 
-            llegada. El formato será \textit{HH:MM}, marcando la hora local del origen.
-        \item Origen. Ciudad de la que sale el viaje, indicando la estación o aerpuerto correspondiente.
-        \item Destino. Igual que con el origen, se guardará la ciudad de destino junto al lugar concreto.
-        \item Accesibilidad. Si es un viaje accesible para personas con discapacidad o no.
+        concreto. Contará con los siguientes atributos:
+        \begin{itemize}
+            \item Fecha. Se marcará tanto el día de salida como el de llegada (pueden ser el mismo),
+                con el formato en el orden correspondiente a la región (en España, \textit{dd/mm/aaaa}).
+            \item Horario. La hora a la que sale el medio de transporte, además de la hora estimada de 
+                llegada. El formato será \textit{HH:MM}, marcando la hora local del origen.
+            \item Origen. Ciudad de la que sale el viaje, indicando la estación o aerpuerto correspondiente.
+            \item Destino. Igual que con el origen, se guardará la ciudad de destino junto al lugar concreto.
+            \item Accesibilidad. Si es un viaje accesible para personas con discapacidad o no.
+            \item Transporte. El medio utilizado para viajar, en nuestro caso \textit{Avión}, \textit{Tren} o
+                \textit{Autobús}.
+        \end{itemize}
 
-    \end{itemize}
+        Un viaje tendrá asociados tantos billetes como plazas tenga.
+
+    \item \textbf{Billete}. Es el elemento que se paga para tener acceso al \textit{Viaje}. En caso de reservarse asientos
+        para varias personas, se considerarán como el mismo \textit{Billete}, con los datos correspondientes de cada comprador.
+        Poseerá los atributos siguientes:
+        \begin{itemize}
+            \item Precio. Cantidad de dinero en la moneda correspondiente que ha pagado el usuario por el \textit{Viaje}.
+            \item Usuarios. Datos necesarios para identificar a los viajantes (definido posteriormente).
+            \item Asientos. Plazas asignadas a cada uno de los usuarios.
+            \item Servicios adicionales. Servicios contratados por uno o varios compradores para utilización durante el
+                el \textit{Viaje}.
+        \end{itemize}
+        Cada \textit{Billete} está asociado a un transporte.
+
+    \item \textbf{Usuario}. Persona que utiliza la aplicación, o que es partícipe de algún \textit{Viaje} (puede ser
+        añadida a uno por otro \textit{Usuario}). Contará con los siguientes atributos:
+        \begin{itemize}
+            \item Nombre. Una cadena de caracteres con el nombre completo de la persona.
+            \item Documento de identidad. Una cadena de caracteres correspondiente al documento identificativo de la
+                la región pertinente al \textit{Usuario}.
+            \item Fecha de nacimiento. Formato usado en la región desde la que se utiliza la aplicación (en España por ejemplo,
+                sería \textit{dd/mm/aaaa}).
+            \item Correo electrónico. Método para contactar con el \textit{Usuario} en caso de ser necesario (por ejemplo, al
+                enviar los billetes, o en caso de que se tenga que notificar la cancelación de un viaje). Será una cadena de
+                caracteres que será confirmada a través de un correo electrónico.
+        \end{itemize}
+        Un usuario tiene uno o varios viajes asociados.
+
+    \item \textbf{Notificación}. 
 
 \end{itemize}
