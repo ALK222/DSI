@@ -1,1 +1,174 @@
 \section{Prototipado}
+
+Figma es una herramienta muy potente de diseño que permite la creación de prototipos
+digitales altamente interactivos. Por ello, hemos empleado esta herramienta para poder
+prototipar nuestras interfaces desarrolladas en el hito anterior, además de mejorarlas
+aplicando aquellos cambios que se han considerado necesarios. Estos cambios serán explicados
+en esta sección, además de detallar también los principios de diseño que aparecen en cada
+una de las interfaces.
+
+\subsection*{Inicio}
+
+La pantalla principal de nuestra aplicación, como ya detallamos anteriormente, va a ser la de búsqueda,
+en la que, a diferencia de lo planteado en el hito anterior, cualquier usuario va a poder realizar la
+comparación de viajes (aunque no pueda finalizar sin tener que iniciar sesión o crearse una cuenta). Otro
+de los cambios que además se ha realizado es ofrecer la posibilidad a los usuarios que no se hayan registrado
+como discapacitados de poder buscar viajes accesibles sin tener que aplicar el filtro en la siguiente página
+(el comparador). Sin embargo, a pesar de estos cambios, la esencia de la ventana es la misma, se mantiene la
+barra de búsqueda con todas las opciones que se pedían anteriormente (el origen, el destino, la fecha de ida,
+la fecha de vuelta y el número de asientos) y para completar se muestran las mejores ofertas en forma de
+tarjetas para que el usuario vea de forma mucho más visual toda la información que ahí se expone. En cuanto a
+los patrones y principios que se han seguido para esta pantalla, son los siguientes:
+
+\begin{itemize}
+    \item \textbf{Principio de proximidad.} Todos los campos requeridos para realizar una búsqueda se encuentran
+        cercanos entre sí, además de encuadrados bajo un marco, lo que indica al usuario que todo el contenido
+        solicitado es necesario para comenzar una búsqueda de transportes. Relacionado a ello, aplica la Ley de
+        Fitts (la distancia que tiene que ser recorrida para moverse de un campo a otro es muy pequeña).
+    \item \textbf{Consistencia interna.} Las distintas tarjetas que se presentan para mostrar las ofertas de la
+        aplicación en la página de inicio guardan y muestran la misma cantidad de información: el logo de la compañía
+        que lo opera, la fecha del viaje, el precio, las horas de salida y llegada y las estaciones. También presenta
+        consistencia en cuanto a la forma de la tarjeta y los colores que se utilizan.
+    \item \textbf{Consistencia externa.} Al igual que en la gran mayoría de las aplicaciones, cuando el usuario tiene la sesión
+        iniciada en la página, puede acceder a su perfil pulsando sobre el botón de usuario situado en la esquina
+        superior derecha.
+    \item \textbf{Principio de visibilidad.} Del mismo modo que en el caso anterior, puede consultarse el estado en el que
+        se encuentra la aplicación si en la esquina superior derecha te sale la opción de iniciar sesión o de
+        registrarse (sesión no iniciada) o el icono del perfil (sesión iniciada).
+\end{itemize}
+
+\subsection*{Comparador}
+
+La pantalla del comparador no ha sufrido cambios con respecto al hito anterior, pero se ha cambiado el planteamiento
+con respecto al hito anterior. Como ya hemos visto, dentro de la opción de búsqueda puedes seleccionar viajes
+accesibles (aunque no seas una persona con discapacidad), apareciendo todos los viajes ya filtrados sin necesidad
+de aplicar el filtro. Además, otra de las mejoras que se han realizado respecto a los prototipos en papel es hacer
+que el botón de información de cada una de las tarjetas de los viajes muestre un \textit{pop-up} con la información más en
+detalle del viaje: la información de las paradas que realiza (en caso de que las haya), la información del viaje
+(la misma que se muestra en la tarjeta original), información de la compañía que opera el viaje (breve descripción
+y un enlace a la página web), así como también los servicios adicionales que se ofrecen en el viaje. Se ha añadido
+la funcionalidad de la ordenación de los viajes. En cuanto al contenido anterior de esta pantalla no se han realizado
+modificaciones puesto que se ha considerado que la información que ya se mostraba tanto en los viajes como en los
+filtros a aplicar era la necesaria. Una vez comentado el contenido de esta pantalla y las modificaciones que han
+sido efectuadas, vamos a centrarnos en la identificación de los distintos patrones y principios que se han seguido
+en el diseño de esta interfaz:
+
+\begin{itemize}
+    \item \textbf{Principio de proximidad.} Todas las tarjetas de los viajes de ida se encuentran bastante próximas entre
+        sí y separadas de las tarjetas de viajes de vuelta, que entre sí también se encuentran cercanas, lo que
+        indica que pertenecen a dos grupos distintos y claramente diferenciados. Por otro lado y aislado a este caso,
+        el principio de proximidad también se aplica en el caso de las opciones de filtrado, ya que se encuentran
+        todas agrupadas y próximas en la columna izquierda de la pantalla.
+    \item \textbf{Consistencia interna.} al igual que ocurría con las ofertas que aparecían en la página de inicio, todas
+        las tarjetas de viajes tanto de ida como de vuelta tienen la misma consistencia, puesto que la información
+        que muestran y la tipografía y los colores que se utilizan son los mismos en todas las tarjetas. Otro de los
+        ejemplos de la consistencia podemos observarlo en los filtros. Como puede apreciarse, aquellos filtros que se
+        refieren a rangos (como el rango horario, el rango de precios o la duración), tienen el mismo formato de
+        presentación, una barra en la que puedes moverte para seleccionar el filtro y unas barras que indican la
+        cantidad de viajes que existen con esos valores.
+    \item \textbf{Consistencia externa.} Además de la ya mencionada ubicación del botón del perfil (en la parte
+        superior derecha de la pantalla), otras de las opciones que aparecen en esta pantalla y que guardan
+        consistencia con la gran mayoría de las aplicaciones son los botones de Atrás y Continuar, ya que aparecen
+        respectivamente en la parte izquierda y en la derecha de la aplicación, indicando la sensación de avance
+        (derecha) y retroceso (izquierda).
+    \item \textbf{Principio de visibilidad.} Uno de los mecanismos que tiene esta pantalla para informarte del estado de la
+        misma es destacar el borde de aquellos viajes (tanto de ida como de vuelta) que hayas seleccionado, pudiendo
+        conocer rápidamente las opciones que has escogido.
+    \item \textbf{Ley de Hick.} Con la finalidad de no realizar un proceso de compra demasiado complejo y lleno de información,
+        hemos decidido dividir el proceso en tres etapas: una primera etapa de selección de los viajes deseados,
+        una segunda de datos y servicios adicionales y una tercera en la que se muestra un resumen y se procede al
+        pago del viaje.
+    \item \textbf{Efecto Zeigarnik.} Aunque la idea de dividir el proceso en distintas etapas se trate de un resultado de la
+        Ley de Hick para intentar que sea mucho menos tedioso, la idea de mostrar la etapa del proceso en la que te
+        encuentras para saber los pasos necesarios para finalizar es resultado de la aplicación directa del Efecto
+        Zeigarnik.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la aplicación
+        y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido un error
+        o bien quiere explorar otras opciones.
+\end{itemize}
+
+\subsection*{Reserva}
+
+Al finalizar el proceso de selección de los viajes que se quieren reservar, la siguiente pantalla que aparece es
+la de datos adicionales para realizar la compra: los datos de los pasajeros, si se desean contratar servicios
+adicionales (gratuitos o bien pagando un suplemento) y la selección de los asientos. En cuanto a las modificaciones
+que se han realizado con respecto al hito anterior han sido principalmente una modificación de la opción de seleccionar
+asiento, ya que la información representada no era muy clara y además no mostraba información más allá de los asientos
+(sólo mostraba la información de los huecos libres, sin dar información de la ubicación - filas y columnas - ni si
+tenía o no ventanilla). Es por ello que se ha planificado una mejora en la que ahora se muestra una leyenda de
+colores en función del estado del asiento (hemos añadido además asientos que debido a su posición dentro del vehículo
+suponen un incremento del precio, por lo que se van a destacar en otro color). En cuanto a los principios de diseño que
+aparecen en esta pantalla, podemos destacar los siguientes:
+
+\begin{itemize}
+    \item \textbf{Principio de cierre}. Dentro de la opción de seleccionar los datos de los pasajeros, puede verse
+        cómo el campo del teléfono se encuentra entrecortado, dando la sensación a los usuarios de que puede seguir
+        bajando para poder rellenar más datos.
+    \item \textbf{Consistencia interna.} Las dos pestañas que se tienen para poder seleccionar los asientos y los servicios
+        adicionales tienen la misma forma y tipografía, dando a entender al usuario la información contenida en
+        ellas está altamente relacionada y es necesaria para poder continuar con la reserva del viaje.
+    \item \textbf{Consistencia externa.} Además de la ya mencionada ubicación del botón del perfil (en la parte superior
+        derecha de la pantalla), otras de las opciones que aparecen en esta pantalla y que guardan consistencia
+        con la gran mayoría de las aplicaciones son los botones de Atrás y Continuar, ya que aparecen respectivamente
+        en la parte izquierda y en la derecha de la aplicación, indicando la sensación de avance (derecha) y retroceso
+        (izquierda).
+    \item \textbf{Ley de Hick.} Con el fin de no sobrecargar la pantalla de información, los datos adicionales que se necesitan
+        para la reserva se han dividido en tres secciones, de las cuales dos de ellas son desplegables, haciendo que
+        la cantidad de información que se solicita al usuario puede ser regulada por él en todo momento.
+    \item \textbf{Efecto Zeigarnik.} La idea de mostrar la etapa del proceso en la que te encuentras para saber los pasos
+        necesarios para finalizar es resultado de la aplicación directa del Efecto Zeigarnik.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la aplicación
+        y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido un error
+        o bien quiere explorar otras opciones.
+\end{itemize}
+
+\subsection*{Pago}
+
+La última de las pantallas necesarias para implementar la funcionalidad de realizar una reserva es la página de
+pago. Una de las modificaciones realizadas (que ya mencionamos un poco anteriormente) es que antes de llegar a
+esta página, si no tienes la sesión todavía iniciada, te requiere de hacerlo para poder continuar (al hacerlo te
+vuelve a dirigir aquí con los datos de la compra que has realizado). En cuanto a las modificaciones realizadas
+sobre la propia página, hemos mantenido la idea original de mantener los mapas de ida y de vuelta (mostrando el
+itinerario a seguir) y pestañas en las que se dan dos posibles opciones de pago (tarjeta o PayPal). También
+aparece el precio total del viaje, con el precio de los billetes más los suplementos que se hayan seleccionado
+(servicios adicionales o asientos más caros). Sin embargo, a esto se le ha añadido un resumen de los viajes que
+finalmente han sido seleccionados. Este resumen contiene las tarjetas de los viajes tanto de ida como de vuelta
+y para cada una de ellas muestra la fecha, el origen, el destino y las fechas de salida y llegada. Además, cuando
+se selecciona la opción de ver la información del vuelo, abre un \textit{pop-up} en el que se puede ver la información del
+vuelo más detallada (los pasajeros que van a viajar, los asientos, los servicios que tiene disponibles y el precio). 
+
+Otra de las modificaciones que se ha realizado es la información que aparece luego de confirmar la compra. En este
+caso, hemos pasado de un \textit{pop-up} sencillo a una ventana en la que se muestra en detalle todo el resumen de la compra
+que se ha realizado (las paradas, los destinos, las fechas, los pasajeros que van a viajar, los pasajeros y los
+servicios adicionales que se han incluido en la compra). El mensaje con el número de la reserva diciendo que se ha
+realizado correctamente se mantiene en la parte superior. Bajo esta información se encuentra un botón que da la
+opción de continuar explorando nuevas opciones (lleva a la página de inicio). 
+
+En cuanto a los principios de diseño que se han identificado (en ambas páginas, tanto en la referente a los datos
+del pago como a la de confirmación de la compra), podemos encontrar los siguientes:
+
+\begin{itemize}
+    \item \textbf{Ley de Fitts.} Una vez decidido el método de pago con el que se va a realizar la reserva, los campos
+        necesarios para efectuar la compra para cada uno de los métodos de pago se encuentran próximos entre sí
+        (además de dentro de la misma pestaña), para poder facilitar al usuario moverse entre los distintos campos.
+    \item \textbf{Consistencia interna.} La tipografía y los colores usados en las distintas opciones de pago (tanto en las
+        pestañas como en los campos) es la misma, al igual que ocurre en el resumen de la compra (las tarjetas que
+        representan los viajes de ida y de vuelta tienen la misma estructura y contienen la misma información para
+        dársela al usuario). Esto también es aplicable al resumen de la compra, ya que la cantidad de información
+        que se brinda en el viaje de ida es la misma que en el caso del viaje de vuelta.
+    \item \textbf{Consistencia externa.} Como ya hemos visto en las etapas anteriores del proceso de reserva, se
+        guarda cierta consistencia con el resto de aplicaciones, en las que se sobreentiende que el botón de retroceso
+        de la página se encuentra en la parte derecha, mientras que en el caso de el de continuar (en este caso el
+        botón de pagar) se encuentra en la parte derecha de la pantalla, dando la sensación de progreso.
+    \item \textbf{Ley de Hick.} El número de opciones de pago que se ofrecen se encuentran separadas por pestañas,
+        de modo que el usuario no se sobrecarga con una gran cantidad de información y de opciones con las que se
+        puede realizar el pago.
+    \item \textbf{Efecto Zeigarnik.} La idea de mostrar la etapa del proceso en la que te encuentras para saber los
+        pasos necesarios para finalizar es resultado de la aplicación directa del Efecto Zeigarnik.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la aplicación
+        y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido un error
+        o bien quiere explorar otras opciones.
+    \item \textbf{Regla \textit{peak-end}.} Cuando se finaliza el proceso de reserva de la aplicación (\textit{peak}), se muestra a modo
+        de finalización del proceso y para confirmar que todo se ha realizado correctamente una nueva ventana con
+        un resumen de la información que se ha reservado.
+\end{itemize}
