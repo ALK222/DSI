@@ -90,7 +90,7 @@ en el diseño de esta interfaz:
 \subsection*{Reserva}
 
 Al finalizar el proceso de selección de los viajes que se quieren reservar, la siguiente pantalla que aparece es
-la de datos adicionales para realizar la compra: los datos de los pasajeros, si se desean contratar servicios
+la de reserva, que incluye: los datos de los pasajeros, si se desean contratar servicios
 adicionales (gratuitos o bien pagando un suplemento) y la selección de los asientos. En cuanto a las modificaciones
 que se han realizado con respecto al hito anterior han sido principalmente una modificación de la opción de seleccionar
 asiento, ya que la información representada no era muy clara y además no mostraba información más allá de los asientos
@@ -171,4 +171,90 @@ del pago como a la de confirmación de la compra), podemos encontrar los siguien
     \item \textbf{Regla \textit{peak-end}.} Cuando se finaliza el proceso de reserva de la aplicación (\textit{peak}), se muestra a modo
         de finalización del proceso y para confirmar que todo se ha realizado correctamente una nueva ventana con
         un resumen de la información que se ha reservado.
+\end{itemize}
+
+\subsection*{Inicio de sesión}
+
+Para poder realizar reservas nuevas en la aplicación, es necesario que se inicie sesión con
+una cuenta válida y que se encuentre ya registrada en la aplicación. Para poder realizar una
+reserva completa sí que es necesario realizar el inicio de sesión, aunque para buscar viajes
+no es necesario, como ya hemos visto anteriormente. Con respecto al prototipo del hito anterior
+no se han realizado modificaciones aparentes sobre esta página, ya que se ha considerado que
+la información que se solicita al usuario es la necesaria. En cuanto a los principios de diseño
+que se han seguido para la creación de esta ventana son los siguientes:
+
+\begin{itemize}
+    \item \textbf{Ley de Fitts.} Los campos que han de rellenarse para poder iniciar sesión en la
+        aplicación (correo y contraseña) se encuentran próximos entre sí, facilitando al
+        usuario en todo momento el desplazamiento de uno a otro, pudiendo aportar de forma
+        sencilla la información que le es solicitada.
+    \item \textbf{Consistencia interna.} La tipografía y la disposición empleada para destacar los campos
+        del formulario es la misma tanto en el caso del correo como en el de la contraseña (en
+        la parte superior del campo se encuentra un texto que describe lo que ha de escribirse
+        en el formulario y luego puede apreciarse el campo propiamente dicho).
+    \item \textbf{Consistencia externa.} La página de inicio de sesión guarda consistencia externa con
+        el resto de páginas de este tipo de las otras aplicaciones, ya que los campos de inicio
+        de sesión se encuentran en la parte superior de la ventana, al igual que inmediatamente
+        debajo de ello se encuentra el botón de iniciar sesión (si ya has rellenado los campos).
+        Justo debajo de iniciar sesión, en caso de que todavía no tengas una cuenta se da la
+        opción de registrarse como un nuevo usuario de la aplicación. Este ejemplo de estructura
+        puede verse en el inicio de sesión de \textit{Gmail}, entre otros.
+    \item \textbf{Principio de visibilidad.} Como ya vimos anteriormente, uno de los estados que va a
+        manejar nuestra aplicación es el hecho de si tienes la sesión iniciada actualmente o no.
+        Para poder consultar esta información, se puede observar la esquina superior derecha. Si
+        el icono que aparece es el perfil, la sesión se encuentra iniciada, mientras que en el
+        caso contrario, se requerirá de que se inicie sesión.
+\end{itemize}
+
+\subsection*{Registro}
+
+En el supuesto caso de que el usuario que quiera entrar a nuestra aplicación desee entrar para
+poder realizar una reserva y no tenga una cuenta creada todavía, es posible darle la opción de
+crearse una cuenta. Dentro de este nuevo formulario, al usuario le serán solicitados una serie
+de datos adicionales (no solamente el correo y la contraseña). Estos datos adicionales han
+variado con respecto al hito anterior, ya que se ha añadido nueva información para poder ofrecer
+más facilidades al usuario, como por ejemplo, que a la hora de reservar un viaje, si tiene la
+sesión iniciada, en los datos de los pasajeros se rellenará automáticamente la información del
+primero de ellos con los datos que ya se tienen del usuario que se ha registrado en la aplicación.
+En cuanto a los patrones de diseño que se han utilizado, hemos podido identificar los siguientes:
+
+\begin{itemize}
+    \item \textbf{Principio de proximidad.} Todos los campos que se necesitan para poder crear una nueva
+        cuenta en la aplicación se encuentran próximos entre sí, permitiendo al usuario realizar
+        movimientos muy cortos para desplazarse entre los distintos campos del registro.
+    \item \textbf{Consistencia interna.} El fondo empleado tanto para cada uno de los campos así
+        como la tipografía empleada para esta pantalla es consistente, ya que se mantiene dando
+        una sensación de unidad en todo el conjunto de los datos.
+    \item \textbf{Principio de visibilidad.} Como ya vimos anteriormente, uno de los estados que va a
+        manejar nuestra aplicación es el hecho de si tienes la sesión iniciada actualmente o no.
+        Para poder consultar esta información, se puede observar la esquina superior derecha. Si
+        el icono que aparece es el perfil, la sesión se encuentra iniciada, mientras que en el
+        caso contrario, se requerirá de que se inicie sesión.
+\end{itemize}
+
+\subsection*{Perfil}
+
+El usuario puede entrar a su perfil y visualizar todos los datos que haya introducido en el
+registro. Un usuario no registrado en Just Travel It no puede acceder a esta pantalla ya que
+para ello es necesario como mínimo tener un perfil en la aplicación. El usuario tampoco podrá
+acceder a la pantalla de perfil si no está con sus sesión iniciada, puede ocurrir que el usuario
+esté registrado pero no tenga la sesión iniciada, para ello debe iniciar sesión. En cuanto a los
+principios de diseño que aparecen en esta pantalla, se pueden resaltar los siguientes:
+
+\begin{itemize}
+    \item \textbf{Consistencia interna.} El color utilizado en los botones es el mismo al igual
+        que la fuente y el tamaño de la letra. No solo entre los botones dentro de la pantalla
+        sino con los del resto de la aplicación.
+    \item \textbf{Ley de Fitts.} La información de cada tipo se mantiene agrupada en su grupo. Los
+        datos personales están todos juntos en un párrafo, mientras que la información general
+        en otro, de esta forma se le facilita al usuario el encontrar la información que desee
+        más ágilmente.
+    \item \textbf{Ley de Hick.} Se aprovecha la clasificación del tipo de información del cliente para no
+        agrupar todo en un bloque. De esta manera, evitamos que el usuario no se sobrecargue de
+        información.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario tiene el control de su
+        información en todo momento, siempre que tenga la sesión iniciada. Con esta pantalla
+        tenemos el objetivo de mostrarle al usuario toda la información que ha metido en la
+        aplicación y con el botón de modificar su perfil le damos la posibilidad de cambiar su
+        información cuando desee.
 \end{itemize}
