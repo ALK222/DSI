@@ -17,7 +17,7 @@ Tras un análisis de los errores cometidos en el hito anterior hemos definido lo
 de la siguiente manera:
 
 \begin{itemize}
-    \item \textbf{Viaje}. Con este elemento representamos todos los datos sobre un desplazamiento
+    \item \textbf{Viaje.} Con este elemento representamos todos los datos sobre un desplazamiento
         concreto. Contará con los siguientes atributos:
         \begin{itemize}
             \item Fecha. Se marcará tanto el día de salida como el de llegada (pueden ser el mismo),
@@ -33,7 +33,7 @@ de la siguiente manera:
 
         Un viaje tendrá asociados tantos billetes como plazas tenga.
 
-    \item \textbf{Billete}. Es el elemento que se paga para tener acceso al \textit{Viaje}. En caso de reservarse asientos
+    \item \textbf{Billete.} Es el elemento que se paga para tener acceso al \textit{Viaje}. En caso de reservarse asientos
         para varias personas, se considerarán como el mismo \textit{Billete}, con los datos correspondientes de cada comprador.
         Poseerá los atributos siguientes:
         \begin{itemize}
@@ -45,7 +45,7 @@ de la siguiente manera:
         \end{itemize}
         Cada \textit{Billete} está asociado a un transporte.
 
-    \item \textbf{Usuario}. Persona que utiliza la aplicación, o que es partícipe de algún \textit{Viaje} (puede ser
+    \item \textbf{Usuario.} Persona que utiliza la aplicación, o que es partícipe de algún \textit{Viaje} (puede ser
         añadida a uno por otro \textit{Usuario}). Contará con los siguientes atributos:
         \begin{itemize}
             \item Nombre. Una cadena de caracteres con el nombre completo de la persona.
@@ -58,5 +58,48 @@ de la siguiente manera:
                 caracteres que será confirmada a través de un correo electrónico.
         \end{itemize}
         Un usuario tiene uno o varios viajes asociados.
+    
+    \item \textbf{Notificación.} Mensaje recibido por un \textit{Usuario} acerca de su \textit{Viaje}. Sus atributos serán los siguientes.
+        \begin{itemize}
+            \item Mensaje. Una cadena de caracteres con el objeto de la notificación.
+            \item Fecha. Fecha en la que se envió la notificación. Formato es el de la región en que se utiliza (en España por ejemplo,
+                sería \textit{dd/mm/aaaa}).
+            \item Hora. Hora a la que se envió la notificación. El formato será \textit{HH:MM}.
+        \end{itemize}
+
+        Una notificación va dirigida a un \textit{Usuario} y es acerca de un \textit{Viaje}.
+    
+    \item \textbf{Contacto con atención al cliente.} Utilizado en caso de que algún \textit{Usuario} tenga uno o varios problemas con la aplicación. Consta
+        de los siguientes atributos:
+        \begin{itemize}
+            \item Mensajes. Cadenas de caracteres intercambiadas entre un \textit{Usuario} y las personas al cargo de la atención al cliente.
+            \item Fecha. Fecha en la que se envió cada mensaje. Formato es el de la región en que se utiliza (en España por ejemplo,
+                sería \textit{dd/mm/aaaa}).
+            \item Hora. Hora a la que se envió cada mensaje. El formato será \textit{HH:MM}.
+        \end{itemize}
+
+        El contacto con atención al cliente lo hace un \textit{Usuario} con un problema con un \textit{Viaje}.
+
+    \item \textbf{Lista de viajes.} Mostrada para que el \textit{Usuario} pueda elegir que viajes son los que desea. Tiene los siguientes atributos:
+        \begin{itemize}
+            \item Viaje de ida. Instancias del elemento \textit{Viaje} que tengan como origen la ciudad seleccionada por el \textit{Usuario}.
+            \item Viaje de vuelta. Instancias del elemento \textit{Viaje} que tengan como destino la ciudad seleccionada por el \textit{Usuario}.
+            \item Filtros. Estos representarán qué instancias de \textit{Viaje} se encuentran en la lista. Se podrá filtrar según precio (formato numérico
+                de la cantidad de '€', o la moneda correspondiente), duración (formato \textit{HH:MM}), y si es accesible o no (una variable \textit{booleana}).
+            \item Ordenación. Representa el orden en el que está ordenada la lista. Será un enumerado con cuatro opciones: \textit{Precio de mayor a menor}, 
+                \textit{Precio de menor a mayor}, \textit{Duración de mayor a menor} y \textit{Duración de menor a mayor}.
+        \end{itemize}
+
+    La lista de viajes tiene asociados instancias de \textit{Viaje}.
+
+    \item \textbf{Reserva.} Realizada por un \textit{Usuario} a partir de \textit{Viajes}. Consta de los siguientes atributos:
+        \begin{itemize}
+            \item Viajes. Instancias con los viajes que han sido reservados. En caso de haber varios acompañantes, cada uno tendrá su
+                instancia de viaje.
+            \item Usuarios. Instancias de \textit{Usuario} con los datos de los asistentes a cada uno de los viajes.
+            \item Servicios. Servicios que hayan sido reservados por el \textit{Usuario} para el viaje.
+        \end{itemize}
+
+        La reserva relaciona los viajes con usuarios.
 
 \end{itemize}
