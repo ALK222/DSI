@@ -87,10 +87,10 @@ en el diseño de esta interfaz:
         o bien quiere explorar otras opciones.
 \end{itemize}
 
-\subsection*{Reserva}
+\subsection*{Datos adicionales}
 
 Al finalizar el proceso de selección de los viajes que se quieren reservar, la siguiente pantalla que aparece es
-la de reserva, que incluye: los datos de los pasajeros, si se desean contratar servicios
+la de datos adicionales, que incluye: los datos de los pasajeros, si se desean contratar servicios
 adicionales (gratuitos o bien pagando un suplemento) y la selección de los asientos. En cuanto a las modificaciones
 que se han realizado con respecto al hito anterior han sido principalmente una modificación de la opción de seleccionar
 asiento, ya que la información representada no era muy clara y además no mostraba información más allá de los asientos
@@ -235,7 +235,7 @@ En cuanto a los patrones de diseño que se han utilizado, hemos podido identific
 \subsection*{Perfil}
 
 El usuario puede entrar a su perfil y visualizar todos los datos que haya introducido en el
-registro. Un usuario no registrado en Just Travel It no puede acceder a esta pantalla ya que
+registro. Un usuario no registrado en \textit{Just Travel It} no puede acceder a esta pantalla ya que
 para ello es necesario como mínimo tener un perfil en la aplicación. El usuario tampoco podrá
 acceder a la pantalla de perfil si no está con sus sesión iniciada, puede ocurrir que el usuario
 esté registrado pero no tenga la sesión iniciada, para ello debe iniciar sesión. En cuanto a los
@@ -257,4 +257,165 @@ principios de diseño que aparecen en esta pantalla, se pueden resaltar los sigu
         tenemos el objetivo de mostrarle al usuario toda la información que ha metido en la
         aplicación y con el botón de modificar su perfil le damos la posibilidad de cambiar su
         información cuando desee.
+\end{itemize}
+
+\subsection*{Modificar perfil}
+
+Al usuario se le brinda la posibilidad de cambiar los datos de su perfil creado en \textit{Just Travel It}. Podrá
+modificar todos los campos rellenados en la creación del perfil. Ocurrirá lo mismo que en el \textit{Registro},
+al modificar los datos, cuando se realice una reserva con la sesión iniciada se rellenaran los campos del perfil
+en los campos adecuados a la reserva. Los principios empleados para la creación de esta ventana son:
+
+\begin{itemize}
+    \item \textbf{Consistencia interna.} La pantalla guarda consistencia sobre todo con la pantalla de la página de registro,
+        los colores, tamaños, fuentes y tipografías se encargan de mantener la consistencia interna de estas pantallas.
+    \item \textbf{Consistencia externa.} Se trata de la misma consistencia que podemos encontrar en \textit{Registro}.
+    \item \textbf{Principio de proximidad.} Al ser igual que en \textit{Registro}, todas las preguntas se encuentran
+        bastante próximas entre sí.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento puede modificar todos
+        sus datos introducidos en la aplicación.
+    \item \textbf{Ley de Fitts.} Los campos que han de rellenarse para modificar el perfil se encuentran próximos
+        entre sí y caben en la pantalla, por lo que no hay que hacer \textit{scroll} con el ratón, de este forma
+        el usuario puede viajar con facilidad de un campo a otro.
+\end{itemize}
+
+\subsection*{Mis reservas}
+
+Se le ofrece al usuario con una sesión iniciada que pueda consultar la información de sus reservas
+activas así como de poder comprobar las reservas pasadas. En este punto es posible consultar, modificar o cancelar
+una reserva. Pasamos a nombrar los principios utilizados en esta pantalla: 
+
+\begin{itemize}
+    \item \textbf{Consistencia externa.} Al igual que en la gran mayoría de las aplicaciones, cuando el usuario
+        tiene la sesión iniciada en la página, puede acceder a su perfil pulsando sobre el botón de usuario situado
+        en la esquina superior derecha.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la
+        aplicación y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha
+        cometido un error en cuanto a la página a donde quería acceder.
+    \item \textbf{Principio de visibilidad.} Como ya vimos anteriormente, uno de los estados que va a manejar
+        nuestra aplicación es el hecho de si tienes la sesión iniciada actualmente o no. Para poder consultar
+        esta información, se puede observar la esquina superior derecha. Si el icono que aparece es el perfil,
+        la sesión se encuentra iniciada, mientras que en el caso contrario, se requerirá de que se inicie sesión. Además,
+        se reconoce rápidamente la asociación ida-vuelta de los viajes.
+    \item \textbf{Principio de proximidad.} Todas las tarjetas de los viajes de ida se encuentran bastante próximas entre sí
+        y separadas de las tarjetas de viajes de vuelta, que entre sí también se encuentran cercanas, lo que indica
+        que pertenecen a dos grupos distintos y claramente diferenciados.
+\end{itemize}
+
+\subsection*{Consultar reserva}
+
+Al usuario se le da la posibilidad de consultar su reserva. Desde esta pantalla puede ver el viaje de ida y el
+de vuelta, donde aparecen las tarjetas de los respectivos viajes, con las fechas, los días, la duración, la compañía,
+la cantidad de pasajeros y la información adicional de la reserva. También se puede ver el mapa donde aparece la
+ruta seguida en el viaje. Debajo del mapa se pueden consultar los datos de los pasajeros. Pasamos a nombrar los
+principios utilizados en esta pantalla:
+
+\begin{itemize}
+    \item \textbf{Consistencia externa.} Al igual que en la gran mayoría de las aplicaciones, cuando el usuario
+        tiene la sesión iniciada en la página, puede acceder a su perfil pulsando sobre el botón de usuario situado
+        en la esquina superior derecha.
+    \item \textbf{Consistencia interna.} La pantalla guarda consistencia sobre todo con la pantalla de la página
+        resumen pago, los colores, tamaños, fuentes y tipografías se encargan de mantener la consistencia interna
+        de estas pantallas.
+    \item \textbf{Principio de proximidad.} Todos los campos que se necesitan para poder consultar una reserva en
+        la aplicación se encuentran próximos entre sí, permitiendo al usuario realizar movimientos muy cortos para
+        desplazarse entre los distintos campos.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la
+        aplicación y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido
+        un error en cuanto a la página a dónde quería acceder.
+    \item \textbf{Principio de visibilidad.} En esta pantalla se reconoce rápidamente la asociación ida-vuelta de los
+        viajes.
+    \item \textbf{Ley de Hick.} Con el fin de no sobrecargar la pantalla, los datos adicionales que se necesitan para
+        la reserva se han dividido en dos secciones, haciendo que la cantidad de información que se muestra al
+        usuario pueda ser regulada por él en todo momento.
+\end{itemize}
+
+\subsection*{Modificar reserva}
+
+Al usuario se le otorga la posibilidad de modificar las reservas que haya realizado en \textit{Just Travel It}. Podrá
+modificar los datos del pasajero: ,ombre, apellidos, DNI y teléfono. Tendrá a su disposición dos menús desplegables,
+uno para poder contratar servicios adicionales que no haya contratado con anterioridad y otro en el que podrá
+modificar su asiento. Además cuenta con un boton de selección en la parte inferior izquierda para poder solicitar
+asistencia en la estación correspondiente por si se olvido de marcarlo a la hora de realizar la reserva. Pasamos
+a nombrar los principios utilizados en esta pantalla:
+
+\begin{itemize}
+    \item \textbf{Consistencia interna.} La pantalla guarda consistencia sobre todo con la pantalla de la página
+        mis reservas, los colores, tamaños, fuentes y tipografías se encargan de mantener la consistencia interna de
+        estas pantallas.
+    \item \textbf{Consistencia externa.} Al igual que en la gran mayoría de las aplicaciones, cuando el usuario tiene
+        la sesión iniciada en la página, puede acceder a su perfil pulsando sobre el botón de usuario situado en la
+        esquina superior derecha.
+    \item \textbf{Ley de Fitts.} Los campos que han de rellenarse para modificar el perfil se encuentran próximos
+        entre sí y caben en la pantalla, por lo que no hay que hacer \textit{scroll} con el ratón, de este forma
+        el usuario puede viajar con facilidad de un campo a otro.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la
+        aplicación y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido
+        un error en cuanto a modificar los datos.
+    \item \textbf{Principio de proximidad.} Todos los campos que se necesitan para poder modificar una reserva en
+        la aplicación se encuentran próximos entre sí, permitiendo al usuario realizar movimientos muy cortos para
+        desplazarse entre los distintos campos a modificar.
+    \item \textbf{Principio de visibilidad.} Como ya vimos anteriormente, uno de los estados que va a manejar nuestra
+        aplicación es el hecho de si tienes la sesión iniciada actualmente o no. Para poder consultar esta
+        información, se puede observar la esquina superior derecha. Si el icono que aparece es el perfil, la sesión
+        se encuentra iniciada, mientras que en el caso contrario, se requerirá de que se inicie sesión.
+\end{itemize}
+
+\subsection*{Soporte}
+
+Si un usuario tiene alguna pregunta que no pueda ser abordada mediante el apartado de preguntas frecuentes previamente
+mencionado, ya sea debido a la naturaleza altamente específica de su problema o porque requiere una solución no
+automatizada, o si experimenta algún inconveniente con la aplicación, tiene la opción de hacer clic en el incluíacono de
+chat. Este icono se encuentra ubicado en la parte inferior derecha de cualquier pantalla de la página web, justo sobre
+el icono de preguntas frecuentes.
+
+Esta pantalla ha experimentado ciertas modificaciones con respecto al prototipo en papel. En este caso, hemos
+expandido las funcionalidades de la sección de soporte, que anteriormente sólo incluía un asistente automatizado
+de respuestas. La nueva sección ahora incorpora un canal de contacto telefónico, donde los usuarios pueden obtener
+toda la información necesaria para comunicarse con un asistente personal. Además, hemos añadido una función de
+mensajería que permite a los usuarios enviar mensajes y solicitudes directamente al equipo de asistencia al cliente,
+que responderá con la mayor brevedad posible.
+
+En cuanto a los principios de diseño que se han seguido para la creación de estas ventanas, son los siguientes:
+
+\begin{itemize}
+    \item \textbf{Principio de proximidad.} Todos los campos que se necesitan rellenar para poder enviar un nuevo
+        mensaje, se encuentran próximos entre sí, permitiendo al usuario realizar movimientos muy cortos para
+        desplazarse entre los distintos cuadros de texto. Relacionado a este principio, aplica la Ley de Fitts,
+        donde la distancia que tiene que ser recorrida para moverse de un campo a otro es muy pequeña.
+    \item \textbf{Consistencia interna.} Las distintas tarjetas que representan las formas de contactar con atención
+        al cliente, tienen la misma estructura: un icono significativo, el significado de la tarjeta e información
+        añadida en caso de ser necesaria. También presenta consistencia en cuanto a la forma de la tarjeta y los
+        colores que se utilizan.
+    \item \textbf{Consistencia externa.} Se guarda cierta consistencia con el resto de aplicaciones. Icono de
+        perfil, botón de atrás y enviar, en el chat; el botón de enviar y el cuadro de texto para escribir (simulando
+        el mismo que encontraríamos en un teléfono), una “X” que indica “cerrar el \textit{pop-up}”.
+    \item \textbf{Feedback visual.} Una vez enviada la solicitud o mensaje al equipo de asistencia al cliente, el
+        usuario recibirá un mensaje de confirmación con el objetivo de aclarar las dudas de si el mensaje ha sido
+        enviado con éxito.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario mantiene el control total de la aplicación,
+        teniendo la capacidad de avanzar o retroceder en cualquier instante. Si identifica un error o desea
+        explorar alternativas, cuenta con la libertad de tomar decisiones de manera autónoma en todo momento.
+
+\end{itemize}
+
+\subsection*{Preguntas frecuentes}
+
+Si un usuario quiere consultar las preguntas frecuentes que pueden surgir a la hora de utilizar la aplicación,
+es posible darle al botón de preguntas frecuentes marcado con una interrogación en la parte inferior derecha
+de la pantalla. Esta pantalla con respecto al prototipo en papel no ha tenido ningún cambio. Pasamos a nombrar
+los principios utilizados en esta pantalla:
+
+\begin{itemize}
+    \item \textbf{Consistencia interna.} La tipografía y los colores usados en las distintas preguntas frecuentes
+        es la misma, al igual que ocurre en las preguntas frecuentes desplegables. 
+    \item \textbf{Consistencia externa.} Se guarda cierta consistencia con el resto de aplicaciones, empleando el
+        desplegable en las preguntas para después mostrar las preguntas frecuentes relacionadas.
+    \item \textbf{Principio de proximidad.} Todas las preguntas se encuentran bastante próximas entre sí.
+    \item \textbf{Principio de libertad y control del usuario.} El usuario en todo momento tiene el control de la
+        aplicación y puede decidir cuándo avanzar y cuándo retroceder en todo momento si ha detectado que ha cometido
+        un error entrando en la pregunta que no debía o bien quiere explorar otras preguntas.
+    \item \textbf{Ley de Fitts.} Los campos que han de rellenarse para modificar el perfil se encuentran próximos
+        entre sí y caben en la pantalla, por lo que no hay que hacer \textit{scroll} con el ratón, de este forma el
+        usuario puede viajar con facilidad de un campo a otro.
 \end{itemize}
