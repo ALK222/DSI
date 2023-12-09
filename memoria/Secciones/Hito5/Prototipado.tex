@@ -9,7 +9,7 @@ una de las interfaces.
 
 \subsection*{Inicio}
 
-La pantalla principal de nuestra aplicación, como ya detallamos anteriormente, va a ser la de búsqueda,
+La pantalla principal de nuestra aplicación (figura \ref{fig:it1_inicio}), como ya detallamos anteriormente, va a ser la de búsqueda,
 en la que, a diferencia de lo planteado en el hito anterior, cualquier usuario va a poder realizar la
 comparación de viajes (aunque no pueda finalizar sin tener que iniciar sesión o crearse una cuenta). Otro
 de los cambios que además se ha realizado es ofrecer la posibilidad a los usuarios que no se hayan registrado
@@ -37,9 +37,16 @@ los patrones y principios que se han seguido para esta pantalla, son los siguien
         registrarse (sesión no iniciada) o el icono del perfil (sesión iniciada).
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=1, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de inicio}
+    \label{fig:it1_inicio}
+\end{figure}
+
 \subsection*{Comparador}
 
-La pantalla del comparador no ha sufrido cambios con respecto al hito anterior, pero se ha cambiado el planteamiento
+La pantalla del comparador (figura \ref{fig:it1_comparador} no ha sufrido cambios con respecto al hito anterior, pero se ha cambiado el planteamiento
 con respecto al hito anterior. Como ya hemos visto, dentro de la opción de búsqueda puedes seleccionar viajes
 accesibles (aunque no seas una persona con discapacidad), apareciendo todos los viajes ya filtrados sin necesidad
 de aplicar el filtro. Además, otra de las mejoras que se han realizado respecto a los prototipos en papel es hacer
@@ -87,9 +94,16 @@ en el diseño de esta interfaz:
         o bien quiere explorar otras opciones.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=2, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de comparador}
+    \label{fig:it1_comparador}
+\end{figure}
+
 \subsection*{Datos adicionales}
 
-Al finalizar el proceso de selección de los viajes que se quieren reservar, la siguiente pantalla que aparece es
+Al finalizar el proceso de selección de los viajes que se quieren reservar, la siguiente pantalla (figura \ref{fig:it1_datos_adicionales}) que aparece es
 la de datos adicionales, que incluye: los datos de los pasajeros, si se desean contratar servicios
 adicionales (gratuitos o bien pagando un suplemento) y la selección de los asientos. En cuanto a las modificaciones
 que se han realizado con respecto al hito anterior han sido principalmente una modificación de la opción de seleccionar
@@ -122,9 +136,16 @@ aparecen en esta pantalla, podemos destacar los siguientes:
         o bien quiere explorar otras opciones.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=3, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de datos adicionales de reserva}
+    \label{fig:it1_datos_adicionales}
+\end{figure}
+
 \subsection*{Pago}
 
-La última de las pantallas necesarias para implementar la funcionalidad de realizar una reserva es la página de
+La última de las pantallas (figura \ref{fig:it1_pago}) necesarias para implementar la funcionalidad de realizar una reserva es la página de
 pago. Una de las modificaciones realizadas (que ya mencionamos un poco anteriormente) es que antes de llegar a
 esta página, si no tienes la sesión todavía iniciada, te requiere de hacerlo para poder continuar (al hacerlo te
 vuelve a dirigir aquí con los datos de la compra que has realizado). En cuanto a las modificaciones realizadas
@@ -173,9 +194,16 @@ del pago como a la de confirmación de la compra), podemos encontrar los siguien
         un resumen de la información que se ha reservado.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=4, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de pago}
+    \label{fig:it1_pago}
+\end{figure}
+
 \subsection*{Inicio de sesión}
 
-Para poder realizar reservas nuevas en la aplicación, es necesario que se inicie sesión con
+Para poder realizar reservas nuevas en la aplicación, es necesario que se inicie sesión (figura \ref{fig:it1_inicio_sesion}) con
 una cuenta válida y que se encuentre ya registrada en la aplicación. Para poder realizar una
 reserva completa sí que es necesario realizar el inicio de sesión, aunque para buscar viajes
 no es necesario, como ya hemos visto anteriormente. Con respecto al prototipo del hito anterior
@@ -206,17 +234,25 @@ que se han seguido para la creación de esta ventana son los siguientes:
         caso contrario, se requerirá de que se inicie sesión.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=5, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de inicio de sesión}
+    \label{fig:it1_inicio_sesion}
+\end{figure}
+
 \subsection*{Registro}
 
 En el supuesto caso de que el usuario que quiera entrar a nuestra aplicación desee entrar para
 poder realizar una reserva y no tenga una cuenta creada todavía, es posible darle la opción de
-crearse una cuenta. Dentro de este nuevo formulario, al usuario le serán solicitados una serie
+crearse una cuenta. Dentro de este nuevo formulario (figura \ref{fig:it1_registro}), al usuario le serán solicitados una serie
 de datos adicionales (no solamente el correo y la contraseña). Estos datos adicionales han
 variado con respecto al hito anterior, ya que se ha añadido nueva información para poder ofrecer
 más facilidades al usuario, como por ejemplo, que a la hora de reservar un viaje, si tiene la
 sesión iniciada, en los datos de los pasajeros se rellenará automáticamente la información del
 primero de ellos con los datos que ya se tienen del usuario que se ha registrado en la aplicación.
 En cuanto a los patrones de diseño que se han utilizado, hemos podido identificar los siguientes:
+
 
 \begin{itemize}
     \item \textbf{Principio de proximidad.} Todos los campos que se necesitan para poder crear una nueva
@@ -232,10 +268,17 @@ En cuanto a los patrones de diseño que se han utilizado, hemos podido identific
         caso contrario, se requerirá de que se inicie sesión.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=6, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de inicio}
+    \label{fig:it1_registro}
+\end{figure}
+
 \subsection*{Perfil}
 
 El usuario puede entrar a su perfil y visualizar todos los datos que haya introducido en el
-registro. Un usuario no registrado en \textit{Just Travel It} no puede acceder a esta pantalla ya que
+registro (figura \ref{fig:it1_perfil}). Un usuario no registrado en \textit{Just Travel It} no puede acceder a esta pantalla ya que
 para ello es necesario como mínimo tener un perfil en la aplicación. El usuario tampoco podrá
 acceder a la pantalla de perfil si no está con sus sesión iniciada, puede ocurrir que el usuario
 esté registrado pero no tenga la sesión iniciada, para ello debe iniciar sesión. En cuanto a los
@@ -259,9 +302,16 @@ principios de diseño que aparecen en esta pantalla, se pueden resaltar los sigu
         información cuando desee.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=7, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de perfil de usuario}
+    \label{fig:it1_perfil}
+\end{figure}
+
 \subsection*{Modificar perfil}
 
-Al usuario se le brinda la posibilidad de cambiar los datos de su perfil creado en \textit{Just Travel It}. Podrá
+Al usuario se le brinda la posibilidad de cambiar los datos de su perfil creado en \textit{Just Travel It} (figura \ref{fig:it1_mod_datos}). Podrá
 modificar todos los campos rellenados en la creación del perfil. Ocurrirá lo mismo que en el \textit{Registro},
 al modificar los datos, cuando se realice una reserva con la sesión iniciada se rellenaran los campos del perfil
 en los campos adecuados a la reserva. Los principios empleados para la creación de esta ventana son:
@@ -279,9 +329,16 @@ en los campos adecuados a la reserva. Los principios empleados para la creación
         el usuario puede viajar con facilidad de un campo a otro.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=8, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de modificación de datos de usuario}
+    \label{fig:it1_mod_datos}
+\end{figure}
+
 \subsection*{Mis reservas}
 
-Se le ofrece al usuario con una sesión iniciada que pueda consultar la información de sus reservas
+Se le ofrece al usuario con una sesión iniciada que pueda consultar la información de sus reservas (figura \ref{fig:it1_reservas})
 activas así como de poder comprobar las reservas pasadas. En este punto es posible consultar, modificar o cancelar
 una reserva. Pasamos a nombrar los principios utilizados en esta pantalla: 
 
@@ -302,9 +359,16 @@ una reserva. Pasamos a nombrar los principios utilizados en esta pantalla:
         que pertenecen a dos grupos distintos y claramente diferenciados.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=9, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de ``Mis reservas''}
+    \label{fig:it1_reservas}
+\end{figure}
+
 \subsection*{Consultar reserva}
 
-Al usuario se le da la posibilidad de consultar su reserva. Desde esta pantalla puede ver el viaje de ida y el
+Al usuario se le da la posibilidad de consultar su reserva (figura \ref{fig:it1_consulta_reserva}). Desde esta pantalla puede ver el viaje de ida y el
 de vuelta, donde aparecen las tarjetas de los respectivos viajes, con las fechas, los días, la duración, la compañía,
 la cantidad de pasajeros y la información adicional de la reserva. También se puede ver el mapa donde aparece la
 ruta seguida en el viaje. Debajo del mapa se pueden consultar los datos de los pasajeros. Pasamos a nombrar los
@@ -330,10 +394,18 @@ principios utilizados en esta pantalla:
         usuario pueda ser regulada por él en todo momento.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=10, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de consulta de reserva}
+    \label{fig:it1_consulta_reserva}
+\end{figure}
+
+
 \subsection*{Modificar reserva}
 
-Al usuario se le otorga la posibilidad de modificar las reservas que haya realizado en \textit{Just Travel It}. Podrá
-modificar los datos del pasajero: ,ombre, apellidos, DNI y teléfono. Tendrá a su disposición dos menús desplegables,
+Al usuario se le otorga la posibilidad de modificar las reservas que haya realizado en \textit{Just Travel It} (figura \ref{fig:it1_mod_reserva}). Podrá
+modificar los datos del pasajero: nombre, apellidos, DNI y teléfono. Tendrá a su disposición dos menús desplegables,
 uno para poder contratar servicios adicionales que no haya contratado con anterioridad y otro en el que podrá
 modificar su asiento. Además cuenta con un boton de selección en la parte inferior izquierda para poder solicitar
 asistencia en la estación correspondiente por si se olvido de marcarlo a la hora de realizar la reserva. Pasamos
@@ -361,10 +433,17 @@ a nombrar los principios utilizados en esta pantalla:
         se encuentra iniciada, mientras que en el caso contrario, se requerirá de que se inicie sesión.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=11, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de modificación de reserva}
+    \label{fig:it1_mod_reserva}
+\end{figure}
+
 \subsection*{Soporte}
 
 Si un usuario tiene alguna pregunta que no pueda ser abordada mediante el apartado de preguntas frecuentes previamente
-mencionado, ya sea debido a la naturaleza altamente específica de su problema o porque requiere una solución no
+mencionado (figura \ref{fig:it1_soporte}), ya sea debido a la naturaleza altamente específica de su problema o porque requiere una solución no
 automatizada, o si experimenta algún inconveniente con la aplicación, tiene la opción de hacer clic en el incluíacono de
 chat. Este icono se encuentra ubicado en la parte inferior derecha de cualquier pantalla de la página web, justo sobre
 el icono de preguntas frecuentes.
@@ -399,11 +478,18 @@ En cuanto a los principios de diseño que se han seguido para la creación de es
 
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=12, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de soporte}
+    \label{fig:it1_soporte}
+\end{figure}
+
 \subsection*{Preguntas frecuentes}
 
 Si un usuario quiere consultar las preguntas frecuentes que pueden surgir a la hora de utilizar la aplicación,
 es posible darle al botón de preguntas frecuentes marcado con una interrogación en la parte inferior derecha
-de la pantalla. Esta pantalla con respecto al prototipo en papel no ha tenido ningún cambio. Pasamos a nombrar
+de la pantalla. Esta pantalla (figura \ref{fig:it1_faq}) con respecto al prototipo en papel no ha tenido ningún cambio. Pasamos a nombrar
 los principios utilizados en esta pantalla:
 
 \begin{itemize}
@@ -419,3 +505,10 @@ los principios utilizados en esta pantalla:
         entre sí y caben en la pantalla, por lo que no hay que hacer \textit{scroll} con el ratón, de este forma el
         usuario puede viajar con facilidad de un campo a otro.
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[page=13, width = 0.8\textwidth]{Imagenes/hito_5/it1.pdf}
+    \caption{Página de preguntas frecuentes}
+    \label{fig:it1_faq}
+\end{figure}
