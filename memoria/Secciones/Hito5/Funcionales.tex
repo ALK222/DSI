@@ -9,6 +9,9 @@ repetidos con respecto al hito anterior. Todos han sido adaptados para indicar l
 en la que ocurren las distintas funcionalidades, manteniendo una cohesión con los nombres de
 cada pantalla con el resto del documento.
 
+Todos los elementos que han sido modificados ha sido debido a que no se incluían todas las partes de
+la aplicación desde la que se iba a dar cumplimiento al requisito.
+
 \subsection*{Repetidos}
 
 \begin{itemize}
@@ -54,7 +57,7 @@ cada pantalla con el resto del documento.
 
     \item \textbf{Ofrecer \textit{(acción)} información sobre horarios de transporte \textit{(objeto)} al realizar la búsqueda \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la página \textit{Comparador} se muestran todos los viajes tanto con los horarios de salida como de llegada .
+            \item Desde la página \textit{Comparador} se muestran todos los viajes tanto con los horarios de salida como de llegada.
         \end{itemize}
 
     \item \textbf{Ofrecer \textit{(acción)} información de los asientos disponibles \textit{(objeto)} del vehículo seleccionado \textit{(contexto)}.}
@@ -95,6 +98,7 @@ cada pantalla con el resto del documento.
         \begin{itemize}
             \item Desde la página \textit{Comparador} se pueden seleccionar los billetes deseados y reservarlos pasando por el 
                 resto de páginas del proceso (\textit{Datos adicionales} y \textit{Pago}).
+            \item Desde la página \textit{Mis reservas} podrán descargarse los billetes reservados.
         \end{itemize}
 
     \item \textbf{Indicar \textit{(acción)} origen y destino \textit{(objeto)} del vehículo a lo largo del trayecto
@@ -130,9 +134,9 @@ cada pantalla con el resto del documento.
     
     \item \textbf{Realizar \textit{(acción)} reservas \textit{(objeto)} para un número determinado de personas \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro de la página \textit{Inicio} se pueden seleccionar cuantos billetes se
+            \item Dentro de la página \textit{Inicio} se pueden seleccionar cuántos billetes se
                 quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
-            \item Dentro de la página \textit{Comparador} se pueden seleccionar cuantos billetes se
+            \item Dentro de la página \textit{Comparador} se pueden seleccionar cuántos billetes se
                 quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
         \end{itemize}
 
@@ -147,7 +151,7 @@ cada pantalla con el resto del documento.
     \item \textbf{Reservar \textit{(acción)} conjuntos de asientos \textit{(objeto)} para que todos los viajeros en caso de que sea un grupo puedan
         sentarse juntos \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro de la pantalla \textit{Datos adicionales}, en el apartado de \textit{Selección de asientos} se pueden seleccionar.
+            \item Dentro de la pantalla \textit{Datos adicionales}, en el apartado de \textit{Selección de asientos} se pueden seleccionar
                 los asientos deseados.
         \end{itemize}
 
@@ -161,14 +165,38 @@ cada pantalla con el resto del documento.
             \item En la página \textit{Comparador} se pueden filtrar los viajes por si tienen escala/transbordo o no.
         \end{itemize}
 
-    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} según precio, duración, tipo de transporte, accesibilidad u horario \textit{(contexto)}.}
+    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} según precio \textit{(contexto)}.}
         \begin{itemize}
-            \item En la página \textit{Comparador} hay una barra con a la derecha con las opciones de filtrado de precio, duración, accesibilidad y horario. Además, encima de los viajes
-                de ida y vuelta tenemos la opción de elegir tipo de transporte, mostrando solo los del seleccionado.
+            \item En la página \textit{Comparador} tendremos la opción de filtrar en base al precio.
         \end{itemize}
 
-    \item \textbf{Ordenar \textit{(acción)} viajes \textit{(objeto)} según precio o duración, para agilizar la búsqueda \textit{(contexto)}.}
+    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} según duración \textit{(contexto)}.}
         \begin{itemize}
-            \item En la página \textit{Comparador}, encima de los viajes de ida y vuelta hay un botón que nos permite seleccionar las distintas ordenaciones.
+            \item En la página \textit{Comparador} tendremos la opción de filtrar en base a la duración.
+        \end{itemize}
+
+    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} según accesibilidad \textit{(contexto)}.}
+        \begin{itemize}
+            \item En la página \textit{Comparador} tendremos la opción de filtrar en base a la accesibilidad.
+        \end{itemize}
+
+    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} según horario \textit{(contexto)}.}
+        \begin{itemize}
+            \item En la página \textit{Comparador} tendremos la opción de filtrar en base al horario.
+        \end{itemize}
+
+    \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} tipo de transporte \textit{(contexto)}.}
+        \begin{itemize}
+            \item En la página \textit{Comparador}, encima de los viajes de ida y vuelta tenemos la opción de elegir tipo de transporte, mostrando solo los del seleccionado.
+        \end{itemize}
+
+    \item \textbf{Ordenar \textit{(acción)} viajes \textit{(objeto)} según precio, para agilizar la búsqueda \textit{(contexto)}.}
+        \begin{itemize}
+            \item En la página \textit{Comparador}, encima de los viajes de ida y vuelta podremos seleccionar ordenación en base al precio.
+        \end{itemize}
+
+    \item \textbf{Ordenar \textit{(acción)} viajes \textit{(objeto)} según duración, para agilizar la búsqueda \textit{(contexto)}.}
+        \begin{itemize}
+            \item En la página \textit{Comparador}, encima de los viajes de ida y vuelta podremos seleccionar ordenación en base al duración.
         \end{itemize}
 \end{itemize}
