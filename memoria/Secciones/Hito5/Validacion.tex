@@ -1,89 +1,199 @@
 \section{Escenarios de validación}
 
-Los escenarios de validación sirven para validar el diseño creado. Los escenarios de validación
-pueden incluir escenarios que representan variantes a la hora de realizar una acción, escenarios
-de acciones que es necesario realizar en el sistema pero que no forman parte de las necesidades
-del usuario, y escenarios de casos límite, que representan situaciones atípicas que el usuario
-puede llegar a encontrarse.
+Los escenarios de validación sirven para validar el diseño creado. Los escenarios de validación pueden incluir escenarios que representan variantes a la hora de realizar una acción, escenarios de acciones que es necesario realizar en el sistema pero que no forman parte de las necesidades del usuario, y escenarios de casos límite, que representan situaciones atípicas que el usuario puede llegar a encontrarse.
+
+En nuestro caso, nos reunimos por google meet para poner en común diferentes casos y hemos descrito una serie de escenarios en los que se hacen preguntas que no hemos contemplado en los escenarios de contexto.
+
+Para comenzar vamos a coger los escenarios que hemos corregido de la anterior fase.
+
+\begin{escenario} % 1
+    \centering
+    ?`Qué pasaría si el usuario quiere buscar un viaje que sea directo?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario puede filtrar desde la pantalla del comparador la opción de solo viajes directos.
+    \end{solucion}
+\end{escenario}
+
+
+\begin{escenario}
+    % 2
+    \centering
+    ?`Qué pasaría si un usuario está en la página del comparador y entra en la pantalla de perfil y quiere volver?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario desde la página de perfil tiene un botón para volver atrás a la pestaña en la que estaba, en este caso la del comparador.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 3
+    \centering
+    ?`Qué pasaría si un usuario está en la página de reservas y quiere volver a su perfil?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario desde la página de reservas tiene un botón para volver atrás a la pestaña en la que estaba, en este caso la del perfil.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 4
+    \centering
+    ?`Qué pasaría si un usuario está en la página de una reserva concreta y quiere volver a la pantalla de todas sus reservas?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario desde la reserva concreta puede darle a la cruz para ver todas sus reservas otra vez.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 5
+    \centering
+    ?`Qué pasaría si el usuario quiere modificar sus datos porque ha visto un error en su billete?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} No está diseñada la ventana pero el usuario podría desde su perfil modificar los datos de reserva y guardar sus cambios.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 6
+    \centering
+    ?`Qué pasaría si el usuario quiere modificar sus datos porque ha visto un error en su billete?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario desde sus reservas puede modificar el viaje, cambiando los datos de los pasajeros, el asiento y los servicios adicionales.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 7
+    \centering
+    ?`Qué pasaría si el usuario se da cuenta de que el precio final que aparece no se corresponde con el del billete por la aplicación de impuestos?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El precio que figure en los billetes aparece con el IVA aplicado.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 8
+    \centering
+    ?`Qué pasaría si el usuario quiere consultar una duda concreta?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} Existe un botón de preguntas frecuentes. Si la duda del usuario no estuviera incluida, hay un servicio de atención al cliente por el que, tanto a través de llamada como del chat, puede preguntar.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 9
+    \centering
+    ?`Qué pasaría si el usuario quiere consultar la fecha de sus viajes?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} Desde la página de mis reservas se pueden ver las fechas concretas de los viajes.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario}
+    % 10
+    \centering
+    ?`Qué pasaría si el usuario quiere consultar las fechas en las que se produce el viaje cuando está buscando?
+
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} El usuario puede consultar una gran cantidad de datos en las tarjetas, las fechas del viaje figuran, como las horas, el precio, la compañía.
+    \end{solucion}
+\end{escenario}
 
 \begin{escenario} % 11
     \centering
-?`Qué pasaría si el usuario tiene un documento de identidad distinto al DNI?
+    ?`Qué pasaría si el usuario tiene un documento de identidad distinto al DNI?
 
-\begin{solucion}
-    \centering
-    \textbf{Parcialmente contemplado.} Además del DNI, en \textit{Registro} está la opción de introducir tanto el NIE como el CIF. Otro tipo de documentos no estarían aceptados.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{Parcialmente contemplado.} Además del DNI, en \textit{Registro} está la opción de introducir tanto el NIE como el CIF. Otro tipo de documentos no estarían aceptados.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 12
     \centering
-?`Qué pasaría si el usuario quiere cambiar su contraseña?
+    ?`Qué pasaría si el usuario quiere cambiar su contraseña?
 
-\begin{solucion}
-    \centering
-    \textbf{Contemplado.} En la pantalla \textit{Modificar perfil}, el usuario tiene la oportunidad de cambiar la contraseña, además de otros datos del perfil.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} En la pantalla \textit{Modificar perfil}, el usuario tiene la oportunidad de cambiar la contraseña, además de otros datos del perfil.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 13
     \centering
-?`Qué pasaría si el usuario se confunde en el registro y selecciona que es discapacitado cuando no lo es?
+    ?`Qué pasaría si el usuario se confunde en el registro y selecciona que es discapacitado cuando no lo es?
 
-\begin{solucion}
-    \centering
-    \textbf{No contemplado.} El usuario solo puede modificar sus datos personales.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} El usuario solo puede modificar sus datos personales.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 14
     \centering
-?`Qué pasaría si una de las personas que viaje no puede viajar?
+    ?`Qué pasaría si una de las personas que viaje no puede viajar?
 
-\begin{solucion}
-    \centering
-    \textbf{No contemplado.} Solo se puede cancelar la reserva entera y no un viaje concreto.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} Solo se puede cancelar la reserva entera y no un viaje concreto.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 15
     \centering
-?`Qué pasa si un medio de transporte se retrasa o se cancela?
+    ?`Qué pasa si un medio de transporte se retrasa o se cancela?
 
-\begin{solucion}
-    \centering
-    \textbf{No contemplado.} Debería haber un apartado de información de qué medidas toma cada compañía con estos sucesos.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} Debería haber un apartado de información de qué medidas toma cada compañía con estos sucesos.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 16
     \centering
-?`Qué pasa si no se encuentran opciones para discapacitados?
+    ?`Qué pasa si no se encuentran opciones para discapacitados?
 
-\begin{solucion}
-    \centering
-    \textbf{No contemplado.} En caso de no encontrar ninguna opción de acuerdo a cierto tipo de
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} En caso de no encontrar ninguna opción de acuerdo a cierto tipo de
         filtrado se debería mostrar un mensaje de que no se ha encontrado ningún viaje, para no
         llevar al usuario a confusión de si ha habido algún fallo técnico al realizar el filtrado.
-\end{solucion}
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 17
     \centering
-?`Qué pasa si el usuario quiere cerrar sesión?
+    ?`Qué pasa si el usuario quiere cerrar sesión?
 
-\begin{solucion}
-    \centering
-    \textbf{Contemplado.} Hay una opción de cerrar sesión en \textit{Perfil}.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{Contemplado.} Hay una opción de cerrar sesión en \textit{Perfil}.
+    \end{solucion}
 \end{escenario}
 
 \begin{escenario} % 18
     \centering
-?`Qué pasa si se corta la conexión en medio de una reserva?
+    ?`Qué pasa si se corta la conexión en medio de una reserva?
 
-\begin{solucion}
-    \centering
-    \textbf{No contemplado.} Deberíamos poner una ventana que muestre este error de conexión explicándole al usuario lo que debería hacer.
-\end{solucion}
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} Deberíamos poner una ventana que muestre este error de conexión explicándole al usuario lo que debería hacer.
+    \end{solucion}
 \end{escenario}
