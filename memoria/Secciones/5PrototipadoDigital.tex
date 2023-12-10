@@ -10,18 +10,128 @@
 \input{Secciones/Hito5/Validacion.tex}
 
 \section{Segunda iteración}
+Tras detectar varios errores y posibles mejoras en nuestro diseño, nos propusimos hacer una segunda iteración del prototipo para así hacer que el programa tenga 
+los menores fallos posibles. Dentro de esta iteración es posible resolver aquellos fallos que se hayan detectado en cualquiera de las etapas del prototipado. En nuestro
+caso, las única etapa que hemos considerado necesaria modificar ha sido la fase de prototipado. Por último, se han identificado
+nuevos escenarios de validación, a modo de conclusión final de esta fase de prototipado, con las posibles mejoras que pueden realizarse sobre el prototipo que hemos
+finalizado ya en esta fase. \\
 
-Tras detectar varios errores y posibles mejoras en nuestro diseño, nos propusimos hacer una segunda iteración del prototipo para así hacer que el programa tenga los menores fallos posibles.
+En el caso del resto de etapas no se ha considerado necesaria una revisión, ya que los cambios que se han realizado en la primera iteración se han hecho con la finalidad
+de realizar una corrección única y exhaustiva con todo el feedback que se recibió en el hito anterior. Tras haber realizado esas modificaciones pertinentes, no se ha visto
+necesario, tras una revisión tener que realizar nuevas modificaciones, por lo que estas etapas del prototipado no se han visto cambiadas con respecto a la iteración anterior Sin embargo, como
+ya se ha comentado, sí que se han realizado en las etapas de prototipado y escenarios de validación. Estas etapas serán realizadas en este orden, de modo que
+los cambios que se apliquen sobre los prototipos sean pasados directamente a los escenarios de validación, haciendo que sean consecuentes con el estado actual del prototipo. \\
+
+Para poder llevar a cabo esta etapa, principalmente el prototipado, elegimos algunos de nosotros uno de los escenarios de validación que estaban todavía pendientes y pensamos
+cómo podían integrarse en nuestra aplicación para poder solucionarlos posteriormente en el prototipo de la iteración 2 en Figma.
+
+\subsection{Prototipado}
+Los cambios que se han realizado principalmente sobre la etapa de prototipado han sido correcciones de los escenarios de validación principalmente, aunque existen otras 
+de las modificaciones que se han realizado para facilitar la experiencia y el manejo de la aplicación por parte del usuario. Veamos a continuación las modificaciones que 
+han sido realizadas. \\
+
+En primer lugar, cabe mencionar una aclaración respecto al prototipo realizado en esta iteración y es que por comodidad sólo se puede acceder tanto a las preguntas 
+frecuentes como al soporte desde la página de inicio para poder retroceder a esta misma página y evitar sobrecargar de réplicas el documento que retrocedan en función 
+del origen. \\
+
+En cuanto a los cambios que se han realizado, uno de ellos afecta a las páginas de registro y modificar el perfil del usuario, ya que se les ha incluido la opción de que
+el usuario determine si es o no una persona con discapacidad (ver figuras \ref{fig:it2_registro} y \ref{fig:it2_modificar_reserva}), corrigiendo así el escenario de validación número 13 que ahora pasaría a estar contemplado. Vamos a aceptar además
+como personas con discapacidad no sólo a aquellas que la sufran de forma permanente sino también a aquellas que puedan tener por ejemplo una lesión temporal. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Registro.png}
+    \caption{Página \textit{Registro}}
+    \label{fig:it2_registro}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Modificar datos.png}
+    \caption{Página \textit{Modificar reserva}}
+    \label{fig:it2_modificar_reserva}
+\end{figure}
+
+En los prototipos de consultar reserva y comparador se les ha incluido un texto en el cual el usuario puede consultar las políticas de cancelación y retrasos de las 
+empresas de transporte (ver figuras \ref{fig:it2_consultar_reserva} y \ref{fig:it2_comparador}). Por lo que, de este modo, contemplamos el escenario 15 y le damos solución. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Información adicional Mis Reservas.png}
+    \caption{Página \textit{Consultar Reserva}}
+    \label{fig:it2_consultar_reserva}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Información adicional Comparador.png}
+    \caption{Página \textit{Comparador}}
+    \label{fig:it2_comparador}
+\end{figure}
+
+En el prototipo de la pantalla del comparador, se ha incluido una pantalla en la que aparece un pop up cuando no hay viajes accesibles para personas con discapacidad, corrigiendo así el escenario de validación 16 (ver figura \ref{fig:it2_filtro_accesible}). \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/No hay viajes accesibles.png}
+    \caption{Página \textit{Comparador Filtro Accesibilidad}}
+    \label{fig:it2_filtro_accesible}
+\end{figure}
+
+En el prototipo de consultar reserva, cuando el usuario desea cancelar una reserva, se ha añadido un paso previo el cual consiste en dar opción al usuario de qué viaje quiere cancelar a 
+qué pasajero (\ref{fig:it2_cancelar_pasajeros}). Después de escogerlo, se le pregunta el motivo por el cual el usuario quiere cancelar esta reserva. Dentro de esta página se ha añadido además un ojo
+que permite ver la reserva en detalle, para ofrecer más información a la persona. \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Cancelar Pasajeros.png}
+    \caption{Página \textit{Cancelar Pasajeros Reserva}}
+    \label{fig:it2_cancelar_pasajeros}
+\end{figure}
+
+Otra de las modificaciones que se ha realizado sobre la pestaña de las tarjetas en la pantalla de pago es el relleno con unos datos de ejemplo de una tarjeta de un usuario al hacer click (ver figura \ref{fig:it2_tarjeta}). \\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Pago con Tarjeta Relleno.png}
+    \caption{Página \textit{Pago}}
+    \label{fig:it2_tarjeta}
+\end{figure}
+
+Por último hemos incluido una ventana por si el usuario pierde la conexión con la aplicación en algún momento. En esta ventana se le indica al usuario instrucciones 
+para que reanude la conexión con Just Travel It (ver figura \ref{fig:it2_conexion}). Es de esta forma cómo hemos corregido y contemplado el escenario 18. Al ser una nueva ventana, veremos en detalle la información
+que guarda y los patrones de diseño que emplea.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{Imagenes/hito_5/Iteracion2/Sin conexión.png}
+    \caption{Página \textit{Sin Conexión}}
+    \label{fig:it2_conexion}
+\end{figure}
+
+\subsection*{Pantalla de pérdida de conexión}
+Como ya hemos visto, una de las nuevas ventanas que se han incorporado en esta iteración es la de pérdida de conexión, que se muestra al usuario cuando se ha producido 
+un error en la conexión. Esta modificación surge de un escenario de validación planteado en la anterior iteración, ya que no se tenía constancia de los distintos 
+imprevistos que podían surgir durante el desarrollo de la aplicación, por lo que se ha decidido ponerles solución en esta iteración. Esta ventana sustituye a la 
+tradicional página de error que no aporta nada de información al usuario para poder brindarle información adicional, como las posibles causas y algunas soluciones que 
+puede llevar a cabo para solucionar el problema. En cuanto a los principios de diseño que se encuentran en esta página tenemos los siguientes:
+\begin{itemize}
+    \item \textbf{Regla Peak-End.} Es el principio que domina en estas situaciones, ya que una posible pérdida de la conexión del sistema puede suponer un motivo de 
+    estrés para el usuario, que en ese momento puede no saber cómo reaccionar correctamente ante la situación, por lo que este mensaje personalizado puede ayudarle a 
+    calmar la situación.
+    \item \textbf{Consistencia interna.} La tipografía empleada, así como los colores, respetan la estética que quiere transmitir la aplicación y se mantiene armoniosa 
+    en todo el diseño.
+    \item \textbf{Consistencia externa.} Al igual que el resto de aplicaciones, cuando se muestra este mensaje, el contenido es similar: exponer el problema y darle 
+    una solución, así como dar la opción de una forma sencilla de recargar la página.
+\end{itemize}
+
+En cuanto a los principios de diseño que se han empleado, no se han realizado cambios importantes que supongan alteraciones de los ya mencionados en la iteración anterior,
+por lo que no se va a volver a hacer hincapié en ellos. Otra de las funcionalidades que se ha querido lograr con esta iteración es realizar un prototipo 100\% interactivo en figma, intentando realizar todas las conexiones
+posibles para simular el funcionamiento real de la aplicación, además de separar el prototipo en dos estados distintos: sesión iniciada y sesión sin iniciar. Para hacerlo
+interactivo se tienen dos flujos diferenciados como punto de partida: usuario no registrado y usuario con discapacidad con sesión iniciada. (\href{https://www.figma.com/file/YGz2UUMhvxNOTCHhu1TZle/Just-Travel-It?type=design&node-id=0%3A1&mode=design&t=18R6j8wE0vfjz3qF-1}{Enlace al Figma}).
 
 \subsection{Escenarios de validación}
+Los escenarios de validación sirven para validar el diseño creado. Los escenarios de validación pueden incluir escenarios que representan variantes a la hora de 
+realizar una acción, escenarios de acciones que es necesario realizar en el sistema pero que no forman parte de las necesidades del usuario, y escenarios de 
+casos límite, que representan situaciones atípicas que el usuario puede llegar a encontrarse. \\
 
-\section{Escenarios de validación}
-
-Los escenarios de validación sirven para validar el diseño creado. Los escenarios de validación pueden incluir escenarios que representan variantes a la hora de realizar una acción, escenarios de acciones que es necesario realizar en el sistema pero que no forman parte de las necesidades del usuario, y escenarios de casos límite, que representan situaciones atípicas que el usuario puede llegar a encontrarse.
-
-En nuestro caso, nos reunimos por google meet para poner en común diferentes casos y hemos descrito una serie de escenarios en los que se hacen preguntas que no hemos contemplado en los escenarios de contexto.
-
-Para comenzar vamos a coger los escenarios que hemos corregido de la anterior fase.
+En nuestro caso, nos reunimos por Google Meet para poner en común diferentes casos y hemos descrito una serie de escenarios en los que se hacen preguntas 
+que no hemos contemplado en los escenarios de contexto. Para comenzar vamos a coger los escenarios que hemos corregido de la anterior fase y añadiremos al final aquellas
+nuevas aportaciones que queramos añadir y no se encuentren planeadas en el diseño de nuestra aplicación.
 
 \begin{escenario} % 1
     \centering
@@ -139,7 +249,7 @@ Para comenzar vamos a coger los escenarios que hemos corregido de la anterior fa
 
     \begin{solucion}
         \centering
-        \textbf{Ccontemplado.} Además del DNI, en \textit{Registro} está la opción de introducir tanto el NIE como el CIF. Otro tipo de documentos no estarían aceptados.
+        \textbf{Contemplado.} Además del DNI, en \textit{Registro} está la opción de introducir tanto el NIE como el CIF. Otro tipo de documentos no estarían aceptados.
     \end{solucion}
 \end{escenario}
 
@@ -214,3 +324,39 @@ Para comenzar vamos a coger los escenarios que hemos corregido de la anterior fa
         \textbf{Contemplado.} Hay una ventana que muestra este error de conexión explicándole al usuario lo que debería hacer.
     \end{solucion}
 \end{escenario}
+
+\begin{escenario} % 19
+    \centering
+    ?`Qué pasa si el usuario se olvida de la contraseña?
+
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} Si el usuario se olvida de su contraseña al iniciar sesión no tiene opción de poder recuperarla o cambiarla (sin tener que entrar).
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario} % 20
+    \centering
+    ?`Qué pasa si el usuario quiere iniciar sesión con otro servicio (Google, Facebook, ...)?
+
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} La única opción que tiene el usuario para iniciar sesión es la cuenta dentro del sistema de la aplicación y no puede recurrir a otros
+        servicios externos como Google o Facebook.
+    \end{solucion}
+\end{escenario}
+
+\begin{escenario} % 21
+    \centering
+    ?`Qué pasa si el usuario no conoce el correo que tiene asociado a su cuenta?
+
+    \begin{solucion}
+        \centering
+        \textbf{No contemplado.} Al igual que en el caso de la contraseña, no existe actualmente ningún mecanismo en la aplicación que permita la recuperación de credenciales
+        de acceso a la aplicación.
+    \end{solucion}
+\end{escenario}
+
+Como conclusión de esta fase, hemos detectado que nuestra aplicación, aunque implementa todas las funcionalidades que habíamos pensado en los requisitos del Hito 3, es cierto 
+que todavía requiere de algunas mejoras puntuales, como podemos ver en estos escenarios de validación, que no facilitan del todo el uso para algunos tipos de usuarios. Al ser
+ya la última fase del diseño, ya no podremos prototiparlos, pero en caso de que hubiese otra iteración se tendrían en cuenta para mejorar el prototipo.
