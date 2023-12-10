@@ -6,7 +6,8 @@ en los requisitos que hemos encontrados en los anteriores hitos.
 
 Vamos a incluir todos los elementos funcionales, pero marcaremos aquellos que estén
 repetidos con respecto al hito anterior. Todos han sido adaptados para indicar la ventana exacta
-en la que ocurren las distintas funcionalidades.
+en la que ocurren las distintas funcionalidades, manteniendo una cohesión con los nombres de
+cada pantalla con el resto del documento.
 
 \subsection*{Repetidos}
 
@@ -32,12 +33,12 @@ en la que ocurren las distintas funcionalidades.
 
     \item \textbf{Seleccionar \textit{(acción)} asientos \textit{(objeto)} una vez elegido el transporte \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la pantalla \textit{Reserva} se pueden seleccionar los asientos deseados.
+            \item Desde la pantalla \textit{Datos adicionales} se pueden seleccionar los asientos deseados.
         \end{itemize}
 
     \item \textbf{Ofrecer \textit{(acción)} asientos \textit{(objeto)} una vez elegido el transporte \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la pantalla \textit{Reserva} se pueden seleccionar los asientos deseados.
+            \item Desde la pantalla \textit{Datos adicionales} se pueden seleccionar los asientos deseados.
         \end{itemize}
 
     \item \textbf{Seleccionar \textit{(acción)} fechas concretas o un intervalo de tiempo \textit{(objeto)} para la búsqueda del transporte \textit{(contexto)}.}
@@ -58,7 +59,7 @@ en la que ocurren las distintas funcionalidades.
 
     \item \textbf{Ofrecer \textit{(acción)} información de los asientos disponibles \textit{(objeto)} del vehículo seleccionado \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la página \textit{Reserva} se puede ver cuántos asientos quedan disponibles y cuáles.
+            \item Desde la página \textit{Datos adicionales} se puede ver cuántos asientos quedan disponibles y cuáles.
         \end{itemize}
 
     \item \textbf{Poder cancelar \textit{(acción)} una reserva \textit{(objeto)} en caso de que el usuario lo considere pertinente \textit{(contexto)}.}
@@ -79,8 +80,8 @@ en la que ocurren las distintas funcionalidades.
     \item \textbf{Ofrecer \textit{(acción)} información detallada sobre las diferentes empresas que operan
         \textit{(objeto)} al comparar dos viajes \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la página de \textit{Comparador} de viajes se puede hacer click en el logo de la empresa que
-                opera para mostrar información e ir a la página del sitio.
+            \item Desde la página de \textit{Comparador} se puede acceder información de la empresa e
+                ir a la página del sitio.
         \end{itemize}
     
     \item \textbf{Ofrecer \textit{(acción)} información sobre las ayudas ofrecidas \textit{(objeto)} a usuarios 
@@ -92,50 +93,61 @@ en la que ocurren las distintas funcionalidades.
     
     \item \textbf{Reservar \textit{(acción)} billetes \textit{(objeto)} de los transportes deseados \textit{(contexto)}.} 
         \begin{itemize}
-            \item Desde la página \textit{Comparador} se pueden seleccionar los billetes deseados y reservarlos.
-            \item Desde la pantalla \textit{Datos adicionales de un viaje} se pueden seleccionar los billetes y reservarlos.
+            \item Desde la página \textit{Comparador} se pueden seleccionar los billetes deseados y reservarlos pasando por el 
+                resto de páginas del proceso (\textit{Datos adicionales} y \textit{Pago}).
         \end{itemize}
 
     \item \textbf{Indicar \textit{(acción)} origen y destino \textit{(objeto)} del vehículo a lo largo del trayecto
         \textit{(contexto)}.}
         \begin{itemize}
-            \item Desde la pantalla \textit{Reserva} se puede visualizar los detalles de la reserva del transporte, como el origen y el destino (tanto
-                la ciudad como el lugar exacto).
             \item Desde la pantalla \textit{Comparador} se puede visualizar los detalles de la reserva del transporte, como el origen y el destino (tanto
-            la ciudad como el lugar exacto).
+                la ciudad como el lugar exacto).
+            \item Desde la pantalla \textit{Datos adicionales} se puede visualizar los detalles de la reserva del transporte, como el origen y el destino (tanto
+                la ciudad como el lugar exacto).
+            \item Una vez hecha la reserva, desde \textit{Mis reservas} se puede visualizar los detalles de la reserva del transporte, como el origen y el destino (tanto
+                la ciudad como el lugar exacto).
         \end{itemize}
 
     \item \textbf{Mostrar \textit{(acción)} información detallada \textit{(objeto)} sobre la accesibilidad de los transportes 
         disponibles \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro de la información de cada transporte, accesible en \textit{Comparador} gracias al botón simbolizado con una \textbf{i}, se puede visualizar el nivel de accesibilidad del medio de
+            \item Dentro de la información de cada viaje, accesible en \textit{Comparador} se puede visualizar el nivel de accesibilidad del medio de
+                transporte y seleccionar la ayuda si el usuario lo desea.
+            \item Dentro de la información de cada viaje, accesible en \textit{Datos adicionales} se puede visualizar el nivel de accesibilidad del medio de
+                transporte y seleccionar la ayuda si el usuario lo desea.
+            \item Dentro de la información de cada viaje, accesible en \textit{Mis reservas} se puede visualizar el nivel de accesibilidad del medio de
                 transporte y seleccionar la ayuda si el usuario lo desea.
         \end{itemize}
     
     \item \textbf{Ofrecer \textit{(acción)} servicios disponibles en el transporte \textit{(objeto)} cuando seleccionas un transporte
         en concreto \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro de la página \textit{Comparador} se puede ver los servicios adicionales del transporte gracias al
-                botón de información de cada tarjeta (simbolizado con una \textbf{i}).
-            \item Dentro de la página \textit{Reserva} se puede ver los servicios adicionales del transporte y reservarlos.
+            \item Dentro de la página \textit{Comparador} se puede ver los servicios adicionales del transporte gracias a la sección
+                de información de cada viaje.
+            \item Dentro de la página \textit{Datos adicionales} se puede ver los servicios adicionales del transporte y reservarlos.
+            \item Dentro de la página \textit{Mis reservas} se pueden visualizar los servicios que hayan sido reservados.
         \end{itemize}
     
     \item \textbf{Realizar \textit{(acción)} reservas \textit{(objeto)} para un número determinado de personas \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro tando de la página \textit{Inicio} como la de \textit{Comparador} se pueden seleccionar cuantos billetes se
+            \item Dentro de la página \textit{Inicio} se pueden seleccionar cuantos billetes se
+                quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
+            \item Dentro de la página \textit{Comparador} se pueden seleccionar cuantos billetes se
                 quieren comprar, distinguiendo entre adultos, niños y personas con discapacidad.
         \end{itemize}
 
     \item \textbf{Filtrar \textit{(acción)} viajes \textit{(objeto)} en función del número de personas que vayan a participar en el viaje \textit{(contexto)}.}
         \begin{itemize}
-            \item Al realizar la búsqueda con los billetes con el número de billetes a comprar, se filtra automáticamente para solo mostrar transportes
-                que tengan como mínimo ese número de plazas disponibles.
+            \item Al realizar la búsqueda con los billetes en la página \textit{Inicio} con el número de billetes a comprar, se filtra automáticamente para solo mostrar
+                en la página \textit{Comparador} los viajes que tengan como mínimo ese número de plazas disponibles.
+            \item Al realizar la búsqueda con los billetes en la página \textit{Comparador} con el número de billetes a comprar, se filtra automáticamente para solo mostrar
+                en sa misma página los viajes que tengan como mínimo ese número de plazas disponibles.
         \end{itemize}
 
     \item \textbf{Reservar \textit{(acción)} conjuntos de asientos \textit{(objeto)} para que todos los viajeros en caso de que sea un grupo puedan
         sentarse juntos \textit{(contexto)}.}
         \begin{itemize}
-            \item Dentro de la pantalla \textit{Reserva}, en el apartado de \textit{Selección de asientos} se pueden seleccionar.
+            \item Dentro de la pantalla \textit{Datos adicionales}, en el apartado de \textit{Selección de asientos} se pueden seleccionar.
                 los asientos deseados.
         \end{itemize}
 
